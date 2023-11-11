@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!--CSS-->
     <link rel="stylesheet" href="style.css" />
-    <title>FitnesApp PRO</title>
+    <title>MyGymBuddy</title>
   </head>
   <body>
     <header class="header">
@@ -17,10 +18,69 @@
           <li><a href="">Diary</a></li>
           <li><a href="">Explore</a></li>
           <li><a href="">More</a></li>
-          <li><a href="">Login</a></li>
+          <li><a href="#" id="openLogin">Login</a></li>
         </ul>
       </nav>
     </header>
+
+    <!--Login Form--> <!--ni še čist tko kukr sm si zamislu ampak vgalvnem je ok-->
+    <div class="loginform" id="loginForm">
+
+      <!--Log in-->
+      <div class= "Sign-container" id="container">
+        <div class= "form-container log-in">
+          <form>
+            <h1>Log in</h1>
+            <div class="sign-icons">
+              <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" placeholder="Email">
+            <!--<i><ion-icon name="person-outline"></ion-icon></i>-->
+            <input type="password" placeholder="Password">
+            <!--<i><ion-icon name="lock-closed-outline"></ion-icon></i>-->
+            <a href="#">Forgot your password?</a>
+            <button>Log in</button>
+          </form>
+        </div>
+        
+        <!--Sign up-->
+        <div class= "form-container sign-up">
+          <form>
+            <h1>Create Account</h1>
+            <div class="sign-icons">
+              <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign up</button>
+          </form>
+        </div>
+
+        <!--Uno zravn v okvircku-->
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Welcome back!</h1>
+              <p>To keep connected with us please login with your personal info</p>
+              <button class="hidden" id="login">Log in</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1>Hello, friend!</h1>
+              <p>Enter your personal details and start your fitness journey with us</p>
+              <button class="hidden" id="register">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <ul class="social_icon">
         <li>
@@ -47,5 +107,6 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="main.js"></script>
   </body>
 </html>
