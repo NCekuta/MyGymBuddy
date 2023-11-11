@@ -1,0 +1,99 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: black;
+}
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 22%,
+    rgba(167, 198, 223, 1) 100%
+  );
+}
+
+/*NAVBAR*/
+.header {
+  height: 100px;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px 40px;
+}
+.navbar h1 {
+  font-size: 20px;
+  font-weight: 400px;
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-display: swap;
+}
+.navbar ul {
+  list-style-type: none;
+}
+.navbar a {
+  color: black;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 70px;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "Red Hat Display";
+}
+.navbar li a:hover {
+  color: white;
+}
+.navbar li {
+  float: left;
+}
+
+/*FOOTER*/
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+/*Socialna omrežja*/
+.footer .social_icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 13px 0;
+  flex-wrap: wrap;
+}
+.footer .social_icon li {
+  list-style: none;
+}
+.footer .social_icon li a {
+  font-size: 2em;
+  display: inline-block;
+  margin: 0 80px;
+  transition: 0.5s;
+}
+.footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+
+/*Copyright*/
+.footer .copyright li {
+  list-style: none;
+}
+.footer .copyright li a {
+  font-size: 1.2em;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+}
