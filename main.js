@@ -8,17 +8,17 @@ registerBtn.addEventListener('click', () => {container.classList.add("active")})
 loginBtn.addEventListener('click', () => {container.classList.remove("active")});
 
 
-// Funkcionlanost, da se login odpre ob pritisku na gumb login
+// Funkcionalnost, da se login odpre ob pritisku na gumb login
 // linkamo login gumb in login form
 const openLoginBtn = document.getElementById('openLogin');
 const loginForm = document.getElementById('loginForm');
 
-// Add click event listener to open login modal
+// Ko kliknemo na login gumb se prikaže login
 openLoginBtn.addEventListener('click', () => {
   loginForm.style.display = 'flex';
 });
 
-// Close modal when clicking outside the content
+// Če kliknemo izven login okna se okno zapre
 window.addEventListener('click', (event) => {
   if (event.target === loginForm) {
     loginForm.style.display = 'none';
