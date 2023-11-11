@@ -1,1 +1,1 @@
-# FitnesApp-PRO
+# MyGymBuddy
