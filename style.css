@@ -8,12 +8,9 @@
   box-sizing: border-box;
 }
 body {
-  background: rgb(255, 255, 255);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 20%,
-    rgba(167, 198, 223, 1) 100%
-  );
+  background: #38373a;
+  font-family: "Red Hat Display";
+  font-weight: bolder;
 }
 
 /*NAVBAR------------------------------------------------------------------------------------------------------------*/
@@ -36,7 +33,7 @@ body {
   list-style-type: none;
 }
 .navbar a {
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
   justify-content: center;
   align-items: center;
@@ -50,6 +47,10 @@ body {
 }
 .navbar li {
   float: left;
+}
+
+.navbar li a.active {
+  color: white;
 }
 
 /*LOGIN/REGISTRATION -----------------------------------------------------------------------------------------------*/
@@ -279,6 +280,50 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
   justify-content: center;
   align-items: center;
+}
+
+/*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
+
+#Calorieh{
+  margin-left: 2.5%;
+  margin-bottom: 20px;
+}
+
+#calorie-container {
+  background-color: #252525;
+  height: 200px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+
+.square {
+  background-color: #242222;
+  height: 180px;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#goal, #food, #exercise, #remaining{
+  width: 16%;
+  border: 10px solid #242222;
+  align-items:last baseline;
+}
+
+#plus, #minus, #enako{
+  width: 10%;
+  font-size: 100px;
+}
+
+#calorie-text {
+  margin: 0 10px;
+  font-size: 18px;
 }
 
 /*FOOTER-----------------------------------------------------------------------------------------------------------*/
