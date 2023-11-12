@@ -8,9 +8,12 @@
   box-sizing: border-box;
 }
 body {
-  background: #38373a;
+  background: linear-gradient(to bottom right, #2C3E50, rgb(0, 0, 0));
   font-family: "Red Hat Display";
   font-weight: bolder;
+}
+html { 
+  height: 100% 
 }
 
 /*NAVBAR------------------------------------------------------------------------------------------------------------*/
@@ -28,6 +31,7 @@ body {
   font-family: "Kaushan Script";
   font-style: normal;
   font-display: swap;
+  color: white;
 }
 .navbar ul {
   list-style-type: none;
@@ -358,6 +362,7 @@ body {
   display: inline-block;
   margin: 0 80px;
   transition: 0.5s;
+  color: #fff;
 }
 .footer .social_icon li a:hover {
   transform: translateY(-10px);
@@ -366,12 +371,14 @@ body {
 /*Copyright*/
 .footer .copyright li {
   list-style: none;
+  
 }
 .footer .copyright li a {
   font-size: 1.2em;
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
+  color: #fff;
 }
 
 /*footer ni več črn, ce znas poprav*/
