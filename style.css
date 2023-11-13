@@ -18,7 +18,7 @@ html {
 
 /*primary dark mode colors*/
 :root{
-  --primary-color:linear-gradient(to bottom right, #2C3E50, rgb(0, 0, 0));
+  --primary-color:linear-gradient(to bottom right, #2C3E50, rgb(12, 12, 12));
   --secondary-color:#fff;
   --third-color: rgb(74, 213, 255);
 }
@@ -363,6 +363,13 @@ html {
   margin: 0 10px;
   font-size: 18px;
 }
+
+
+
+/*Contatct---------------------------------------------------------------------------------------------------------*/
+
+
+
 
 /*FOOTER-----------------------------------------------------------------------------------------------------------*/
 .footer {
