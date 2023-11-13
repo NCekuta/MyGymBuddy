@@ -368,6 +368,77 @@ html {
 
 /*Contatct---------------------------------------------------------------------------------------------------------*/
 
+#contact h2 {
+  text-align: center;
+  font-size: 50px;
+  color: var(--secondary-color);
+}
+
+.contact-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-content: center;
+  gap: 20px;
+  height: 360px;
+  max-width: 1600px;
+  margin: 0px auto;
+}
+
+.contact-image img {
+  height: 360px;
+}
+
+.contact-data {
+  font-size: 1.2em;
+  color: var(--secondary-color);
+}
+
+.contact-form {
+  width: calc(100% - 560px);
+  max-width: 1000px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 10px;
+  color: var(--secondary-color);
+}
+
+.contact-form p {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.contact-form input {
+  padding: 10px;
+}
+
+.contact-form input[name='name'], .contact-form input[name='email'] {
+  flex-basis: 49%;
+}
+
+.contact-form p, .contact-form input[name='message'] {
+  width: 100%;
+}
+
+.contact-form .submit-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-form button {
+  background-color: transparent;
+  color: var(--secondary-color);
+  padding: 8px;
+  width: 150px;
+  cursor: pointer;
+  border: 2px solid var(--secondary-color); /* Add this line for the white outline */
+}
+
+.contact-form button:hover {
+  background-color: #ffffff1b;
+}
 
 
 
