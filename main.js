@@ -25,8 +25,22 @@ window.addEventListener('click', (event) => {
   }
 });
 
+
 /*dark/light mode ikona*/
+// pogledamo uporabnikovo željeno temo v local storage
+const isLightTheme = localStorage.getItem("theme") === "light";
+
+// spremeni stran glede na temo
+document.body.classList.toggle("light-theme", isLightTheme);
+
+// spremeni ikono glede na temo
 const moon_sun = document.getElementById("moon_sun");
+if (isLightTheme) {
+  moon_sun.innerHTML = '<ion-icon name="sunny" id="sun"></ion-icon>';
+} else {
+  moon_sun.innerHTML = '<ion-icon name="moon" id="moon"></ion-icon>';
+}
+
 moon_sun.onclick = function(){
   document.body.classList.toggle("light-theme");
   if(document.body.classList.contains("light-theme")){
@@ -35,4 +49,8 @@ moon_sun.onclick = function(){
   else{
     moon_sun.innerHTML = '<ion-icon name="moon" id="moon"></ion-icon>';
   }
+
+  // shrani temo ki je nastavljena
+  const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
+  localStorage.setItem("theme", theme);
 }
