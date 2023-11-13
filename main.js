@@ -24,3 +24,16 @@ window.addEventListener('click', (event) => {
     loginForm.style.display = 'none';
   }
 });
+
+
+/*dark/light mode ikona*/
+const moon_sun = document.getElementById("moon_sun");
+moon_sun.onclick = function(){
+  document.body.classList.toggle("light-theme");
+  if(document.body.classList.contains("light-theme")){
+    moon_sun.innerHTML = '<ion-icon name="sunny" id="sun"></ion-icon>';
+  }
+  else{
+    moon_sun.innerHTML = '<ion-icon name="moon" id="moon"></ion-icon>';
+  }
+}
