@@ -25,7 +25,6 @@ window.addEventListener('click', (event) => {
   }
 });
 
-
 /*dark/light mode ikona*/
 const moon_sun = document.getElementById("moon_sun");
 moon_sun.onclick = function(){
