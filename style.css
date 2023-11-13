@@ -20,12 +20,14 @@ html {
 :root{
   --primary-color:linear-gradient(to bottom right, #2C3E50, rgb(0, 0, 0));
   --secondary-color:#fff;
+  --third-color: rgb(74, 213, 255);
 }
 
 /*light mode*/
 .light-theme{
   --primary-color:linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
   --secondary-color:linear-gradient(to bottom right, #2C3E50, rgb(0, 0, 0));
+  --third-color: rgb(74, 213, 255);
 }
 
 /*NAVBAR------------------------------------------------------------------------------------------------------------*/
@@ -59,14 +61,14 @@ html {
   font-family: "Red Hat Display";
 }
 .navbar li a:hover {
-  color: rgb(74, 213, 255);
+  color: var(--third-color);
 }
 .navbar li {
   float: left;
 }
 
 .navbar li a.active {
-  color: rgb(74, 213, 255);
+  color: var(--third-color);
 }
 
 
