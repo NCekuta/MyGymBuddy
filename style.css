@@ -12,21 +12,25 @@ body {
   font-family: "Red Hat Display";
   font-weight: bolder;
 }
-html { 
-  height: 100% 
+html {
+  height: 100%;
 }
 
 /*primary dark mode colors*/
-:root{
-  --primary-color:linear-gradient(to bottom right, #2C3E50, rgb(0, 0, 0));
-  --secondary-color:#fff;
+:root {
+  --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --secondary-color: #fff;
   --third-color: rgb(74, 213, 255);
 }
 
 /*light mode*/
-.light-theme{
-  --primary-color:linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
-  --secondary-color:linear-gradient(to bottom right, #2C3E50, rgb(0, 0, 0));
+.light-theme {
+  --primary-color: linear-gradient(
+    to bottom right,
+    rgb(255, 255, 255),
+    rgb(121, 181, 230)
+  );
+  --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
   --third-color: rgb(74, 213, 255);
 }
 
@@ -40,7 +44,7 @@ html {
   margin: 25px 40px;
 }
 .navbar h1 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 400px;
   font-family: "Kaushan Script";
   font-style: normal;
@@ -71,29 +75,55 @@ html {
   color: var(--third-color);
 }
 
-
-#moon, #sun{
-  font-size: 40px;
+/*Dasboard*/
+.dashboard-content {
   position: relative;
-  top: -6px; 
+  background-color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 0 40px;
+}
+.dashboard-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 5px 2rem;
+}
+.search-bar {
+  background: rgb(237, 237, 237);
+  border-radius: 15px;
+  color: rgba(113, 99, 186, 255);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
 }
 
-#moon{
+#moon,
+#sun {
+  font-size: 40px;
+  position: relative;
+  top: -6px;
+}
+
+#moon {
   color: grey;
 }
 
-#sun{
+#sun {
   color: black;
 }
 
-#moon:hover, #sun:hover {
+#moon:hover,
+#sun:hover {
   cursor: pointer;
   transform: scale(1.3);
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
 /*LOGIN/REGISTRATION -----------------------------------------------------------------------------------------------*/
-.Sign-container{
+.Sign-container {
   background-color: #fff;
   border-radius: 30px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -102,34 +132,34 @@ html {
   width: 768px;
   max-width: 100%;
   min-height: 480px;
-  font-family: "Montserrat" , sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.Sign-container h1{
+.Sign-container h1 {
   font-weight: bolder;
   font-family: "Red Hat Display";
   color: rgb(121, 181, 230);
 }
 
-.Sign-container p{
+.Sign-container p {
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.3px;
   margin: 20px 0;
 }
 
-.Sign-container span{
+.Sign-container span {
   font-size: 12px;
 }
 
-.Sign-container a{
+.Sign-container a {
   color: #333;
   font-size: 13px;
   text-decoration: none;
   margin: 15px 0 10px;
 }
 
-.Sign-container button{
+.Sign-container button {
   background-color: rgb(121, 181, 230);
   color: white;
   font-size: 12px;
@@ -143,18 +173,18 @@ html {
   cursor: pointer;
 }
 
-.Sign-container button:hover{
+.Sign-container button:hover {
   background-color: transparent;
   color: rgb(121, 181, 230);
   border-color: rgb(121, 181, 230);
 }
 
-.Sign-container button.hidden{
+.Sign-container button.hidden {
   background-color: transparent;
   border-color: #fff;
 }
 
-.Sign-container form{
+.Sign-container form {
   background-color: #fff;
   display: flex;
   align-items: center;
@@ -164,7 +194,7 @@ html {
   height: 100%;
 }
 
-.Sign-container input{
+.Sign-container input {
   background-color: #eee;
   border: none;
   margin: 8px 0;
@@ -175,31 +205,31 @@ html {
   outline: none;
 }
 
-.form-container{
+.form-container {
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
 
-.log-in{
+.log-in {
   left: 0;
   width: 50%;
   z-index: 2;
 }
 
-.Sign-container.active .log-in{
+.Sign-container.active .log-in {
   transform: translateX(100%);
 }
 
-.sign-up{
+.sign-up {
   left: 0;
   width: 50%;
   opacity: 0;
   z-index: 1;
 }
 
-.Sign-container.active .sign-up{
+.Sign-container.active .sign-up {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -207,17 +237,19 @@ html {
 }
 
 @keyframes move {
-  0%, 49.99% {
+  0%,
+  49.99% {
     opacity: 0;
     z-index: 1; /*prednosti index (nahaja se za vsemi objeki)*/
   }
-  50%, 100% {
+  50%,
+  100% {
     opacity: 1;
     z-index: 5;
   }
 }
 
-.sign-icons{
+.sign-icons {
   margin: 15px;
 }
 
@@ -233,7 +265,7 @@ html {
   font-size: 20px;
 }
 
-.toggle-container{
+.toggle-container {
   position: absolute;
   top: 0;
   left: 50%;
@@ -245,21 +277,21 @@ html {
   z-index: 1000;
 }
 
-.toggle-container h1{
+.toggle-container h1 {
   color: #fff;
 }
 
-.toggle-container button:hover{
+.toggle-container button:hover {
   color: rgb(121, 181, 230);
   background-color: #fff;
 }
 
-.Sign-container.active .toggle-container{
+.Sign-container.active .toggle-container {
   transform: translateX(-100%);
   border-radius: 0 100px 100px 0;
 }
 
-.toggle{
+.toggle {
   background-color: rgb(121, 181, 230);
   height: 100%;
   background: linear-gradient(right, rgb(196, 228, 255), rgb(121, 181, 230));
@@ -272,11 +304,11 @@ html {
   transition: all 0.6s ease-in-out;
 }
 
-.Sign-container.active .toggle{
+.Sign-container.active .toggle {
   transform: translateX(50%);
 }
 
-.toggle-panel{
+.toggle-panel {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -291,20 +323,20 @@ html {
   transition: all 0.6s ease-in-out;
 }
 
-.toggle-left{
+.toggle-left {
   transform: translateX(-200%);
 }
 
-.Sign-container.active .toggle-left{
+.Sign-container.active .toggle-left {
   transform: translateX(0%);
 }
 
-.toggle-right{
+.toggle-right {
   right: 0;
   transform: translateX(0);
 }
 
-.Sign-container.active .toggle-right{
+.Sign-container.active .toggle-right {
   transform: translateX(200%);
 }
 
@@ -323,7 +355,7 @@ html {
 
 /*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
 
-#Calorieh{
+#Calorieh {
   margin-left: 2.5%;
   margin-bottom: 20px;
 }
@@ -348,13 +380,18 @@ html {
   color: white;
 }
 
-#goal, #food, #exercise, #remaining{
+#goal,
+#food,
+#exercise,
+#remaining {
   width: 16%;
   border: 10px solid #242222;
-  align-items:last baseline;
+  align-items: last baseline;
 }
 
-#plus, #minus, #enako{
+#plus,
+#minus,
+#enako {
   width: 10%;
   font-size: 100px;
 }
@@ -402,7 +439,6 @@ html {
 /*Copyright*/
 .footer .copyright li {
   list-style: none;
-  
 }
 .footer .copyright li a {
   font-size: 1.2em;

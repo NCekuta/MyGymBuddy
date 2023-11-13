@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--CSS-->
     <link rel="stylesheet" href="style.css" />
     <title>MyGymBuddy</title>
   </head>
@@ -23,43 +20,66 @@
         </ul>
       </nav>
     </header>
+    <!--Primary kartica-->
+    <div class="dashboard-content">
+      <div class="dashboard-wrapper">
+        <div class="dashboard-title">
+          <span>Primary</span>
+          <h2>Dashboard</h2>
+        </div>
+        <div class="search-bar">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="search" />
+        </div>
+      </div>
+    </div>
+    <!--Kartica welcome-->
+    <div class="kartica-welcome"></div>
 
-    <!--Login Form--> <!--ni še čist tko kukr sm si zamislu ampak vgalvnem je ok-->
+    <!--Login Form-->
+    <!--ni še čist tko kukr sm si zamislu ampak vgalvnem je ok-->
     <div class="loginform" id="loginForm">
-      
       <!--Log in-->
-      <div class= "Sign-container" id="container">
-        <div class= "form-container log-in">
+      <div class="Sign-container" id="container">
+        <div class="form-container log-in">
           <form>
             <h1>Log in</h1>
             <div class="sign-icons">
-              <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+              <a href="#"
+                ><ion-icon name="logo-google" color="danger"></ion-icon
+              ></a>
               <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-              <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
+              <a href="#"
+                ><ion-icon name="logo-facebook" color="primary"></ion-icon
+              ></a>
             </div>
             <span>or use your account</span>
-            <input type="email" placeholder="Email">
+            <input type="email" placeholder="Email" />
             <!--<i><ion-icon name="person-outline"></ion-icon></i>-->
-            <input type="password" placeholder="Password">
+            <input type="password" placeholder="Password" />
             <!--<i><ion-icon name="lock-closed-outline"></ion-icon></i>-->
             <a href="#">Forgot your password?</a>
             <button>Log in</button>
           </form>
         </div>
-        
+
         <!--Sign up-->
-        <div class= "form-container sign-up">
+        <div class="form-container sign-up">
           <form>
             <h1>Create Account</h1>
             <div class="sign-icons">
-              <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+              <a href="#"
+                ><ion-icon name="logo-google" color="danger"></ion-icon
+              ></a>
               <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-              <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
+              <a href="#"
+                ><ion-icon name="logo-facebook" color="primary"></ion-icon
+              ></a>
             </div>
             <span>or use your email for registration</span>
-            <input type="text" placeholder="Name">
-            <input type="email" placeholder="Email">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email" />
+            <input type="password" placeholder="Password" />
             <button>Sign up</button>
           </form>
         </div>
@@ -69,12 +89,18 @@
           <div class="toggle">
             <div class="toggle-panel toggle-left">
               <h1>Welcome back!</h1>
-              <p>Stay in sync with your fitness goals by logging in with your personal information</p>
+              <p>
+                Stay in sync with your fitness goals by logging in with your
+                personal information
+              </p>
               <button class="hidden" id="login">Log in</button>
             </div>
             <div class="toggle-panel toggle-right">
               <h1>Welcome, fitness enthusiast!</h1>
-              <p>Provide your personal information to kickstart your transformative fitness journey with our app</p>
+              <p>
+                Provide your personal information to kickstart your
+                transformative fitness journey with our app
+              </p>
               <button class="hidden" id="register">Sign up</button>
             </div>
           </div>
