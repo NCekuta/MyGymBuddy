@@ -14,8 +14,8 @@
       <nav class="navbar">
         <h1>MyGymBuddy</h1>
         <ul class="nav_zavihki">
-          <li><a href="main.html">Dashboard</a></li>
-          <li><a href="diary.html" class="active">Diary</a></li>
+          <li><a href="main.html" class="active">Dashboard</a></li>
+          <li><a href="diary.html">Diary</a></li>
           <li><a href="">Explore</a></li>
           <li><a href="contact.html">More</a></li>
           <li><a href="#" id="openLogin">Login</a></li>
@@ -24,22 +24,84 @@
       </nav>
     </header>
 
+    <!--Contact form-->
+    <section class="contact">
+        <div class="contact-container">
+            <div class="left">
+                <div class="contact-wrapper">
+                    <div class="contact-hedding">
+                        <h1>Contact <span>Us!</span></h1>
+                        <p class="text_mail">Or reach us via: <a href="mailto:MyGymBuddy@gmail.com">MyGymBuddy@gmail.com</a></p>
+                    </div>
+                    <form action="contact.html" method="post" class="contact-form">
 
-    <!--Calorie count-->
-    <h1 id="Calorieh">Calorie count</h1>
-    <div id="calorie-container">
-        <div id="goal" class="square">Goal</div>
-        <div id="minus" class="square">-</div>
-        <div id="food" class="square">Food</div>
-        <div id="plus" class="square">+</div>
-        <div id="exercise" class="square">Exercise</div>
-        <div id="enako" class="square">=</div>
-        <div id="remaining" class="square">Remaining</div>
-    </div>
+                        <div class="contact-input-wrap">
+                            <input class="contact-input" autocomplete="off" name="First name" type="text" required>
+                            <label>First name</label>
+                            <ion-icon name="person"></ion-icon>
+                        </div>
+                        <div class="contact-input-wrap">
+                            <input class="contact-input" autocomplete="off" name="Last name" type="text" required>
+                            <label>Last name</label>
+                            <ion-icon name="person"></ion-icon>
+                        </div>
+                        <div class="contact-input-wrap">
+                            <input class="contact-input" autocomplete="off" name="Email" type="email" required>
+                            <label>Email</label>
+                            <ion-icon name="mail"></ion-icon>
+                        </div>
+                        <div class="contact-input-wrap-textarea">
+                            <textarea name="Message" autocomplete="off" class="contact-input"></textarea>
+                            <label>Message</label>
+                            <ion-icon name="text"></ion-icon>
+                        </div>
+                        <div class="contact-buttons w-100">
+                            <button class="btn upload">
+                                <span>
+                                    <ion-icon name="attach"></ion-icon> Add attachment
+                                </span>
+                                <input type="file" name="attachment">
+                            </button>
+                            <input type="submit" value="Send message" class="btn">
+                            <ion-icon name="send"></ion-icon>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="right"></div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!--Login Form--> <!--ni še čist tko kukr sm si zamislu ampak vgalvnem je ok-->
     <div class="loginform" id="loginForm">
-
+      
       <!--Log in-->
       <div class= "Sign-container" id="container">
         <div class= "form-container log-in">
