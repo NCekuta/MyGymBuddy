@@ -91,9 +91,7 @@ html {
   padding: 5px 2rem;
 }
 .search-bar {
-  background: rgb(237, 237, 237);
   border-radius: 15px;
-  color: rgba(113, 99, 186, 255);
   display: flex;
   align-items: center;
   gap: 5px;
