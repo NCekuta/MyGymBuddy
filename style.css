@@ -358,7 +358,7 @@ html {
 #Calorieh {
   margin-left: 2.5%;
   margin-bottom: 20px;
-  color: white;
+  color: var(--secondary-color);
 }
 
 #calorie-container {
