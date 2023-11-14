@@ -405,6 +405,122 @@ html {
 
 /*Contatct---------------------------------------------------------------------------------------------------------*/
 
+.contact{
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--primary-color);
+}
+
+
+.contact .contact-container{
+  height: 100vh;
+  min-height: 700px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.contact .contact-container > div{
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.left{
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  background-color: var(--primary-color);
+  padding: 65px 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  position: relative;
+  z-index: 3;
+}
+
+.contact-heading h1{
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 3.5rem;
+  line-height: 0.9;
+  white-space: nowrap;
+  margin-bottom: 1.2rem;
+}
+
+.contact-heading h1 span{
+  color: var(--primary-color);
+}
+
+.text{
+  color: var(--primary-color);
+  line-height: 1.1;
+  font-size: 1rem;
+}
+
+.text a {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.text a:hover {
+  color: var(--primary-color);
+  transition: 0.3s;
+}
+
+.contact-form{
+  display: grid;
+  margin-top: 2.55rem;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+
+.contact-input-wrap{
+  position: relative;
+}
+
+.contact-input-wrap.w-100{
+  grid-column: span 2;
+}
+
+.contact-input{
+  width: 100%;
+  background-color: var(--secondary-color);
+  padding: 1.5rem 1.35rem calc(0.75rem -2px) 1.35rem;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  border-radius: 20px;
+  color: var(--secondary-color);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.contact-input:hover{
+background-color: var(--third-color);
+}
+
+.contact-input-wrap label{
+  position: absolute;
+  top: 50%;
+  left: calc(1.35rem + 2px);
+  transform: translateY(-50%);
+  color: var(--secondary-color);
+  pointer-events: none;
+}
+
+.contact-input-wrap .contact-icon{
+  position: absolute;
+  right: calc(1.35rem + 2px);
+  top: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
+  color: var(--secondary-color);
+}
+
+/*Contatct---------------------------------------------------------------------------------------------------------*/
+
 #contact h2 {
   text-align: center;
   font-size: 50px;
@@ -476,6 +592,7 @@ html {
 .contact-form button:hover {
   background-color: #ffffff1b;
 }
+
 
 
 
