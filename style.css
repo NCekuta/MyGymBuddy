@@ -75,13 +75,13 @@ html {
   color: var(--third-color);
 }
 
-/*Dasboard*/
+/*Primary dasboard*/
 .dashboard-content {
   position: relative;
   background-color: white;
   padding: 1rem;
   border-radius: 10px;
-  margin: 0 40px;
+  margin: 0 2%;
 }
 .dashboard-wrapper {
   display: flex;
@@ -91,12 +91,55 @@ html {
   padding: 5px 2rem;
 }
 .search-bar {
+  background: rgb(237,237,237);
   border-radius: 15px;
+  color: rgba(113, 99, 186, 255);
   display: flex;
   align-items: center;
   gap: 5px;
-  padding: 2px 12px;
+  padding: 4px 12px;
 }
+.search-bar input{
+  background: transparent;
+  padding: 3px;
+}
+.search-bar i {
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+.search-bar i:hover{
+  transform: scale(1.2);
+}
+
+/*Today container*/
+
+.card-welcome{
+  
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 1% 2%;
+}
+.card-wrapper{
+display: flex;
+flex-wrap: wrap;
+gap: 1rem;
+}
+.card-title{
+  padding-bottom: 10px;
+  font-size: 20px;
+}
+.protein-counter{
+    background-color: rgb(205, 205, 205);
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 20%;
+    height: 15%;
+    
+}
+
+/*Icons dark/light mode*/
 
 #moon,
 #sun {
@@ -517,7 +560,7 @@ html {
   list-style: none;
 }
 .footer .copyright li a {
-  font-size: 1.2em;
+  font-size: 1.0em;
   display: inline-block;
   transition: 0.5s;
   text-decoration: none;
