@@ -408,7 +408,44 @@ html {
 #Calorieh {
   margin-left: 2.5%;
   margin-bottom: 20px;
+  margin-top: 20px;
   color: var(--secondary-color);
+}
+
+#add-exercise-container{
+  background-color: white;
+  height: 100px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+#food-intake-container{
+  background-color: white;
+  height: 100px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+#water-intake-container{
+  background-color: white;
+  height: 100px;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 #calorie-container {
@@ -651,7 +688,7 @@ background-color: var(--third-color);
 
 /*FOOTER-----------------------------------------------------------------------------------------------------------*/
 .footer {
-  position: absolute;
+  position:relative;
   width: 100%;
   bottom: 0;
   height: 100px;
