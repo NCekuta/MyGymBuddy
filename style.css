@@ -11,6 +11,8 @@ body {
   background: var(--primary-color);
   font-family: "Red Hat Display";
   font-weight: bolder;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 html {
   height: 100%;
