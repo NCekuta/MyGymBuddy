@@ -117,32 +117,36 @@ html {
 /*Macro container*/
 
 .card-welcome{
-  
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
   margin: 1% 2%;
 }
 .card-wrapper{
-display: flex;
-flex-wrap: wrap;
-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 .card-title{
-  padding-bottom: 10px;
+  padding-bottom: 20px;
   font-size: 20px;
 }
 .protein-counter,
 .carb-counter,
-.fat-counter{
+.fat-counter,
+.sugar-counter{
     background-color: rgb(205, 205, 205);
     border-radius: 10px;
     padding: 1.2rem;
     width: 20%;
     height: 25%;
-    transition: 0.5s ease-in-out;    
+    transition: 0.5s ease-in-out;  
+    margin: 15px;  
 }
-.protein-counter:hover{
+.protein-counter:hover,
+.carb-counter:hover,
+.fat-counter:hover,
+.sugar-counter{
   transform: translateY(-5px);
 }
 
