@@ -410,7 +410,7 @@ html {
   color: var(--secondary-color);
 }
 
-#add-exercise-container{
+#daily-intake-container{
   background-color: white;
   height: 100px;
   width: 95%;
@@ -422,28 +422,20 @@ html {
   border-radius: 10px;
 }
 
-#food-intake-container{
-  background-color: white;
-  height: 100px;
-  width: 95%;
+#water-intake-container, #food-intake-container, #add-exercise-container{
+  background-color: rgb(205, 205, 205);
+  height: 50px;
+  width: 30%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
   margin: 0 auto;
   padding: 0.5rem;
   border-radius: 10px;
 }
 
-#water-intake-container{
-  background-color: white;
-  height: 100px;
-  width: 95%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  padding: 0.5rem;
-  border-radius: 10px;
+.add-button{
+  margin-left: 60%;
 }
 
 #calorie-container {
