@@ -24,31 +24,63 @@
       </nav>
     </header>
 
-    <div id="contact" class="content">
-      <h2>Kontakt</h2>
-      <div class="contact-container">
-          <div class="contact-image">
-              
-          </div>
-          <div class="contact-data">
-              <i class="fa fa-map-marker"></i> Ljubljanska cesta 3, 2000 Maribor <br/>
-              <i class="fa fa-phone"></i> +386 41 773 423 <br/>
-              <i class="fa fa-envelope"></i> MyGymBuddy@gmail.com <br/>
-          </div>
-          <div class="contact-form">
-              <p>Pošljite nam sporočilo</p>
-              <input type="text" name="name" placeholder="Vaše ime" required/>
-              <input type="email" name="email" placeholder="Vaš e-naslov" required/>
-              <input type="text" name="message" placeholder="Vaše sporočilo" required/>
-              <div class="submit-container">
-                  <button type="submit">
-                    <ion-icon name="send"></ion-icon> Pošlji
-                  </button>
+
+    <div class="contact-container">
+      <div class="contact">
+
+        <!--leva stran-->
+        <div class="contact-form">
+          <form action="contact.html">
+            <h2 class="title">Contact <span>Us!</span></h2>
+            <div class="contact-full-name">
+              <div class="contact-input-container">
+                <input class="contact-input" autocomplete="off" name="First name" type="text" required>
+                <label>First name</label>
+                <ion-icon class="contact-icon" name="person"></ion-icon>
               </div>
-          </div>
+  
+              <div class="contact-input-container">
+                <input class="contact-input" autocomplete="off" name="Last name" type="text" required>
+                <label>Last name</label>
+                <ion-icon class="contact-icon" name="person"></ion-icon>
+              </div>
+            </div>
+
+            <div class="contact-input-container">
+              <input class="contact-input" autocomplete="off" name="Email" type="email" required>
+              <label>Email</label>
+              <ion-icon class="contact-icon" name="mail"></ion-icon>
+            </div>
+
+            <div class="contact-input-container textarea">
+              <textarea name="Message" autocomplete="off" class="contact-input"></textarea>
+              <label for="">Message</label>
+              <ion-icon class="contact-icon" name="text"></ion-icon>
+            </div>
+
+            <div class="contact-buttons">
+              <button class="btn upload">
+                  <span>
+                      <ion-icon name="attach"></ion-icon> Add attachment
+                  </span>
+                  <input type="file" name="attachment">
+              </button>
+              <div class="send-button">
+                <span>
+                  <ion-icon name="send" class="send-icon"></ion-icon>
+                  <input type="submit" value="Send message" class="btn contact">
+                </span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!--desna stran-->
+        <div class="contact-info">
+          
+        </div>
       </div>
     </div>
-
 
     <!--Login Form--> <!--ni še čist tko kukr sm si zamislu ampak vgalvnem je ok-->
     <div class="loginform" id="loginForm">
