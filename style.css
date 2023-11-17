@@ -541,12 +541,12 @@ html {
   outline: none;
   border: 2px solid black;
   background: none;
-  padding: 0.6rem 1.2rem;
+  padding: 1.2rem 1.5rem; /* Adjusted padding for increased height */
   color: black;
   font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0.5px;
-  border-radius: 25px;
+  font-size: 1.1rem; /* Adjusted font size */
+  letter-spacing: 0.8px; /* Adjusted letter spacing */
+  border-radius: 30px; /* Adjusted border radius */
   transition: 0.3s;
 }
 
@@ -556,6 +556,21 @@ textarea.contact-input {
   border-radius: 22px;
   resize: none;
   overflow-y: auto;
+}
+
+textarea.contact-input::-webkit-scrollbar {
+  width: 12px; 
+}
+
+textarea.contact-input::-webkit-scrollbar-thumb {
+  background-color: var(--third-color);
+  border-radius: 6px;
+}
+
+textarea.contact-input::-webkit-scrollbar-track {
+  background-color: var(--primary-color);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .contact-input-container label {
@@ -683,7 +698,7 @@ textarea.contact-input {
   color: #fff;
   margin: 0.7rem 0;
   align-items: center;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .contact-info-icon {
