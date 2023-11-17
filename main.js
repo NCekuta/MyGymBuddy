@@ -54,3 +54,20 @@ moon_sun.onclick = function(){
   const theme = document.body.classList.contains("light-theme") ? "light" : "dark";
   localStorage.setItem("theme", theme);
 }
+
+//kotakt attachments
+document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+// Function to handle file selection and display filenames
+function handleFileSelect(event) {
+  const fileList = event.target.files;
+  const attachmentList = document.getElementById('attachment-list');
+  attachmentList.innerHTML = ''; // Clear previous entries
+
+  for (const file of fileList) {
+    const listItem = document.createElement('div');
+    listItem.classList.add('attachment-item');
+    listItem.textContent = file.name;
+    attachmentList.appendChild(listItem);
+  }
+}

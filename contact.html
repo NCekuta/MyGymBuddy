@@ -30,7 +30,7 @@
 
         <!--leva stran-->
         <div class="contact-form">
-          <form action="contact.html">
+          <form action="contact.html" enctype="multipart/form-data">
             <h2 class="title">Contact <span>Us!</span></h2>
             <div class="contact-full-name">
               <div class="contact-input-container">
@@ -55,19 +55,21 @@
             <div class="contact-input-container textarea">
               <textarea name="Message" autocomplete="off" class="contact-input"></textarea>
               <label for="">Message</label>
-              <ion-icon class="contact-icon" name="text"></ion-icon>
+              <ion-icon class="contact-icon textarea" name="text"></ion-icon>
             </div>
+
+            <div id="attachment-list"></div>
 
             <div class="contact-buttons">
               <button class="btn upload">
                   <span>
                       <ion-icon name="attach"></ion-icon> Add attachment
                   </span>
-                  <input type="file" name="attachment">
+                  <input type="file" name="attachment" id="fileInput" multiple>
               </button>
               <div class="send-button">
-                  <ion-icon name="send" class="send-icon"></ion-icon>
-                  <input type="submit" value="Send message" class="btn contact">
+                <ion-icon name="send-sharp" class="send-icon"></ion-icon>
+                <input type="submit" value="Send message" class="btn contact">
               </div>
             </div>
           </form>
