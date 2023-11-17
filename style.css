@@ -508,7 +508,7 @@ html {
 }
 
 .contact-form{
-  background-color: var(--primary-color);
+  background-color: #fff;
   position: relative;
   padding: 2.3rem 2.2rem;
   z-index: 10;
@@ -654,9 +654,75 @@ textarea.contact-input {
   opacity: 0;
 }
 
+/*Desna stran---------------------*/
+.contact-info {
+  padding: 2.3rem 2.2rem;
+  position: relative;
+  background-color: var(--third-color);
+  border-radius: 100px 0 0 20px;
+}
 
+.contact-info .title {
+  color: #fff;
+  padding-bottom: 1rem;
+}
 
+.contact-info-information{
+  display: flex;
+  color: #fff;
+  margin: 0.7rem 0;
+  align-items: center;
+  font-size: 0.95rem;
+}
 
+.contact-info-icon {
+  width: 28px;
+  margin-right: 0.7rem;
+}
+
+.contact-info-social-media {
+  padding: 1rem 0 0 0;
+}
+
+.contact-info-social-media p {
+  color: #fff;
+}
+
+.contact-info-social-icons {
+  display: flex;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.contact-info-social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: #fff;
+  color: var(--third-color);
+  text-align: center;
+  padding-top: 7px;
+  margin-right: 1.5rem;
+  transition: 0.3s;
+}
+
+.contact-info-social-icons a:hover {
+  transform: scale(1.05);
+}
+
+.contact-map {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-map iframe {
+  width: 100%; 
+  max-width: 1000px;
+  height: 350px;
+}
 
 
 /*FOOTER-----------------------------------------------------------------------------------------------------------*/
