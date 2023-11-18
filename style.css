@@ -514,8 +514,8 @@ html {
   line-height: 1;
   margin-bottom: 0.7rem;
   text-align: center;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center;
+  align-items: center; 
 }
 
 .title span{
@@ -539,27 +539,45 @@ html {
 .contact-input {
   width: 100%;
   outline: none;
-  border: 2px solid black;
-  background: none;
-  padding: 1.2rem 1.5rem; /* Adjusted padding for increased height */
-  color: black;
-  font-weight: 500;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 0.7rem;
+  color: rgb(54, 54, 54);
   font-size: 1.1rem; /* Adjusted font size */
   letter-spacing: 0.8px; /* Adjusted letter spacing */
-  border-radius: 30px; /* Adjusted border radius */
+  border-radius: 25px; /* Adjusted border radius */
   transition: 0.3s;
 }
 
 .contact-input:focus {
   border-color: var(--third-color);
+  background-color: #fff;
+}
+
+.contact-input-container:focus-within label,
+.contact-input:focus-within + .contact-input-container label {
+  color: var(--third-color);
+}
+
+.contact-input-container:focus-within .contact-icon,
+.contact-input:focus-within + .contact-icon {
+  color: var(--third-color);
 }
 
 textarea.contact-input {
-  padding: 0.8rem 1.2rem;
-  min-height: 150px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  min-height: 250px;
   border-radius: 22px;
   resize: none;
   overflow-y: auto;
+  font-family: "Red Hat Display";
+  color: rgb(54, 54, 54);
 }
 
 textarea.contact-input::-webkit-scrollbar {
@@ -583,11 +601,12 @@ textarea.contact-input::-webkit-scrollbar-track {
   left: 15px;
   transform: translateY(-50%);
   padding: 0 0.4rem;
-  color: black;
-  font-size: 0.9rem;
-  font-weight: 400;
+  color: rgb(94, 94, 94);
+  font-size: 1rem;
+  font-weight: bold;
   pointer-events: none;
   transition: 0.5s;
+  font-family: "Red Hat Display";
 }
 
 .contact-icon{
@@ -596,7 +615,24 @@ textarea.contact-input::-webkit-scrollbar-track {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: var(--primary-color);
+  color: rgb(94, 94, 94);
+}
+
+/*spremeni se ko je v fokusu*/
+.contact-input-container.focus label {
+  font-size: 0.8rem;
+  top: 0.5rem;
+  transform: translateY(0);
+  transition: 0.3s;
+
+}
+
+.contact-input-container.textarea.focus label {
+  font-size: 0.8rem;
+  top: 0.5rem;
+  transform: translateY(0);
+  transition: 0.3s;
+  font-weight: bold;
 }
 
 .contact-input-container.textarea label {
@@ -659,7 +695,14 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 .btn.upload{
   position: relative;
-  background-color: rgb(201, 201, 201);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+}
+
+.btn.btn.upload label{
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "Red Hat Display";
+  color: rgb(94, 94, 94);
 }
 
 .btn.upload:hover{
@@ -668,7 +711,8 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 .btn.upload span{
   color: var(--primary-color);
-  font-size: 25px;
+  font-size: 20px;
+  color: rgb(94, 94, 94);
 }
 
 .btn.upload input{

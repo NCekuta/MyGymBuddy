@@ -25,7 +25,6 @@ window.addEventListener('click', (event) => {
   }
 });
 
-
 /*dark/light mode ikona*/
 // pogledamo uporabnikovo željeno temo v local storage
 const isLightTheme = localStorage.getItem("theme") === "light";
@@ -71,3 +70,21 @@ function handleFileSelect(event) {
     attachmentList.appendChild(listItem);
   }
 }
+
+// kontakt, doda .focus class da se labeli premaknejo gor in tm ostanejo če je kej not napisano
+const contactInputs = document.querySelectorAll(".contact-input");
+function focusFunc(){
+  let parent = this.parentNode;
+  parent.classList.add("focus");
+}
+function blurFunc(){
+  let parent = this.parentNode;
+  if(this.value == ""){
+  parent.classList.remove("focus");
+  }
+}
+
+contactInputs.forEach((input) => {
+  input.addEventListener("focus", focusFunc);
+  input.addEventListener("blur", blurFunc);
+})
