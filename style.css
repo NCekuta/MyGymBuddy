@@ -550,6 +550,10 @@ html {
   transition: 0.3s;
 }
 
+.contact-input:focus {
+  border-color: var(--third-color);
+}
+
 textarea.contact-input {
   padding: 0.8rem 1.2rem;
   min-height: 150px;
