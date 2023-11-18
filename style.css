@@ -181,6 +181,7 @@ html {
   max-width: 100%;
   min-height: 480px;
   font-family: "Montserrat", sans-serif;
+  z-index: 10;
 }
 
 .Sign-container h1 {
@@ -503,7 +504,6 @@ html {
   background-color: #fff;
   position: relative;
   padding: 2.3rem 2.2rem;
-  z-index: 10;
   overflow: hidden;
   position: relative;
 }
@@ -587,7 +587,6 @@ textarea.contact-input::-webkit-scrollbar-track {
   font-size: 0.9rem;
   font-weight: 400;
   pointer-events: none;
-  z-index: 1000;
   transition: 0.5s;
 }
 
@@ -768,7 +767,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 /*FOOTER-----------------------------------------------------------------------------------------------------------*/
 .footer {
-  position:relative;
+  position: relative;
   width: 100%;
   bottom: 0;
   height: 100px;
