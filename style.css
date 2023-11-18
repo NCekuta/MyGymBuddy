@@ -748,6 +748,7 @@ textarea.contact-input::-webkit-scrollbar-track {
   width: 100%; 
   max-width: 1000px;
   height: 350px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 
