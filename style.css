@@ -633,6 +633,13 @@ textarea.contact-input::-webkit-scrollbar-track {
   transition: 0.3s;
 }
 
+.btn.contact {
+  color: #fff;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: "Red Hat Display";
+}
+
 .btn.contact:hover {
   background-color: rgb(138, 228, 255);
 }
@@ -647,7 +654,8 @@ textarea.contact-input::-webkit-scrollbar-track {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
-  color: var(--primary-color);
+  color: #fff;
+  font-size: 25px;
 }
 
 .btn.upload{
@@ -661,6 +669,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 .btn.upload span{
   color: var(--primary-color);
+  font-size: 25px;
 }
 
 .btn.upload input{
@@ -708,6 +717,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 .contact-info-icon {
   width: 28px;
   margin-right: 0.7rem;
+  font-size: 20px;
 }
 
 .contact-info-social-media {
