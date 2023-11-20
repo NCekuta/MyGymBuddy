@@ -13,6 +13,9 @@ body {
   font-weight: bolder;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 html {
   height: 100%;
@@ -72,80 +75,82 @@ html {
 .navbar li a.active {
   color: var(--third-color);
 }
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 /*Primary dasboard*/
 .dashboard-content {
-  position: relative;
-  background-color: white;
-  padding: 1rem;
-  border-radius: 10px;
-  margin: 0 2%;
-}
-.dashboard-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 5px 2rem;
-}
-.search-bar {
-  background: rgb(237,237,237);
-  border-radius: 15px;
-  color: rgba(113, 99, 186, 255);
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 4px 12px;
-}
-.search-bar input{
-  background: transparent;
-  padding: 3px;
-}
-.search-bar i {
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: all 0.5s ease-out;
-}
-.search-bar i:hover{
-  transform: scale(1.2);
-}
-
+    position: relative;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0 2%;
+  }
+  .dashboard-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 2rem;
+  }
+  .search-bar {
+    background: rgb(237,237,237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+  }
+  .search-bar input{
+    background: transparent;
+    padding: 3px;
+  }
+  .search-bar i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  .search-bar i:hover{
+    transform: scale(1.2);
+  }
+  
 /*Macro container*/
 
 .card-welcome{
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  margin: 1% 2%;
-}
-.card-wrapper{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-.card-title{
-  padding-bottom: 20px;
-  font-size: 20px;
-}
-.protein-counter,
-.carb-counter,
-.fat-counter,
-.sugar-counter{
-    background-color: rgb(205, 205, 205);
+    background-color: white;
+    padding: 2rem;
     border-radius: 10px;
-    padding: 1.2rem;
-    width: 20%;
-    height: 25%;
-    transition: 0.5s ease-in-out;  
-    margin: 15px;  
-}
-.protein-counter:hover,
-.carb-counter:hover,
-.fat-counter:hover,
-.sugar-counter{
-  transform: translateY(-5px);
-}
-
+    margin: 1% 2%;
+  }
+  .card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .card-title{
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  .protein-counter,
+  .carb-counter,
+  .fat-counter,
+  .sugar-counter{
+      background-color: rgb(205, 205, 205);
+      border-radius: 10px;
+      padding: 1.2rem;
+      width: 20%;
+      height: 25%;
+      transition: 0.5s ease-in-out;  
+      margin: 15px;  
+  }
+  .protein-counter:hover,
+  .carb-counter:hover,
+  .fat-counter:hover,
+  .sugar-counter{
+    transform: translateY(-5px);
+  }
 /*Icons dark/light mode*/
 
 #moon,
@@ -169,7 +174,6 @@ html {
   transform: scale(1.3);
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
-
 /*LOGIN/REGISTRATION -----------------------------------------------------------------------------------------------*/
 .Sign-container {
   background-color: #fff;
@@ -401,7 +405,6 @@ html {
   justify-content: center;
   align-items: center;
 }
-
 /*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
 
 #Calorieh {
@@ -811,7 +814,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 /*FOOTER-----------------------------------------------------------------------------------------------------------*/
 .footer {
-  position: relative;
+  position: fixed;
   width: 100%;
   bottom: 0;
   height: 100px;
@@ -820,6 +823,8 @@ textarea.contact-input::-webkit-scrollbar-track {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
+  
 }
 /*Socialna omrežja*/
 .footer .social_icon {
