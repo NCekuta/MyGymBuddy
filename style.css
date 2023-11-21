@@ -445,6 +445,66 @@ html {
 .add-button{
   margin-left: auto;
 }
+#meal-intake-container {
+  background-color: transparent;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.daily-intakes {
+  background-color: var(--third-color);
+  height: 50px;
+  min-width: 22.5%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 1rem 1rem;
+  border-radius: 10px 10px 0 0;
+}
+
+.meal-name {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1rem;
+  color: white;
+}
+
+.sum {
+  margin-left: 1rem;
+}
+
+.intake-content {
+  background-color: rgb(222, 242, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 10px;
+  border: 2px solid rgb(170, 213, 255);
+  border-radius: 0 0 10px 10px;
+}
+
+.intake-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-left: 1rem;
+}
+
+.calories {
+  margin-left: auto;
+  padding-right: 1.5rem;
+}
 
 #calorie-container {
   background-color: white;
@@ -456,6 +516,23 @@ html {
   margin: 0 auto;
   padding: 0.5rem;
   border-radius: 10px;
+}
+
+.addfood-button {
+  background-color: #ffffff1f;
+  color: white;
+  font-weight: bold;
+  padding: 0.3rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+.addfood-button:hover{
+  color: var(--third-color);
+  background-color: #ffffff2e;
 }
 
 .square {
