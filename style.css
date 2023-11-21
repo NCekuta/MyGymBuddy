@@ -17,6 +17,10 @@ body {
   flex-direction: column;
   min-height: 100vh;
 }
+/*Scroll opcija ostaja skrita ampak se obdrži funkcionalnost*/
+body::-webkit-scrollbar{
+  display: none;
+}
 html {
   height: 100%;
 }
