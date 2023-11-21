@@ -42,11 +42,13 @@ html {
 /*NAVBAR------------------------------------------------------------------------------------------------------------*/
 .header {
   height: 100px;
+  margin-bottom: 20px;
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   margin: 25px 40px;
+  
 }
 .navbar h1 {
   font-size: 25px;
@@ -60,6 +62,7 @@ html {
   list-style-type: none;
 }
 .navbar a {
+  position: relative;
   color: var(--secondary-color);
   text-decoration: none;
   justify-content: center;
@@ -67,7 +70,19 @@ html {
   margin: 0px 50px;
   font-weight: bolder;
   font-size: 20px;
+  letter-spacing: 0.5px;
   font-family: "Red Hat Display";
+  padding: 0 10px;
+}
+.navbar a:after{
+  content: "";
+  position: absolute;
+  background-color: var(--third-color);
+  height: 3px;
+  width: 0%;
+  left:0;
+  bottom: -10px;
+  transition: 0.4s;
 }
 .navbar li a:hover {
   color: var(--third-color);
@@ -75,13 +90,27 @@ html {
 .navbar li {
   float: left;
 }
-
 .navbar li a.active {
   color: var(--third-color);
 }
-/*GOOGLE FONTS*/
-@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+.navbar a:hover:after{
+  width: 100%;
+}
+.navbar ul.nav-zavihki li ul.dropdown-menu li{
+ display: block;
+}
+.navbar ul.nav-zavihki li ul.dropdown-menu{
+  width:100%;
+  background: orangered;
+  position: absolute;
+  z-index: 999;
+  display: none;
+}
+.navbar ul.nav-zavihki li:hover ul.dropdown-menu{
+  display: block;
+}
+
+
 
 /*Primary dasboard*/
 .dashboard-content {
@@ -154,6 +183,23 @@ html {
   .fat-counter:hover,
   .sugar-counter{
     transform: translateY(-5px);
+  }
+
+  /*total calories container*/
+  .total-calories{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-right: 80%;
+    margin-left: 2%;
+  }
+  .total-calories-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .total-calories-title{
+    font-size: 20px;
   }
 /*Icons dark/light mode*/
 
