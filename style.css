@@ -74,6 +74,7 @@ html {
   font-family: "Red Hat Display";
   padding: 0 10px;
 }
+/*Underline efekt*/
 .navbar a:after{
   content: "";
   position: absolute;
@@ -96,21 +97,6 @@ html {
 .navbar a:hover:after{
   width: 100%;
 }
-.navbar ul.nav-zavihki li ul.dropdown-menu li{
- display: block;
-}
-.navbar ul.nav-zavihki li ul.dropdown-menu{
-  width:100%;
-  background: orangered;
-  position: absolute;
-  z-index: 999;
-  display: none;
-}
-.navbar ul.nav-zavihki li:hover ul.dropdown-menu{
-  display: block;
-}
-
-
 
 /*Primary dasboard*/
 .dashboard-content {
