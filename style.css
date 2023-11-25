@@ -29,14 +29,14 @@ html {
 :root {
   --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
   --secondary-color: #fff;
-  --third-color: rgb(74, 213, 255);
+  --third-color: rgb(121, 202, 255);
 }
 
 /*light mode*/
 .light-theme {
   --primary-color: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
   --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
-  --third-color: rgb(74, 213, 255);
+  --third-color: rgb(121, 202, 255);
 }
 
 /*NAVBAR------------------------------------------------------------------------------------------------------------*/
@@ -227,7 +227,7 @@ html {
 .Sign-container h1 {
   font-weight: bolder;
   font-family: "Red Hat Display";
-  color: rgb(121, 181, 230);
+  color: var(--third-color);
 }
 
 .Sign-container p {
@@ -245,11 +245,10 @@ html {
   color: #333;
   font-size: 13px;
   text-decoration: none;
-  margin: 15px 0 10px;
 }
 
 .Sign-container button {
-  background-color: rgb(121, 181, 230);
+  background-color: var(--third-color);
   color: white;
   font-size: 12px;
   padding: 10px 45px;
@@ -264,8 +263,8 @@ html {
 
 .Sign-container button:hover {
   background-color: transparent;
-  color: rgb(121, 181, 230);
-  border-color: rgb(121, 181, 230);
+  color: var(--third-color);
+  border-color: var(--third-color);
 }
 
 .Sign-container button.hidden {
@@ -283,15 +282,28 @@ html {
   height: 100%;
 }
 
-.Sign-container input {
-  background-color: #eee;
-  border: none;
-  margin: 8px 0;
-  padding: 10px 15px;
-  font-size: 13px;
-  border-radius: 8px;
+.sign-input{
   width: 100%;
   outline: none;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  color: rgb(54, 54, 54);
+  font-size: 0.8rem; /* Adjusted font size */
+  font-weight: bold;
+  letter-spacing: 0.8px; 
+  border-radius: 25px; 
+  transition: 0.3s;
+  margin: 0.4rem;
+}
+
+.eye-icon{
+  transform: translateY(-170%);
+  color: rgb(94, 94, 94);
+  margin-left: 15rem;
 }
 
 .form-container {
@@ -371,7 +383,7 @@ html {
 }
 
 .toggle-container button:hover {
-  color: rgb(121, 181, 230);
+  color: var(--third-color);
   background-color: #fff;
 }
 
@@ -381,9 +393,9 @@ html {
 }
 
 .toggle {
-  background-color: rgb(121, 181, 230);
+  background-color: var(--third-color);
   height: 100%;
-  background: linear-gradient(right, rgb(196, 228, 255), rgb(121, 181, 230));
+  background: var(--third-color);
   color: #fff;
   position: relative;
   left: -100%;
@@ -521,8 +533,8 @@ html {
   justify-content: space-between;
   width: 100%;
   border-radius: 10px;
-  border: 2px solid rgb(170, 213, 255);
   border-radius: 0 0 10px 10px;
+  border: 3px solid var(--third-color);
 }
 
 .intake-item {

@@ -88,3 +88,17 @@ contactInputs.forEach((input) => {
   input.addEventListener("focus", focusFunc);
   input.addEventListener("blur", blurFunc);
 })
+
+//login eye icon
+document.getElementById("togglePassword").addEventListener("click", function() {
+  var passwordField = document.getElementById("passwordField");
+  var icon = document.getElementById("togglePassword");
+
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    icon.innerHTML = '<ion-icon name="eye-off-outline"></ion-icon>';
+  } else {
+    passwordField.type = "password";
+    icon.innerHTML = '<ion-icon name="eye-outline"></ion-icon>';
+  }
+});
