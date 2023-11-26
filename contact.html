@@ -122,7 +122,7 @@
         </div>
 
           <div class="form-container log-in">
-            <form>
+            <form action="main.html" method="GET">
               <h1>Log in</h1>
               <div class="sign-icons">
                 <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
@@ -130,19 +130,19 @@
                 <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
               </div>
               <span>or use your account</span>
-              <input type="email" placeholder="Email" class="sign-input"/>
-              <input type="password" placeholder="Password" class="sign-input password-field"/>
+              <input type="email" name="Email" placeholder="Email" class="sign-input"/>
+              <input type="password" name="Password" placeholder="Password" class="sign-input password-field"/>
               <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
                 <ion-icon name="eye-outline"></ion-icon>
               </i>
               <a href="#">Forgot your password?</a>
-              <button>Log in</button>
+              <button type="submit">Log in</button>
             </form>
           </div>
   
           <!--Sign up-->
           <div class="form-container sign-up">
-            <form>
+            <form action="main.html" method="GET">
               <h1>Create Account</h1>
               <div class="sign-icons">
                 <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
@@ -150,9 +150,9 @@
                 <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
               </div>
               <span>or use your email for registration</span>
-              <input type="text" placeholder="Name" class="sign-input"/>
-              <input type="email" placeholder="Email" class="sign-input"/>
-              <input type="password" placeholder="Password" class="sign-input password-field" oninput="checkPasswordStrength(this.value)"/>
+              <input type="text" placeholder="Name" name="Name" class="sign-input"/>
+              <input type="email" placeholder="Email" name="Email" class="sign-input"/>
+              <input type="password" placeholder="Password" name="Password" class="sign-input password-field" oninput="checkPasswordStrength(this.value)"/>
               <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
                 <ion-icon name="eye-outline"></ion-icon>
               </i>
