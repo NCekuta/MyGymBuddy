@@ -139,6 +139,12 @@
       <div class="loginform" id="loginForm">
         <!--Log in-->
         <div class="Sign-container" id="container">
+
+        <!-- Close Icon -->
+        <div id="login-close-icon">
+          <ion-icon name="close"></ion-icon>
+        </div>
+
           <div class="form-container log-in">
             <form>
               <h1>Log in</h1>
@@ -169,22 +175,23 @@
             <form>
               <h1>Create Account</h1>
               <div class="sign-icons">
-                <a href="#"
-                  ><ion-icon name="logo-google" color="danger"></ion-icon
-                ></a>
+                <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
                 <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-                <a href="#"
-                  ><ion-icon name="logo-facebook" color="primary"></ion-icon
-                ></a>
+                <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
               </div>
               <span>or use your email for registration</span>
               <input type="text" placeholder="Name" class="sign-input"/>
               <input type="email" placeholder="Email" class="sign-input"/>
-              <input type="password" placeholder="Password" class="sign-input password-field"/>
+              <input type="password" placeholder="Password" class="sign-input password-field" oninput="checkPasswordStrength(this.value)"/>
               <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
                 <ion-icon name="eye-outline"></ion-icon>
               </i>
-              <label id="checkPassowrd" style="color: red;">password not strong enough</label>
+              <div class="strengthIndicator">
+                <span class="weekIndicator"></span>
+                <span class="goodIndicator"></span>
+                <span class="strongIndicator"></span>
+              </div>
+              <div id="checkPassword"></div>
               <button>Sign up</button>
             </form>
           </div>

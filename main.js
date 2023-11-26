@@ -25,6 +25,12 @@ window.addEventListener('click', (event) => {
   }
 });
 
+//zapremo s kiščkom
+loginCloseIcon = document.getElementById('login-close-icon');
+loginCloseIcon.addEventListener('click', () => {
+  loginForm.style.display = 'none';
+});
+
 /*dark/light mode ikona*/
 // pogledamo uporabnikovo željeno temo v local storage
 const isLightTheme = localStorage.getItem("theme") === "light";
