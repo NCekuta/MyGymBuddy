@@ -101,3 +101,57 @@ function togglePasswordVisibility(icon, formType) {
     icon.innerHTML = '<ion-icon name="eye-outline"></ion-icon>';
   }
 }
+
+//Password strength
+function checkPasswordStrength(password) {
+  var strengthBadge = document.getElementById("checkPassword");
+  var weekIndicator = document.querySelector(".weekIndicator");
+  var goodIndicator = document.querySelector(".goodIndicator");
+  var strongIndicator = document.querySelector(".strongIndicator");
+
+  // To reset the classes and width
+  strengthBadge.className = "";
+
+  // Display the password strength
+  if (password.length < 8) {
+    strengthBadge.innerText = "Your password is weak";
+    weekIndicator.style.backgroundColor = "red";
+    goodIndicator.style.backgroundColor = "hsla(208, 50%, 50%, 0.13)";
+    strongIndicator.style.backgroundColor = "hsla(208, 50%, 50%, 0.13)";
+  } else {
+    // Check for uppercase letters
+    if (/[A-Z]/.test(password)) {
+      // Check for lowercase letters
+      if (/[a-z]/.test(password)) {
+        // Check for numbers
+        if (/\d/.test(password)) {
+          // Check for special characters
+          if (/[^A-Za-z0-9]/.test(password)) {
+            // The password is strong
+            strengthBadge.innerText = "Your password is strong";
+            strengthBadge.className = "strong";
+            weekIndicator.style.backgroundColor = "red";
+            goodIndicator.style.backgroundColor = "orange";
+            strongIndicator.style.backgroundColor = "green";
+          } else {
+            // The password is good
+            strengthBadge.innerText = "Your password is average";
+            strengthBadge.className = "good";
+            weekIndicator.style.backgroundColor = "red";
+            goodIndicator.style.backgroundColor = "orange";
+            strongIndicator.style.backgroundColor = "hsla(208, 50%, 50%, 0.13)";
+          }
+        } else {
+          // The password is weak
+          strengthBadge.innerText = "Password should contain numbers";
+        }
+      } else {
+        // The password is weak
+        strengthBadge.innerText = "Password should contain lowercase letters";
+      }
+    } else {
+      // The password is weak
+      strengthBadge.innerText = "Password should contain uppercase letters";
+    }
+  }
+}

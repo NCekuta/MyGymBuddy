@@ -459,6 +459,36 @@ html {
   justify-content: center;
   align-items: center;
 }
+
+#checkPassword {
+  color: red;
+  transform: translateY(-100%);
+  font-size: 0.9rem;
+}
+#checkPassword.good {
+  color: orange;
+}
+#checkPassword.strong {
+  color: green;
+}
+
+/*Indikator*/
+.strengthIndicator {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  transform: translateY(-150%);
+  margin-bottom: 10px;
+}
+.strengthIndicator span {
+  height: 100%;
+  flex: 1;
+  height: 10px;
+  margin-right: 5px;
+  background-color: transparent;
+  border-radius: 5px;
+}
 /*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
 
 #Calorieh {
