@@ -300,10 +300,16 @@ html {
   margin: 0.4rem;
 }
 
+.sign-input:focus {
+  border-color: var(--third-color);
+  background-color: #fff;
+}
+
 .eye-icon{
   transform: translateY(-170%);
   color: rgb(94, 94, 94);
   margin-left: 15rem;
+  cursor: pointer;
 }
 
 .form-container {

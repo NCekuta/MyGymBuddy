@@ -89,11 +89,10 @@ contactInputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 })
 
-//login eye icon
-document.getElementById("togglePassword").addEventListener("click", function() {
-  var passwordField = document.getElementById("passwordField");
-  var icon = document.getElementById("togglePassword");
-
+// Login eye icon
+function togglePasswordVisibility(icon, formType) {
+  var passwordField = document.querySelector(`.${formType} .password-field`);
+  
   if (passwordField.type === "password") {
     passwordField.type = "text";
     icon.innerHTML = '<ion-icon name="eye-off-outline"></ion-icon>';
@@ -101,4 +100,4 @@ document.getElementById("togglePassword").addEventListener("click", function() {
     passwordField.type = "password";
     icon.innerHTML = '<ion-icon name="eye-outline"></ion-icon>';
   }
-});
+}
