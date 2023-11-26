@@ -361,7 +361,7 @@ html {
 }
 
 .sign-icons a {
-  border: 1px solid #ccc;
+  border: 1px solid var(--third-color);
   border-radius: 20%;
   display: inline-flex;
   justify-content: center;
@@ -370,6 +370,11 @@ html {
   width: 40px;
   height: 40px;
   font-size: 20px;
+}
+
+.sign-icons a:hover{
+  transform: translateY(-5px) scale(1.1);
+  transition: 0.3s ease-in-out;
 }
 
 .toggle-container {
