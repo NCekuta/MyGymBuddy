@@ -101,10 +101,10 @@ function togglePasswordVisibility(icon, formType) {
   
   if (passwordField.type === "password") {
     passwordField.type = "text";
-    icon.innerHTML = '<ion-icon name="eye-off-outline"></ion-icon>';
+    icon.innerHTML = '<ion-icon name="eye-outline"></ion-icon>';
   } else {
     passwordField.type = "password";
-    icon.innerHTML = '<ion-icon name="eye-outline"></ion-icon>';
+    icon.innerHTML = '<ion-icon name="eye-off-outline"></ion-icon>';
   }
 }
 
