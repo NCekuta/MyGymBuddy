@@ -30,30 +30,30 @@
 
         <!--leva stran-->
         <div class="contact-form">
-          <form action="contact.html" enctype="multipart/form-data">
+          <form action="#" enctype="multipart/form-data" id="form-contact">
             <h2 class="title">Contact <span>Us!</span></h2>
             <div class="contact-full-name">
               <div class="contact-input-container">
-                <input class="contact-input" autocomplete="off" name="First name" type="text" required>
+                <input class="contact-input" id="contact_firstName" autocomplete="off" name="First name" type="text" required>
                 <label>First name</label>
                 <ion-icon class="contact-icon" name="person"></ion-icon>
               </div>
   
               <div class="contact-input-container">
-                <input class="contact-input" autocomplete="off" name="Last name" type="text" required>
+                <input class="contact-input" id="contact_lastName" autocomplete="off" name="Last name" type="text" required>
                 <label>Last name</label>
                 <ion-icon class="contact-icon" name="person"></ion-icon>
               </div>
             </div>
 
             <div class="contact-input-container">
-              <input class="contact-input" autocomplete="off" name="Email" type="email" required>
+              <input class="contact-input" id="contact_email" autocomplete="off" name="Email" type="email" required>
               <label>Email</label>
               <ion-icon class="contact-icon" name="mail"></ion-icon>
             </div>
 
             <div class="contact-input-container textarea">
-              <textarea name="Message" autocomplete="off" class="contact-input"></textarea>
+              <textarea name="Message" id="contact_message" autocomplete="off" class="contact-input"></textarea>
               <label for="">Message</label>
               <ion-icon class="contact-icon textarea" name="text"></ion-icon>
             </div>
@@ -110,6 +110,11 @@
         </div>
       </div>
     </div>
+
+    <!--za pošiljanje sporočil na gmail-->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
       <!--Login Form-->
       <div class="loginform" id="loginForm">

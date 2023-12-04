@@ -60,23 +60,6 @@ moon_sun.onclick = function(){
   localStorage.setItem("theme", theme);
 }
 
-//kotakt attachments
-document.getElementById('fileInput').addEventListener('change', handleFileSelect);
-
-// Function to handle file selection and display filenames
-function handleFileSelect(event) {
-  const fileList = event.target.files;
-  const attachmentList = document.getElementById('attachment-list');
-  attachmentList.innerHTML = ''; // Clear previous entries
-
-  for (const file of fileList) {
-    const listItem = document.createElement('div');
-    listItem.classList.add('attachment-item');
-    listItem.textContent = file.name;
-    attachmentList.appendChild(listItem);
-  }
-}
-
 // kontakt, doda .focus class da se labeli premaknejo gor in tm ostanejo če je kej not napisano
 const contactInputs = document.querySelectorAll(".contact-input");
 function focusFunc(){
@@ -161,3 +144,75 @@ function checkPasswordStrength(password) {
     }
   }
 }
+
+
+const contactForm = document.getElementById("form-contact");
+const contactFirstName = document.getElementById("contact_firstName");
+const contactLastName = document.getElementById("contact_lastName");
+const contactEmail = document.getElementById("contact_email");
+const contactMessage = document.getElementById("contact_message");
+
+// Array to store attachment data
+let allConvertedFiles = [];
+
+// Contact attachments
+const attachmentList = document.getElementById('attachment-list');
+
+document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+
+// Function to handle file selection, convert files to Base64, and display filenames
+function handleFileSelect(event) {
+  const fileList = event.target.files;
+  attachmentList.innerHTML = ''; // Clear previous entries
+  allConvertedFiles = []; // Clear previous attachments
+
+  for (const file of fileList) {
+    const listItem = document.createElement('div');
+    listItem.classList.add('attachment-item');
+    listItem.textContent = file.name;
+    attachmentList.appendChild(listItem);
+
+    // Read file data as Base64
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const dataUri = "data:" + file.type + ";base64," + btoa(e.target.result);
+      allConvertedFiles.push({ name: file.name, data: dataUri });
+    };
+    reader.readAsBinaryString(file);
+  }
+}
+
+function sendEmail() {
+
+  const bodyMessage = `First name: ${contactFirstName.value}<br> Last name: ${contactLastName.value}<br>
+  Email: ${contactEmail.value}<br> Message: ${contactMessage.value}`
+
+  Email.send({
+      SecureToken : "8cf5b2c8-3193-4010-8c58-c3ed3e148081",
+      To : 'mygymbuddybusiness@gmail.com',
+      From : "mygymbuddybusiness@gmail.com",
+      Subject : "Support",
+      Body : bodyMessage,
+      Attachments : allConvertedFiles
+  }).then(
+    message => {
+      if (message == "OK"){
+          Swal.fire({
+            title: "Success!",
+            text: "Message sent successfully!",
+            icon: "success"
+          });
+      }
+    }
+  );
+}
+
+contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    sendEmail();
+
+    contactForm.reset();
+    attachmentList.innerHTML = '';
+    return false;
+})
