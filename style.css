@@ -40,42 +40,66 @@ html {
 }
 
 /*NAVBAR------------------------------------------------------------------------------------------------------------*/
+
 .header {
   height: 100px;
   margin-bottom: 20px;
-}
-.navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin: 25px 40px;
-  
+  z-index: 1000;
 }
-.navbar h1 {
+header h1 {
   font-size: 25px;
   font-weight: 400px;
   font-family: "Kaushan Script";
   font-style: normal;
   font-display: swap;
   color: var(--secondary-color);
+  margin-left: 40px;
 }
-.navbar ul {
-  list-style-type: none;
+header .navbar ul{
+  list-style: none;
+  
 }
-.navbar a {
+.header .navbar ul li{
   position: relative;
+  float:left;
+  margin: 0px 45px
+
+}
+.header .navbar ul li a{
   color: var(--secondary-color);
   text-decoration: none;
-  justify-content: center;
-  align-items: center;
-  margin: 0px 50px;
+  font-family: "Red Hat Display";
   font-weight: bolder;
   font-size: 20px;
   letter-spacing: 0.5px;
-  font-family: "Red Hat Display";
-  padding: 0 10px;
+  position: relative;
+  
 }
-/*Underline efekt*/
-.navbar a:after{
+.header .navbar ul li a:hover {
+  color: var(--third-color);
+}
+.header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  background-color: grey;
+  display: none;
+}
+.header .navbar ul li ul li{
+  width: 100%;
+}
+.header .navbar ul li:hover > ul{
+  display: block;
+}
+.navbar{
+  margin-right:35px
+}
+
+/*UNDERLINE EFEKT*/
+.header .navbar a:after{
   content: "";
   position: absolute;
   background-color: var(--third-color);
@@ -84,12 +108,6 @@ html {
   left:0;
   bottom: -10px;
   transition: 0.4s;
-}
-.navbar li a:hover {
-  color: var(--third-color);
-}
-.navbar li {
-  float: left;
 }
 .navbar li a.active {
   color: var(--third-color);
