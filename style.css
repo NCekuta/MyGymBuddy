@@ -109,6 +109,7 @@ header .navbar ul{
   align-items: center;
   justify-content: center;
   font-size: 1.1rem;
+  color: black;
 
 }
 /*Postavitev na more*/
@@ -145,6 +146,47 @@ header .navbar ul{
 .navbar a:hover:after{
   width: 100%;
 }
+
+/*Explore zavihek*/
+
+/*Explore main card*/
+.explore-card{
+  width: 100%;
+  background-color: white;
+  height: 35vh;
+ 
+}
+.welcome-blog-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 6%
+}
+.blog-header{
+  font-weight: bold;
+  font-size: 45px;
+}
+.blog-smallheader{
+  font-size: 20px;
+  font-weight: bold;
+}
+/*Explore undercard*/
+.post-main-card{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  column-gap: 2.5rem;
+  margin-top: 2rem;
+
+}
+.filter-card{
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
 
 /*Primary dasboard*/
 .dashboard-content {
