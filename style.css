@@ -1135,10 +1135,9 @@ textarea.contact-input::-webkit-scrollbar-track {
 }
 
 
-/*Messages zavihek*/
+/*Messages zavihek -------------------------------------------------------------------------------------------------------------------------*/
 .messages {
   display: flex;
-  height: calc(100vh - 60px);
 }
 
 #sidebar {
@@ -1154,4 +1153,43 @@ textarea.contact-input::-webkit-scrollbar-track {
   padding: 10px;
   box-sizing: border-box;
   overflow-y: auto;
+}
+
+.messages ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.messages li {
+  cursor: pointer;
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.messages li:hover {
+  background-color: #f5f5f5;
+}
+
+.messages button {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Message content styles */
+#main-content h2 {
+  margin-bottom: 10px;
+}
+
+#main-content button {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
