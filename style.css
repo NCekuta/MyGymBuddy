@@ -1136,18 +1136,95 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 
 /*Messages zavihek -------------------------------------------------------------------------------------------------------------------------*/
-.messages {
-  display: flex;
+
+.messages-container {
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
+.messages {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*leva stran*/
 #sidebar {
   width: 25%;
-  background-color: #f0f0f0;
+  background-color: #fff;
   padding: 10px;
   box-sizing: border-box;
   overflow-y: auto;
 }
 
+#sidebar h1{
+  color: var(--third-color);
+  margin-bottom: 1rem;
+}
+
+.receivedSent{
+  width: 100%;
+  border-radius: 10px;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#buttonReceived, #buttonSent{
+  flex: 1;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  cursor: pointer;
+  border: solid 2px transparent;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Red Hat Display";
+  background-color: hsla(208, 50%, 50%, 0.089);
+  color: rgb(94, 94, 94);
+}
+
+#buttonReceived:hover, #buttonSent:hover{
+  border: solid 2px var(--third-color)
+}
+
+#buttonReceived.active-button {
+  background-color: var(--third-color);
+  color: white; 
+}
+
+#buttonSent.active-button {
+  background-color: var(--third-color);
+  color: white; 
+}
+
+.new-message-button {
+  background-color: var(--third-color);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; 
+  font-weight: bold;
+  font-size: 18px;
+  font-family: "Red Hat Display";
+}
+
+.new-message-button:hover {
+  background-color: #b7d1ff;
+}
+
+/*desna stran*/
 #main-content {
   flex: 1;
   padding: 10px;
@@ -1164,20 +1241,23 @@ textarea.contact-input::-webkit-scrollbar-track {
 .messages li {
   cursor: pointer;
   padding: 8px;
-  border-bottom: 1px solid #ddd;
+  background-color: hsla(208, 50%, 50%, 0.089);
+  border-radius: 10px;
+  margin-top: 1rem;
+  font-size: 15px;
+  font-family: "Red Hat Display";
+  color: rgb(94, 94, 94);
 }
 
 .messages li:hover {
-  background-color: #f5f5f5;
+  background-color: var(--third-color);
+  color: #fff;
 }
 
-.messages button {
-  margin-top: 10px;
-  padding: 8px;
-  background-color: #4285f4;
+.receivedMessages li.active-message,
+.sentMessages li.active-message {
+  background-color: var(--third-color);
   color: white;
-  border: none;
-  cursor: pointer;
 }
 
 /* Message content styles */
@@ -1188,8 +1268,21 @@ textarea.contact-input::-webkit-scrollbar-track {
 #main-content button {
   margin-top: 10px;
   padding: 8px;
-  background-color: #4285f4;
+  background-color: var(--third-color);
   color: white;
   border: none;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

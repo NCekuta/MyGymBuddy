@@ -221,33 +221,38 @@ contactForm.addEventListener("submit", (e) => {
     return false;
 })
 
-// messages tab ------------------------------------------------------------------------------------------------------------
-// Function to populate messages
+// Messages tab ------------------------------------------------------------------------------------------------------------
 function populateMessages() {
   // Sample messages data
-  const messagesData = [
+  const messagesReceived = [
     { id: 1, subject: 'Message 1', content: 'Content of Message 1' },
     { id: 2, subject: 'Message 2', content: 'Content of Message 2' },
     { id: 3, subject: 'Message 3', content: 'Content of Message 3' },
-    // Add more messages as needed
+  ];
+
+  const messagesSent = [
+    { id: 4, subject: 'Message 4', content: 'Content of Message 4' },
+    { id: 5, subject: 'Message 5', content: 'Content of Message 5' },
+    { id: 6, subject: 'Message 6', content: 'Content of Message 6' },
   ];
 
   // Select elements
-  const sidebar = document.getElementById('sidebar');
+  const receivedMessagesContainer = document.querySelector('.receivedMessages');
+  const sentMessagesContainer = document.querySelector('.sentMessages');
   const mainContent = document.getElementById('main-content');
-
-  // Populate sidebar with messages
-  const messagesList = document.createElement('ul');
-  messagesData.forEach(message => {
-    const listItem = document.createElement('li');
-    listItem.textContent = message.subject;
-    listItem.addEventListener('click', () => displayMessage(message));
-    messagesList.appendChild(listItem);
-  });
-  sidebar.appendChild(messagesList);
+  const buttonReceived = document.getElementById('buttonReceived');
+  const buttonSent = document.getElementById('buttonSent');
 
   // Function to display message in the main content area
-  function displayMessage(message) {
+  function displayMessage(message, listItem) {
+    // Remove the active class from all list items
+    document.querySelectorAll('.receivedMessages li, .sentMessages li').forEach(item => {
+      item.classList.remove('active-message');
+    });
+
+    // Add the active class to the clicked list item
+    listItem.classList.add('active-message');
+
     mainContent.innerHTML = `
       <h2>${message.subject}</h2>
       <p>${message.content}</p>
@@ -264,4 +269,61 @@ function populateMessages() {
   window.forwardMessage = function (messageId) {
     alert(`Forwarding message with ID ${messageId}`);
   };
+
+  // Event listener for the "Received" button
+  buttonReceived.addEventListener('click', function () {
+    receivedMessagesContainer.style.display = 'block';
+    sentMessagesContainer.style.display = 'none';
+
+    // Add the active class to the "Received" button
+    buttonReceived.classList.add('active-button');
+    // Remove the active class from the "Sent" button
+    buttonSent.classList.remove('active-button');
+  });
+
+  // Event listener for the "Sent" button
+  buttonSent.addEventListener('click', function () {
+    receivedMessagesContainer.style.display = 'none';
+    sentMessagesContainer.style.display = 'block';
+
+    // Add the active class to the "Sent" button
+    buttonSent.classList.add('active-button');
+    // Remove the active class from the "Received" button
+    buttonReceived.classList.remove('active-button');
+  });
+
+  // Call the event listener for the "Received" button initially to set the default view
+  buttonReceived.click();
+
+  // Populate received messages
+  const receivedMessagesList = document.createElement('ul');
+  messagesReceived.forEach(message => {
+    const listItem = document.createElement('li');
+    listItem.textContent = message.subject;
+    listItem.addEventListener('click', () => displayMessage(message, listItem));
+    receivedMessagesList.appendChild(listItem);
+  });
+  receivedMessagesContainer.appendChild(receivedMessagesList);
+
+  // Populate sent messages
+  const sentMessagesList = document.createElement('ul');
+  messagesSent.forEach(message => {
+    const listItem = document.createElement('li');
+    listItem.textContent = message.subject;
+    listItem.addEventListener('click', () => displayMessage(message, listItem));
+    sentMessagesList.appendChild(listItem);
+  });
+  sentMessagesContainer.appendChild(sentMessagesList);
+
+  // Add "New message" button to the sent messages container
+  const newMessageButton = document.createElement('button');
+  newMessageButton.classList.add('new-message-button');
+  newMessageButton.textContent = 'New message';
+  sentMessagesContainer.appendChild(newMessageButton);
 }
+
+// Call the function to populate messages
+populateMessages();
+
+
+

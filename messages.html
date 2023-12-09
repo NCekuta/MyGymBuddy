@@ -35,35 +35,30 @@
 
 
     <!--messages window-->
-    <div class="messages">
-        <div id="sidebar">
-            <!-- Left side with received messages and new message button goes here -->
-            <h2>Received Messages</h2>
-            <button>Create New Message</button>
-        </div>
+    <div class="messages-container">
+      <div class="messages">
+          <div id="sidebar">
+              <h1>Inbox</h1>
+              <div class="receivedSent">
+                <button id="buttonReceived">Received</button>
+                <button id="buttonSent">Sent</button>
+              </div>
 
-        <div id="main-content">
-            <!-- Right side with individual message content goes here -->
-            <h2>Message Subject</h2>
-            <p>Message content goes here...</p>
-            <!-- Reply and forward buttons go here -->
-            <button>Reply</button>
-            <button>Forward</button>
-        </div>
+              <div class="receivedMessages"></div>
+              <div class="sentMessages"></div>
+
+          </div>
+
+          <div id="main-content">
+              <!-- Right side with individual message content goes here -->
+              <h2>Message Subject</h2>
+              <p>Message content goes here...</p>
+              <!-- Reply and forward buttons go here -->
+              <button>Reply</button>
+              <button>Forward</button>
+          </div>
+      </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
