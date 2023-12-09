@@ -1133,3 +1133,25 @@ textarea.contact-input::-webkit-scrollbar-track {
   text-decoration: none;
   color: var(--secondary-color);
 }
+
+
+/*Messages zavihek*/
+.messages {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+#sidebar {
+  width: 25%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+#main-content {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}

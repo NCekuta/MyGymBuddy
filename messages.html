@@ -32,72 +32,45 @@
         </ul>
       </nav>
     </header>
-    <!--Primary kartica-->
-    <div class="dashboard-content">
-      <div class="dashboard-wrapper">
-        <div class="dashboard-title">
-          <span>Primary</span>
-          <h2>Dashboard</h2>
+
+
+    <!--messages window-->
+    <div class="messages">
+        <div id="sidebar">
+            <!-- Left side with received messages and new message button goes here -->
+            <h2>Received Messages</h2>
+            <ul>
+                <li>Message 1</li>
+                <li>Message 2</li>
+                <!-- Add more list items for other messages -->
+            </ul>
+            <button>Create New Message</button>
         </div>
-        <div class="search-bar">
-          <i class="magnifying-glass"><ion-icon name="search-outline"></ion-icon></i>
-          <input type="text" placeholder="search" />
+
+        <div id="main-content">
+            <!-- Right side with individual message content goes here -->
+            <h2>Message Subject</h2>
+            <p>Message content goes here...</p>
+            <!-- Reply and forward buttons go here -->
+            <button>Reply</button>
+            <button>Forward</button>
         </div>
-      </div>
     </div>
 
-    <!--Kartica welcome-->
-    <div class="card-welcome">
-     <h2 class="card-title">Today's macros:</h2>
-      <div class="card-wrapper"> 
-        <div class ="protein-counter">
-          <div class="protein-header">
-            <div class="protein-amount">
-            <span class="protein-title">
-              Protein: 
-            </span>
-            </div>
-          </div>
-        </div>
-        <div class ="carb-counter">
-          <div class="carb-header">
-            <div class="carb-amount">
-            <span class="carb-title">
-              Carbs: 
-            </span>
-            </div>
-          </div>
-        </div>
-        <div class ="fat-counter">
-          <div class="fat-header">
-            <div class="-fat-amount">
-            <span class="fat-title">
-             Fat: 
-            </span>
-            </div>
-          </div>
-        </div>
-        <div class ="carb-counter">
-          <div class="carb-header">
-            <div class="carb-amount">
-            <span class="carb-title">
-              Sugar: 
-            </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="total-calories">
-      <h2 class="total-calories-title">Total calories:</h2>
-      <div class="total-calories-wrapper">
-        <div class="total-calories-counter">
-          <div class="total-calories-amount">
-          </div>
-        </div>
-      </div>
-    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
       <!--Login Form-->
       <div class="loginform" id="loginForm">
