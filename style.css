@@ -1156,15 +1156,29 @@ textarea.contact-input::-webkit-scrollbar-track {
 /*leva stran*/
 #sidebar {
   width: 25%;
-  background-color: #fff;
+  background-color: var(--third-color);
   padding: 10px;
   box-sizing: border-box;
   overflow-y: auto;
 }
 
-#sidebar h1{
-  color: var(--third-color);
-  margin-bottom: 1rem;
+.sidebarContent{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.inboxHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1rem;
+  color: white;
+}
+
+.newMessage {
+  cursor: pointer;
 }
 
 .receivedSent{
@@ -1225,11 +1239,18 @@ textarea.contact-input::-webkit-scrollbar-track {
 }
 
 /*desna stran*/
-#main-content {
+#messageRight {
   flex: 1;
   padding: 10px;
   box-sizing: border-box;
   overflow-y: auto;
+  background-color: var(--third-color);
+}
+
+.messageRightContent{
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .messages ul {
@@ -1261,11 +1282,11 @@ textarea.contact-input::-webkit-scrollbar-track {
 }
 
 /* Message content styles */
-#main-content h2 {
+#messageRight h2 {
   margin-bottom: 10px;
 }
 
-#main-content button {
+#messageRight button {
   margin-top: 10px;
   padding: 8px;
   background-color: var(--third-color);
@@ -1273,6 +1294,34 @@ textarea.contact-input::-webkit-scrollbar-track {
   border: none;
   cursor: pointer;
 }
+
+.message-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-icon {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.message-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.message-date {
+  align-self: flex-end; /* Align to the bottom right */
+}
+
+.message-subject {
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+
 
 
 

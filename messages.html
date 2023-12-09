@@ -38,7 +38,8 @@
     <div class="messages-container">
       <div class="messages">
           <div id="sidebar">
-              <h1>Inbox</h1>
+            <h1 class="inboxHead">Inbox <span class="newMessage" onclick="createNewMessage()"><ion-icon name="add-circle-outline"></ion-icon></span></h1>
+            <div class="sidebarContent">
               <div class="receivedSent">
                 <button id="buttonReceived">Received</button>
                 <button id="buttonSent">Sent</button>
@@ -46,21 +47,22 @@
 
               <div class="receivedMessages"></div>
               <div class="sentMessages"></div>
-
+            </div>
           </div>
 
-          <div id="main-content">
-              <!-- Right side with individual message content goes here -->
-              <h2>Message Subject</h2>
-              <p>Message content goes here...</p>
-              <!-- Reply and forward buttons go here -->
+          <div id="messageRight">
+            <div class="messageRightContent">
               <button>Reply</button>
               <button>Forward</button>
+            </div>
           </div>
       </div>
     </div>
 
+    <!--new message form-->
+    <div class="newMessageFormContainer">
 
+    </div>
 
       <!--Login Form-->
       <div class="loginform" id="loginForm">

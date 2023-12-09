@@ -225,21 +225,51 @@ contactForm.addEventListener("submit", (e) => {
 function populateMessages() {
   // Sample messages data
   const messagesReceived = [
-    { id: 1, subject: 'Message 1', content: 'Content of Message 1' },
-    { id: 2, subject: 'Message 2', content: 'Content of Message 2' },
-    { id: 3, subject: 'Message 3', content: 'Content of Message 3' },
+    { 
+      id: 1, 
+      messageDate: '2023-12-12',
+      subject: 'Greetings from MyGymBuddy', 
+      content: 'Hello Nejc,<br><br>We hope you are enjoying your fitness journey with MyGymBuddy. Keep up the great work!<br><br>Best regards,<br>The MyGymBuddy Team'
+    }, 
+    { 
+      id: 2, 
+      messageDate: '2023-12-15',
+      subject: 'Important Update: New Features Added', 
+      content: 'Dear Nejc,<br><br>We are excited to announce new features added to MyGymBuddy. Explore the app to discover the latest enhancements!<br><br>Best regards,<br>The MyGymBuddy Team'
+    },
+    { 
+      id: 3, 
+      messageDate: '2023-12-18',
+      subject: 'Congratulations on Your Milestone', 
+      content: 'Hi Nejc,<br><br>Congratulations on reaching a new fitness milestone! Your dedication and hard work are truly inspiring. Keep pushing towards your goals!<br><br>Best regards,<br>The MyGymBuddy Team'
+    }    
   ];
 
   const messagesSent = [
-    { id: 4, subject: 'Message 4', content: 'Content of Message 4' },
-    { id: 5, subject: 'Message 5', content: 'Content of Message 5' },
-    { id: 6, subject: 'Message 6', content: 'Content of Message 6' },
+    { 
+      id: 4, 
+      messageDate: '2023-12-10',
+      subject: 'Confirmation: Gym Session Tomorrow', 
+      content: 'Hi John,<br><br>This is a confirmation of our gym session tomorrow at 14:30. Looking forward to working out together!<br><br>Best regards,<br>Nejc',
+    },
+    { 
+      id: 5, 
+      messageDate: '2023-12-13',
+      subject: 'Invitation: Join My Fitness Challenge', 
+      content: 'Hi John,<br><br>I am organizing a fitness challenge and would love for you to join! Let me know if you are interested.<br><br>Best regards,<br>Nejc'
+    },
+    { 
+      id: 6, 
+      messageDate: '2023-12-20',
+      subject: 'Reminder: Fitness Challenge Tomorrow', 
+      content: 'Hi John,<br><br>Just a friendly reminder that our fitness challenge is tomorrow. Get ready for an exciting and rewarding experience!<br><br>Best regards,<br>Nejc'
+    }    
   ];
 
   // Select elements
   const receivedMessagesContainer = document.querySelector('.receivedMessages');
   const sentMessagesContainer = document.querySelector('.sentMessages');
-  const mainContent = document.getElementById('main-content');
+  const mainContent = document.querySelector('.messageRightContent');
   const buttonReceived = document.getElementById('buttonReceived');
   const buttonSent = document.getElementById('buttonSent');
 
@@ -254,7 +284,7 @@ function populateMessages() {
     listItem.classList.add('active-message');
 
     mainContent.innerHTML = `
-      <h2>${message.subject}</h2>
+      <h2>${message.subject}</h2> 
       <p>${message.content}</p>
       <button onclick="replyToMessage(${message.id})">Reply</button>
       <button onclick="forwardMessage(${message.id})">Forward</button>
@@ -295,25 +325,91 @@ function populateMessages() {
   // Call the event listener for the "Received" button initially to set the default view
   buttonReceived.click();
 
-  // Populate received messages
-  const receivedMessagesList = document.createElement('ul');
-  messagesReceived.forEach(message => {
-    const listItem = document.createElement('li');
-    listItem.textContent = message.subject;
-    listItem.addEventListener('click', () => displayMessage(message, listItem));
-    receivedMessagesList.appendChild(listItem);
-  });
-  receivedMessagesContainer.appendChild(receivedMessagesList);
+  function populateMessageList(messages, containerClass) {
+    // Create an unordered list
+    const messagesList = document.createElement('ul');
+  
+    // Iterate through the messages array
+    messages.forEach(message => {
+      // Create a list item for each message
+      const listItem = document.createElement('li');
+  
+      // Create a container for the avatar and text
+      const messageContainer = document.createElement('div');
+      messageContainer.classList.add('message-container');
+  
+      // Create an icon element
+      const icon = document.createElement('ion-icon');
+      icon.setAttribute('name', 'person-circle-outline');
+      icon.classList.add('avatar-icon'); // Add a class for styling
+  
+      // Create a container for the text content
+      const textContainer = document.createElement('div');
+      textContainer.classList.add('message-text'); // Add a class for styling
+  
+      // Create a date element (replace 'messageDate' with the actual date property of your message object)
+      const date = document.createElement('div');
+      date.textContent = message.messageDate; // Replace 'messageDate' with the actual date property of your message object
+      date.classList.add('message-date'); // Add a class for styling
+  
+      // Create a span for the subject
+      const subject = document.createElement('span');
+      subject.textContent = message.subject;
+      subject.classList.add('message-subject'); // Add a class for styling
+  
+      // Create a span for the short snippet of the message content
+      const shortContent = document.createElement('p');
+      // Replace line breaks with spaces and display the first 20 characters of the message content
+      shortContent.innerHTML = message.content.replace(/<br>/g, ' ').slice(0, 25);
+      
+      // Append ellipsis to the short content
+      const ellipsis = document.createElement('span');
+      ellipsis.textContent = '...';
+      shortContent.appendChild(ellipsis);
+  
+      // Append the date, subject, and short content to the text container
+      textContainer.appendChild(subject);
+      textContainer.appendChild(shortContent);
+      textContainer.appendChild(date);
+  
+      // Append the icon and text container to the messageContainer
+      messageContainer.appendChild(icon);
+      messageContainer.appendChild(textContainer);
+  
+      // Append the messageContainer to the listItem
+      listItem.appendChild(messageContainer);
+  
+      // Add a click event listener
+      listItem.addEventListener('click', () => displayMessage(message, listItem));
+  
+      // Append the listItem to the messagesList
+      messagesList.appendChild(listItem);
+    });
+  
+    // Get the container element using the provided class
+    const container = document.querySelector(`.${containerClass}`);
+  
+    // Append the messagesList to the container
+    container.appendChild(messagesList);
+  }
+  
+  // Call the function for sent messages
+  populateMessageList(messagesSent, 'sentMessages');
+  
+  // Call the function for received messages
+  populateMessageList(messagesReceived, 'receivedMessages');
+  
 
-  // Populate sent messages
-  const sentMessagesList = document.createElement('ul');
-  messagesSent.forEach(message => {
-    const listItem = document.createElement('li');
-    listItem.textContent = message.subject;
-    listItem.addEventListener('click', () => displayMessage(message, listItem));
-    sentMessagesList.appendChild(listItem);
-  });
-  sentMessagesContainer.appendChild(sentMessagesList);
+// Append the sentMessagesList to the sentMessagesContainer
+sentMessagesContainer.appendChild(sentMessagesList);
+
+
+// Append the sentMessagesList to the sentMessagesContainer
+sentMessagesContainer.appendChild(sentMessagesList);
+
+
+// Append the sentMessagesList to the sentMessagesContainer
+sentMessagesContainer.appendChild(sentMessagesList);
 
   // Add "New message" button to the sent messages container
   const newMessageButton = document.createElement('button');
@@ -326,4 +422,23 @@ function populateMessages() {
 populateMessages();
 
 
+//new message---------------------------------------------------------------------------------------------------------------
+
+const newMessageIcon = document.querySelector('.newMessage');
+const newMessageForm = document.getElementById('newMessageForm'); // Assuming you have a form with the id 'newMessageForm'
+
+// Function to open the new message form
+function openNewMessageForm() {
+  newMessageForm.style.display = 'flex';
+}
+
+// Function to close the new message form if clicked outside
+window.addEventListener('click', (event) => {
+  if (event.target === newMessageForm) {
+    newMessageForm.style.display = 'none';
+  }
+});
+
+// Attach the openNewMessageForm function to the click event of the new message icon
+newMessageIcon.addEventListener('click', openNewMessageForm);
 
