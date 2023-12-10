@@ -601,6 +601,100 @@ header .navbar ul{
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
+/*Reset password ---------------------------------------------------------------------------------------------------------*/
+
+.forgotPasswordContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#forgotPasswordForm {
+  width: 100%;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Assuming a vertical layout inside the card */
+  padding: 30px; /* Adjust the padding as needed */
+}
+
+#forgotPasswordForm p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#forgotPasswordForm h1 {
+  text-align: center;
+  color: var(--third-color);
+}
+
+
+#forgotPasswordForm input{
+  width: 100%;
+  outline: none;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding: 0.8rem;
+  color: rgb(54, 54, 54);
+  font-size: 0.9rem; 
+  font-family: "Red Hat Display";
+  font-weight: bold;
+  letter-spacing: 0.8px; 
+  border-radius: 15px; 
+  transition: 0.3s;
+}
+
+#forgotPasswordForm input:focus {
+  border-color: var(--third-color);
+  background-color: #fff;
+}
+
+#iconResetPassword{
+  transform: translateY(-170%);
+  color: rgb(94, 94, 94);
+  margin-left: 25rem;
+  font-size: 1.3rem;
+}
+
+#iconResetPassword:focus{
+  color: var(--third-color);
+}
+
+#forgotPasswordForm input:focus-within #iconResetPassword,
+#forgotPasswordForm input:focus-within + #iconResetPassword {
+  color: var(--third-color);
+  transition: 0.3s;
+}
+
+#btnResetEmail{
+  background-color: var(--third-color);
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Red Hat Display";
+  cursor: pointer;
+}
+
+#btnResetEmail:hover{
+  background-color: #9fd4ff;
+}
+
+
+
+
+
+
+
+
+
 /*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
 
 #Calorieh {
@@ -1327,7 +1421,7 @@ textarea.contact-input::-webkit-scrollbar-track {
   font-weight: bolder;
 }
 
-/*New text--------------------------------------------------------------------------------------------------*/
+/*Create new message--------------------------------------------------------------------------------------------------*/
 #newMessageForm {
   width: 60%;
   background-color: #fff;
