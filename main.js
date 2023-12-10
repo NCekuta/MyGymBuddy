@@ -130,6 +130,12 @@ function checkPasswordStrength(password) {
   }
 }
 
+// forgot passsword button
+
+
+
+
+
 // contact tab --------------------------------------------------------------------------------------------------------------------
 // kontakt, doda .focus class da se labeli premaknejo gor in tm ostanejo če je kej not napisano
 const contactInputs = document.querySelectorAll(".contact-input");
@@ -283,7 +289,6 @@ function populateMessages() {
   ];
 
  
-
   // Select elements
   const receivedMessagesContainer = document.querySelector('.receivedMessages');
   const sentMessagesContainer = document.querySelector('.sentMessages');
