@@ -1179,7 +1179,8 @@ textarea.contact-input::-webkit-scrollbar-track {
 
 #newMessage {
   cursor: pointer;
-  transform: translatey(20%);
+  transform: translatey(10%);
+  font-size: 2.5rem;
 }
 
 .receivedSent{
@@ -1237,7 +1238,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 #openMessage{
   border-bottom: solid 2px #fff;
   padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  padding-bottom: 0.9rem;
 }
 
 .messageRightContent{
