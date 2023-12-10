@@ -35,6 +35,8 @@ moon_sun.onclick = function(){
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
+const resetPasswordContainer = document.getElementById('resetPasswordContainer');
+
 // ob pritisku na gumb se doda/izbrise class active
 registerBtn.addEventListener('click', () => {container.classList.add("active")});
 loginBtn.addEventListener('click', () => {container.classList.remove("active")});
@@ -48,6 +50,7 @@ const loginForm = document.getElementById('loginForm');
 // Ko kliknemo na login gumb se prikaže login
 openLoginBtn.addEventListener('click', () => {
   loginForm.style.display = 'flex';
+  resetPasswordContainer.style.display = "none";
 });
 
 // Če kliknemo izven login okna se okno zapre
@@ -75,6 +78,7 @@ function togglePasswordVisibility(icon, formType) {
     icon.innerHTML = '<ion-icon name="eye-off-outline"></ion-icon>';
   }
 }
+
 
 //Password strength
 function checkPasswordStrength(password) {
@@ -130,10 +134,18 @@ function checkPasswordStrength(password) {
   }
 }
 
-// forgot passsword button
-
-
-
+// forgot passsword icon reveal
+function toggleResetPassword(icon) {
+  var passwordField = document.getElementById('resetPasswordInput');
+  
+  if (passwordField.type === "password") {
+    passwordField.type = "text";
+    icon.setAttribute('name', 'eye-outline');
+  } else {
+    passwordField.type = "password";
+    icon.setAttribute('name', 'eye-off-outline');
+  }
+}
 
 
 // contact tab --------------------------------------------------------------------------------------------------------------------
