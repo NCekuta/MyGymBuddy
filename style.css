@@ -187,6 +187,56 @@ header .navbar ul{
   font-weight: bold;
 }
 
+/*News main posts*/
+.post{
+  margin: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  justify-content: center;
+  gap: 2.5rem;
+}
+.post-box{
+  background: whitesmoke;
+  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+  padding: 15px;
+  border-radius: 0.5rem;
+}
+.post-img{
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+.post-title{
+  font-size: 1rem;
+  font-weight: 600;
+  /*obdrzi naslov v eni vrstici*/
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--third-color);
+}
+.post-date{
+  display: flex;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 4px;
+
+}
+.post-description{
+ font-size: 0.9rem;
+ line-height: 1.5rem;
+ margin: 5px 0 10px;
+ /*obdrzi text v treh vrsticah*/
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+}
 
 /*Primary dasboard*/
 .dashboard-content {
