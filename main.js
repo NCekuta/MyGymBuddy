@@ -57,6 +57,7 @@ openLoginBtn.addEventListener('click', () => {
 window.addEventListener('click', (event) => {
   if (event.target === loginForm) {
     loginForm.style.display = 'none';
+    resetPasswordContainer.style.display = "flex";
   }
 });
 
@@ -64,6 +65,7 @@ window.addEventListener('click', (event) => {
 loginCloseIcon = document.getElementById('login-close-icon');
 loginCloseIcon.addEventListener('click', () => {
   loginForm.style.display = 'none';
+  resetPasswordContainer.style.display = "flex";
 });
 
 // Login eye icon
@@ -147,6 +149,52 @@ function toggleResetPassword(icon) {
   }
 }
 
+//forgot password send link to email
+
+const ToEmail = document.getElementById('emailTo');
+const forgotForm = document.getElementById('forgotForm');
+
+function sendResetLink() {
+
+  const bodyMessage2 = `Dear user,<br>
+  We have received a request to reset the password for your account. To proceed with the password reset, please click on the following link: 
+  http://127.0.0.1:5500/resetPassword.html <br>
+  If you did not request a password reset, please ignore this email. Your account security is important to us. <br><br>
+  Best regards,<br>
+  The MyGymBuddy Team`
+
+  Email.send({
+      SecureToken : "8cf5b2c8-3193-4010-8c58-c3ed3e148081",
+      To : ToEmail.value,
+      From : "mygymbuddybusiness@gmail.com",
+      Subject : "Link for password reset",
+      Body : bodyMessage2,
+  }).then(
+    message => {
+      if (message == "OK"){
+          Swal.fire({
+            title: "Success!",
+            text: "Link for reseting your password has been sent to your email!",
+            icon: "success"
+          });
+      }
+    }
+  );
+}
+
+if (forgotForm) {
+  forgotForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    sendResetLink();
+
+    forgotForm.reset();
+    return false;
+  });
+} else {
+  console.warn("Element with ID 'forgot form' not found. Form functionality will be disabled.");
+}
+
 
 // contact tab --------------------------------------------------------------------------------------------------------------------
 // kontakt, doda .focus class da se labeli premaknejo gor in tm ostanejo če je kej not napisano
@@ -211,8 +259,6 @@ function handleFileSelect(event) {
     reader.readAsBinaryString(file);
   }
 }
-
-
 
 function sendEmail() {
 

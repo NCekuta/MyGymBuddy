@@ -601,14 +601,13 @@ header .navbar ul{
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
 
-/*Reset password ---------------------------------------------------------------------------------------------------------*/
+/*Forgot password form ---------------------------------------------------------------------------------------------------------*/
 
 #forgotPasswordContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60vh;
-  display: none;
 }
 
 #forgotPasswordForm {
@@ -672,7 +671,7 @@ header .navbar ul{
   transition: 0.3s;
 }
 
-#btnResetEmail{
+#btnResetEmail {
   background-color: var(--third-color);
   padding: 15px;
   border-radius: 15px;
@@ -682,6 +681,8 @@ header .navbar ul{
   font-weight: bold;
   font-family: "Red Hat Display";
   cursor: pointer;
+  display: block; /* Ensures the button takes the full width */
+  margin: 0 auto; /* Centers the button horizontally */
 }
 
 #btnResetEmail:hover{
