@@ -149,6 +149,7 @@ contactInputs.forEach((input) => {
   input.addEventListener("blur", blurFunc);
 })
 
+
 // omogočeno pošiljanje sporočil na mail
 const contactForm = document.getElementById("form-contact");
 const contactFirstName = document.getElementById("contact_firstName");
@@ -162,7 +163,14 @@ let allConvertedFiles = [];
 // Contact attachments
 const attachmentList = document.getElementById('attachment-list');
 
-document.getElementById('fileInput').addEventListener('change', handleFileSelect);
+const fileInput = document.getElementById('fileInput');
+
+// Check if fileInput exists before adding the event listener
+if (fileInput) {
+  fileInput.addEventListener('change', handleFileSelect);
+} else {
+  console.warn("Element with ID 'fileInput' not found. File input functionality will be disabled.");
+}
 
 // Function to handle file selection, convert files to Base64, and display filenames
 function handleFileSelect(event) {
@@ -185,6 +193,8 @@ function handleFileSelect(event) {
     reader.readAsBinaryString(file);
   }
 }
+
+
 
 function sendEmail() {
 
@@ -211,7 +221,8 @@ function sendEmail() {
   );
 }
 
-contactForm.addEventListener("submit", (e) => {
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     sendEmail();
@@ -219,7 +230,12 @@ contactForm.addEventListener("submit", (e) => {
     contactForm.reset();
     attachmentList.innerHTML = '';
     return false;
-})
+  });
+} else {
+  console.warn("Element with ID 'form-contact' not found. Form functionality will be disabled.");
+}
+
+
 
 // Messages tab ------------------------------------------------------------------------------------------------------------
 function populateMessages() {
@@ -266,6 +282,8 @@ function populateMessages() {
     }    
   ];
 
+ 
+
   // Select elements
   const receivedMessagesContainer = document.querySelector('.receivedMessages');
   const sentMessagesContainer = document.querySelector('.sentMessages');
@@ -283,6 +301,11 @@ function populateMessages() {
     // Add the active class to the clicked list item
     listItem.classList.add('active-message');
 
+    document.getElementById('messageRight').style.display = "block";
+    document.getElementById('iconOpenMessage').style.display = "none";
+    document.getElementById('openMessage').style.border = "none";
+
+    mainContent.style.display = 'block';
     mainContent.innerHTML = `
       <h2>${message.subject}</h2> 
       <p>${message.content}</p>
@@ -398,43 +421,21 @@ function populateMessages() {
   
   // Call the function for received messages
   populateMessageList(messagesReceived, 'receivedMessages');
-  
-
-// Append the sentMessagesList to the sentMessagesContainer
-sentMessagesContainer.appendChild(sentMessagesList);
-
-
-// Append the sentMessagesList to the sentMessagesContainer
-sentMessagesContainer.appendChild(sentMessagesList);
-
-
-// Append the sentMessagesList to the sentMessagesContainer
-sentMessagesContainer.appendChild(sentMessagesList);
-
-  // Add "New message" button to the sent messages container
-  const newMessageButton = document.createElement('button');
-  newMessageButton.classList.add('new-message-button');
-  newMessageButton.textContent = 'New message';
-  sentMessagesContainer.appendChild(newMessageButton);
 }
-
-// Call the function to populate messages
 populateMessages();
 
-
 //new message---------------------------------------------------------------------------------------------------------------
-
-const newMessageIcon = document.querySelector('.newMessage');
-const newMessageForm = document.getElementById('newMessageForm'); // Assuming you have a form with the id 'newMessageForm'
+const newMessageIcon = document.getElementById('newMessage');
+const newMessageForm = document.getElementById('newMessageForm');
 
 // Function to open the new message form
 function openNewMessageForm() {
-  newMessageForm.style.display = 'flex';
+  newMessageForm.style.display = 'block';
 }
 
 // Function to close the new message form if clicked outside
-window.addEventListener('click', (event) => {
-  if (event.target === newMessageForm) {
+document.body.addEventListener('click', (event) => {
+  if (!newMessageForm.contains(event.target) && event.target !== newMessageIcon) {
     newMessageForm.style.display = 'none';
   }
 });

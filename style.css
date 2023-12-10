@@ -1145,7 +1145,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 .messages {
   width: 100%;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   overflow: hidden;
@@ -1165,25 +1165,26 @@ textarea.contact-input::-webkit-scrollbar-track {
 .sidebarContent{
   background-color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .inboxHead {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
   padding-left: 1rem;
   color: white;
 }
 
-.newMessage {
+#newMessage {
   cursor: pointer;
+  transform: translatey(20%);
 }
 
 .receivedSent{
   width: 100%;
-  border-radius: 10px;
+  border-radius: 15px;
   z-index: 1000;
   overflow: hidden;
   display: flex;
@@ -1218,26 +1219,6 @@ textarea.contact-input::-webkit-scrollbar-track {
   color: white; 
 }
 
-.new-message-button {
-  background-color: var(--third-color);
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  margin: 1rem;
-  display: block;
-  margin-left: auto;
-  margin-right: auto; 
-  font-weight: bold;
-  font-size: 18px;
-  font-family: "Red Hat Display";
-}
-
-.new-message-button:hover {
-  background-color: #b7d1ff;
-}
-
 /*desna stran*/
 #messageRight {
   flex: 1;
@@ -1245,13 +1226,33 @@ textarea.contact-input::-webkit-scrollbar-track {
   box-sizing: border-box;
   overflow-y: auto;
   background-color: var(--third-color);
+  display: block;
+}
+
+#messageRight h1{
+  color: white;
+  text-align: center;
+}
+
+#openMessage{
+  border-bottom: solid 2px #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .messageRightContent{
   background-color: white;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
+  display: none;
 }
+
+#iconOpenMessage {
+  font-size: 20rem;
+  color: white;
+  text-align: center;
+}
+
 
 .messages ul {
   list-style-type: none;
@@ -1263,7 +1264,7 @@ textarea.contact-input::-webkit-scrollbar-track {
   cursor: pointer;
   padding: 8px;
   background-color: hsla(208, 50%, 50%, 0.089);
-  border-radius: 10px;
+  border-radius: 15px;
   margin-top: 1rem;
   font-size: 15px;
   font-family: "Red Hat Display";
@@ -1287,12 +1288,16 @@ textarea.contact-input::-webkit-scrollbar-track {
 }
 
 #messageRight button {
-  margin-top: 10px;
-  padding: 8px;
+  margin-top: 8rem;
+  padding: 10px;
   background-color: var(--third-color);
   color: white;
   border: none;
   cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Red Hat Display";
 }
 
 .message-container {
@@ -1321,9 +1326,21 @@ textarea.contact-input::-webkit-scrollbar-track {
   font-weight: bolder;
 }
 
-
-
-
+/*New text--------------------------------------------------------------------------------------------------*/
+#newMessageForm {
+  width: 60%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+  overflow: hidden;
+  padding: 1rem;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Initially hide the form */
+}
 
 
 
