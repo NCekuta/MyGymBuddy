@@ -186,14 +186,19 @@ header .navbar ul{
   font-size: 1.2rem;
   font-weight: bold;
 }
-
+.active-filter{
+  background: var(--third-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
 /*News main posts*/
 .post{
   margin: 2.5rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, auto));
   justify-content: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 .post-box{
   background: whitesmoke;
@@ -202,11 +207,18 @@ header .navbar ul{
   border-radius: 0.5rem;
 }
 .post-img{
-  height: 300px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 0.5rem;
+}
+.category{
+  margin-top: 5px;
+  font-size: 0.67rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
 }
 .post-title{
   font-size: 1rem;
