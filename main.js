@@ -505,4 +505,3 @@ document.body.addEventListener('click', (event) => {
 
 // Attach the openNewMessageForm function to the click event of the new message icon
 newMessageIcon.addEventListener('click', openNewMessageForm);
-

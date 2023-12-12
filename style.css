@@ -196,7 +196,7 @@ header .navbar ul{
 .post{
   margin: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(400px, 200px));
   justify-content: center;
   gap: 1.5rem;
 }
@@ -207,7 +207,7 @@ header .navbar ul{
   border-radius: 0.5rem;
 }
 .post-img{
-  height: 250px;
+  height: 200px;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -249,6 +249,7 @@ header .navbar ul{
  -webkit-box-orient: vertical;
  overflow: hidden;
 }
+
 
 /*Primary dasboard*/
 .dashboard-content {
