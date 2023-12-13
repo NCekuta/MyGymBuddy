@@ -22,6 +22,7 @@
                 <li><a href="myprofile.html">MyProfile</li>
                 <li><a href="mygoals.html">MyGoals</li>
                 <li><a href="progress.html">Progress</li>
+                <li><a href="messages.html">Messages</li>
                 <li><a href="contact.html">Contact</li>
                 <li><a href="settings.html">Settings</li> 
               </ul>
@@ -41,11 +42,98 @@
       </div>
       <!--Pod naslovno kartico-->
       <div class="post-main-card">
-      <span class="filter-card">News</span>
-      <span class="filter-card">Plans</span>
-      <span class="filter-card">Chat</span>
-      <span class="filter-card">Diets</span>
+      <span class="filter-card active-filter" data-filter='all'>All</span>
+      <span class="filter-card" data-filter='plans'>Plans</span>
+      <span class="filter-card" data-filter='facts'>Facts</span>
+      <span class="filter-card" data-filter='diets'>Diets</span>
       </div>
+
+      <!--Objave v news-->
+      <section class="post container">
+          <!--Post 1-->
+        <div class="post-box plans">
+        <img src="/Slike/pullups.jpg" alt="calisthenics" class="post-img">
+        <h2 class="category">Plans</h2>
+        <a href="https://www.menshealth.com/uk/building-muscle/a759641/complete-guide-to-calisthenics-everything-you-need-to-know/" class="post-title">
+          You can build muscle using bodyweight
+        </a>
+        <span class="post-date">09 Dec 2023</span>
+        <p class="post-description">Build Mass Using Just Your Bodyweight with Our Complete Guide to Calisthenics</p>
+        </div>
+         <!--Post 2-->
+         <div class="post-box plans">
+          <img src="/Slike/flag.jpg" alt="flag" class="post-img">
+          <h2 class="category">Plans</h2>
+          <a href="https://summerfunfitness.com/human-flag-workout/" class="post-title">
+            How to train for a human flag
+          </a>
+          <span class="post-date">05 Dec 2023</span>
+          <p class="post-description">You CAN Human Flag. Here’s How</p>
+          </div>
+          <!--Post 3-->
+        <div class="post-box diets">
+          <img src="/Slike/arnold.jpg" alt="arnold" class="post-img">
+          <h2 class="category">Diet</h2>
+          <a href="https://manofmany.com/lifestyle/fitness/arnold-schwarzenegger-diet-workout-plan" class="post-title">
+            Arnold Schwarzenegger's diet
+          </a>
+          <span class="post-date">04 Dec 2023</span>
+          <p class="post-description">As you can probably guess, the Arnold Schwarzenegger diet plan goes big on protein, and by that we mean big.</p>
+        </div>
+       <!--Post 4-->
+       <div class="post-box facts">
+        <img src="/Slike/cbum.jpg" alt="cbum" class="post-img">
+        <h2 class="category">Facts</h2>
+        <a href="https://www.muscleandfitness.com/flexonline/flex-news/chris-bumstead-crowned-2023-classic-physique-olympia-winner/" class="post-title">
+          Cbum won the 5th olympia title
+        </a>
+        <span class="post-date">10 Dec 2023</span>
+        <p class="post-description">CBum fought off an unexpected challenge from Ramon Rocha Querioz to win title No. 5</p>
+      </div>
+
+     <!--Post 5-->
+     <div class="post-box diets">
+      <img src="/Slike/nutrition.jpg" alt="diet" class="post-img">
+      <h2 class="category">Diets</h2>
+      <a href="https://www.webmd.com/fitness-exercise/ss/slideshow-best-foods-fitness" class="post-title">
+        The perfect diet
+      </a>
+      <span class="post-date">11 Dec 2023</span>
+      <p class="post-description">If you don’t have enough to eat before you exercise, you may not have enough gas in the tank. You might burn fewer calories, too.</p>
+    </div>
+   <!--Post 6-->
+   <div class="post-box facts">
+    <img src="/Slike/proteinshake.jpg" alt="powder" class="post-img">
+    <h2 class="category">Facts</h2>
+    <a href="https://www.medicalnewstoday.com/articles/323093" class="post-title">
+      Benefits of protein shakes
+    </a>
+    <span class="post-date">02 Dec 2023</span>
+    <p class="post-description">Protein powders are nutritional supplements that may help build muscle, repair tissue, and make enzymes and hormones. Using protein powder may also aid weight loss and help people tone their muscles.</p>
+  </div>
+
+  <!--Post 7-->
+  <div class="post-box diets">
+    <img src="/Slike/supplements.jpg" alt="supps" class="post-img">
+    <h2 class="category">Diets</h2>
+    <a href="https://www.cnet.com/health/nutrition/5-science-backed-fitness-supplements-that-actually-work/" class="post-title">
+      Which fitness supplements to take
+    </a>
+    <span class="post-date">02 Dec 2023</span>
+    <p class="post-description">5 Fitness Supplements That Have Been Scientifically Proven to Work</p>
+  </div>
+
+  <!--Post 8-->
+  <div class="post-box">
+    <img src="/Slike/anatomy.jpg" alt="anatomy" class="post-img">
+    <h2 class="category">Facts</h2>
+    <a href="https://www.innerbody.com/image/musfov.html" class="post-title">
+      Concepts of human muscle anatomy
+    </a>
+    <span class="post-date">01 Dec 2023</span>
+    <p class="post-description">Learn about the three types of muscle as you use our 3D models to explore the anatomical structure and physiology of human muscles. </p>
+  </div>
+</section>
 
       <!--Login Form-->
       <div class="loginform" id="loginForm">
@@ -71,7 +159,7 @@
               <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
                 <ion-icon name="eye-off-outline"></ion-icon>
               </i>
-              <a href="#">Forgot your password?</a>
+              <a href="forgotPassword.html">Forgot your password?</a>
               <button type="submit">Log in</button>
             </form>
           </div>
@@ -143,6 +231,13 @@
       </ul>
     </footer>
 
+    <!--JQuery-->
+    <script
+ src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+
+
     <!--Ikone za socialna omrežja-->
     <script
       type="module"
@@ -153,6 +248,7 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
     <script src="main.js"></script>
+    <script src="explore.js"></script>
   </body>
 </html>
     

@@ -186,6 +186,69 @@ header .navbar ul{
   font-size: 1.2rem;
   font-weight: bold;
 }
+.active-filter{
+  background: var(--third-color);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+/*News main posts*/
+.post{
+  margin: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 200px));
+  justify-content: center;
+  gap: 1.5rem;
+}
+.post-box{
+  background: whitesmoke;
+  box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+  padding: 15px;
+  border-radius: 0.5rem;
+}
+.post-img{
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+}
+.category{
+  margin-top: 5px;
+  font-size: 0.67rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: black;
+}
+.post-title{
+  font-size: 1rem;
+  font-weight: 600;
+  /*obdrzi naslov v eni vrstici*/
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--third-color);
+}
+.post-date{
+  display: flex;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 4px;
+
+}
+.post-description{
+ font-size: 0.9rem;
+ line-height: 1.5rem;
+ margin: 5px 0 10px;
+ /*obdrzi text v treh vrsticah*/
+ display: -webkit-box;
+ -webkit-line-clamp: 3;
+ -webkit-box-orient: vertical;
+ overflow: hidden;
+}
 
 
 /*Primary dasboard*/
@@ -600,6 +663,207 @@ header .navbar ul{
   transform: scale(1.3);
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
+
+/*Forgot password form ---------------------------------------------------------------------------------------------------------*/
+
+#forgotPasswordContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#forgotPasswordForm {
+  width: 100%;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Assuming a vertical layout inside the card */
+  padding: 30px; /* Adjust the padding as needed */
+}
+
+#forgotPasswordForm p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#forgotPasswordForm h1 {
+  text-align: center;
+  color: var(--third-color);
+}
+
+
+#forgotPasswordForm input{
+  width: 100%;
+  outline: none;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding: 0.8rem;
+  color: rgb(54, 54, 54);
+  font-size: 0.9rem; 
+  font-family: "Red Hat Display";
+  font-weight: bold;
+  letter-spacing: 0.8px; 
+  border-radius: 15px; 
+  transition: 0.3s;
+}
+
+#forgotPasswordForm input:focus {
+  border-color: var(--third-color);
+  background-color: #fff;
+}
+
+#iconResetPassword{
+  transform: translateY(-170%);
+  color: rgb(94, 94, 94);
+  margin-left: 25rem;
+  font-size: 1.3rem;
+}
+
+#iconResetPassword:focus{
+  color: var(--third-color);
+}
+
+#forgotPasswordForm input:focus-within #iconResetPassword,
+#forgotPasswordForm input:focus-within + #iconResetPassword {
+  color: var(--third-color);
+  transition: 0.3s;
+}
+
+#btnResetEmail {
+  background-color: var(--third-color);
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Red Hat Display";
+  cursor: pointer;
+  display: block; /* Ensures the button takes the full width */
+  margin: 0 auto; /* Centers the button horizontally */
+}
+
+#btnResetEmail:hover{
+  background-color: #9fd4ff;
+}
+
+/*Reset password form ----------------------------*/
+
+#resetPasswordContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+}
+
+#resetPasswordForm {
+  width: 100%;
+  max-width: 500px; /* Adjust the maximum width as needed */
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; /* Assuming a vertical layout inside the card */
+  padding: 30px; /* Adjust the padding as needed */
+}
+
+#resetPasswordForm p {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#resetPasswordForm h1 {
+  text-align: center;
+  color: var(--third-color);
+}
+
+#resetPasswordForm input{
+  width: 100%;
+  outline: none;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding: 0.8rem;
+  color: rgb(54, 54, 54);
+  font-size: 0.9rem; 
+  font-family: "Red Hat Display";
+  font-weight: bold;
+  letter-spacing: 0.8px; 
+  border-radius: 15px; 
+  transition: 0.3s;
+}
+
+#resetPasswordForm input:focus {
+  border-color: var(--third-color);
+  background-color: #fff;
+}
+
+/*eye icon*/
+#iconEnterPassword{
+  transform: translateY(-170%);
+  color: rgb(94, 94, 94);
+  margin-left: 25rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+#iconEnterPassword:focus{
+  color: var(--third-color);
+}
+
+#resetPasswordForm input:focus-within #iconEnterPassword,
+#resetPasswordForm input:focus-within + #iconEnterPassword {
+  color: var(--third-color);
+  transition: 0.3s;
+}
+
+/*lock icon*/
+#iconConfirmPassword{
+  transform: translateY(-170%);
+  color: rgb(94, 94, 94);
+  margin-left: 25rem;
+  font-size: 1.3rem;
+}
+
+#iconConfirmPassword:focus{
+  color: var(--third-color);
+}
+
+#resetPasswordForm input:focus-within #iconConfirmPassword,
+#resetPasswordForm input:focus-within + #iconConfirmPassword {
+  color: var(--third-color);
+  transition: 0.3s;
+}
+
+/*button*/
+#btnChangePassword{
+  background-color: var(--third-color);
+  padding: 15px;
+  border-radius: 15px;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: "Red Hat Display";
+  cursor: pointer;
+}
+
+#btnChangePassword:hover{
+  background-color: #9fd4ff;
+}
+
+
+
+
+
+
+
 
 /*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
 
@@ -1133,3 +1397,223 @@ textarea.contact-input::-webkit-scrollbar-track {
   text-decoration: none;
   color: var(--secondary-color);
 }
+
+
+/*Messages zavihek -------------------------------------------------------------------------------------------------------------------------*/
+
+.messages-container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.messages {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/*leva stran*/
+#sidebar {
+  width: 25%;
+  background-color: var(--third-color);
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+}
+
+.sidebarContent{
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.inboxHead {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  color: white;
+}
+
+#newMessage {
+  cursor: pointer;
+  transform: translatey(10%);
+  font-size: 2.5rem;
+}
+
+.receivedSent{
+  width: 100%;
+  border-radius: 15px;
+  z-index: 1000;
+  overflow: hidden;
+  display: flex;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+#buttonReceived, #buttonSent{
+  flex: 1;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  cursor: pointer;
+  border: solid 2px transparent;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: "Red Hat Display";
+  background-color: hsla(208, 50%, 50%, 0.089);
+  color: rgb(94, 94, 94);
+}
+
+#buttonReceived:hover, #buttonSent:hover{
+  border: solid 2px var(--third-color)
+}
+
+#buttonReceived.active-button {
+  background-color: var(--third-color);
+  color: white; 
+}
+
+#buttonSent.active-button {
+  background-color: var(--third-color);
+  color: white; 
+}
+
+/*desna stran*/
+#messageRight {
+  flex: 1;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  background-color: var(--third-color);
+  display: block;
+}
+
+#messageRight h1{
+  color: white;
+  text-align: center;
+}
+
+#openMessage{
+  border-bottom: solid 2px #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.9rem;
+}
+
+.messageRightContent{
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  display: none;
+}
+
+#iconOpenMessage {
+  font-size: 20rem;
+  color: white;
+  text-align: center;
+}
+
+
+.messages ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.messages li {
+  cursor: pointer;
+  padding: 8px;
+  background-color: hsla(208, 50%, 50%, 0.089);
+  border-radius: 15px;
+  margin-top: 1rem;
+  font-size: 15px;
+  font-family: "Red Hat Display";
+  color: rgb(94, 94, 94);
+}
+
+.messages li:hover {
+  background-color: var(--third-color);
+  color: #fff;
+}
+
+.receivedMessages li.active-message,
+.sentMessages li.active-message {
+  background-color: var(--third-color);
+  color: white;
+}
+
+/* Message content styles */
+#messageRight h2 {
+  margin-bottom: 10px;
+}
+
+#messageRight button {
+  margin-top: 8rem;
+  padding: 10px;
+  background-color: var(--third-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 15px;
+  font-family: "Red Hat Display";
+}
+
+.message-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-icon {
+  font-size: 2.5rem;
+  margin-right: 10px;
+}
+
+.message-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.message-date {
+  align-self: flex-end; /* Align to the bottom right */
+}
+
+.message-subject {
+  font-size: 17px;
+  font-weight: bolder;
+}
+
+/*Create new message--------------------------------------------------------------------------------------------------*/
+#newMessageForm {
+  width: 60%;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+  z-index: 10000;
+  overflow: hidden;
+  padding: 1rem;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Initially hide the form */
+}
+
+
+
+
+
+
+
+
+
+
+

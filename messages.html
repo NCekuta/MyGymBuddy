@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!--CSS-->
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <title>MyGymBuddy</title>
   </head>
   <body>
@@ -18,15 +16,15 @@
           <li><a href="diary.html">Diary</a></li>
           <li><a href="explore.html">Explore</a></li>
           <li>
-            <a href="#">More</a>
-            <div class="dropdown-arrow"></div>     
+            <a href="#">More </i></a>
+            <div class="dropdown-arrow"></div>
             <ul>
-              <li><a href="#">MyProfile</li>
-              <li><a href="#">MyGoals</li>
-              <li><a href="#">Progress</li>
-              <li><a href="messages.html">Messages</li>
-              <li><a href="#">Contact</li>
-              <li><a href="#">Settings</li> 
+              <li><a href="myprofile.html">MyProfile</li>
+              <li><a href="mygoals.html">MyGoals</li>
+              <li><a href="progress.html">Progress</li>
+              <li><a href="messages.html">Messages</a></li>
+              <li><a href="contact.html">Contact</li>
+              <li><a href="settings.html">Settings</li> 
             </ul>
           </li>
           <li><a href="#" id="openLogin">Login</a></li>
@@ -34,114 +32,71 @@
         </ul>
       </nav>
     </header>
-    <!--Calorie count-->
-    <h1 id="Calorieh">Calorie count</h1>
-    <div id="calorie-container">
-        <div id="goal" class="square">Goal</div>
-        <div id="minus" class="square">-</div>
-        <div id="food" class="square">Food</div>
-        <div id="plus" class="square">+</div>
-        <div id="exercise" class="square">Exercise</div>
-        <div id="enako" class="square">=</div>
-        <div id="remaining" class="square">Remaining</div>
-    </div>
 
-    <h1 id="Calorieh">Daily intake</h1>
-    <div id="daily-intake-container">
-        <div id="water-intake-container">water intake:
-          <button type="button" class="add-button">add</button>
-        </div>
-        <div id="food-intake-container">water intake:
-          <button type="button" class="add-button">add</button>
-        </div>
-        <div id="add-exercise-container">exercise:
-          <button type="button" class="add-button">add</button>
-        </div>
-    </div>
+    <!--messages window-->
+    <div class="messages-container">
+      <div class="messages">
+          <div id="sidebar">
+            <h1 class="inboxHead">Inbox <span class="newMessage"><ion-icon name="add-circle-outline" id="newMessage"></ion-icon></span></h1>
 
-    <!--Meal intakes-->
-    <h1 id="Calorieh">Meals</h1>
-    <div id="meal-intake-container">
-      <div class="daily-intakes">
-        <h2 class="meal-name">Breakfast <span class="sum breakfast">0</span></h2>
-        <div class="intake-content">
-            <div class="intake-item">
-                <span class="intake-text">banana</span>
-                <span class="calories">0</span>
+            <div class="sidebarContent">
+              <div class="receivedSent">
+                <button id="buttonReceived">Received</button>
+                <button id="buttonSent">Sent</button>
+              </div>
+
+              <div class="receivedMessages"></div>
+              <div class="sentMessages"></div>
             </div>
-            <div class="intake-item">
-                <span class="intake-text">kosmici</span>
-                <span class="calories">0</span>
-            </div>
-            <div class="intake-item">
-              <span class="intake-text">mleko</span>
-              <span class="calories">0</span>
           </div>
-        </div>
-        <button type="button" class="addfood-button">Add food</button>
+
+          <div id="messageRight">
+            <h1 id="openMessage">Message</h1>
+            <h1><ion-icon name="mail-open-outline" id="iconOpenMessage"></ion-icon></h1>
+            <div class="messageRightContent">
+              <button>Reply</button>
+              <button>Forward</button>
+            </div>
+          </div>
       </div>
-        <div class="daily-intakes">
-          <h2 class="meal-name">Lunch <span class="sum lunch">0</span></h2>
-          <div class="intake-content">
-              <div class="intake-item">
-                  <span class="intake-text">piščanec</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">krompir</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">zelenjava</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">kruh</span>
-                  <span class="calories">0</span>
-              </div>
-          </div>
-          <button type="button" class="addfood-button">Add food</button>
+    </div>
+
+    <div id="newMessageForm">
+      <form action="#" enctype="multipart/form-data" id="form-contact">
+        <h2 class="title">New <span>Message!</span></h2>
+        
+        <div class="contact-input-container">
+          <input class="contact-input" id="contact_email" autocomplete="off" name="Email" type="email" required>
+          <label>To</label>
+          <ion-icon class="contact-icon" name="person-add"></ion-icon>
         </div>
-        <div class="daily-intakes">
-          <h2 class="meal-name">Dinner <span class="sum dinner">0</span></h2>
-          <div class="intake-content">
-              <div class="intake-item">
-                  <span class="intake-text">testenine</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">meso</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">jogurt</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">kruh</span>
-                  <span class="calories">0</span>
-              </div>
-          </div>
-          <button type="button" class="addfood-button">Add food</button>
+
+        <div class="contact-input-container">
+          <input class="contact-input" id="contact_email" autocomplete="off" name="Email" type="email" required>
+          <label>Subject</label>
+          <ion-icon class="contact-icon" name="mail"></ion-icon>
         </div>
-        <div class="daily-intakes">
-          <h2 class="meal-name">Snacks/water <span class="sum snacks">0</span></h2>
-          <div class="intake-content">
-              <div class="intake-item">
-                  <span class="intake-text">čokoladica</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                  <span class="intake-text">banana</span>
-                  <span class="calories">0</span>
-              </div>
-              <div class="intake-item">
-                <span class="intake-text">rogliček</span>
-                <span class="calories">0</span>
-            </div>
-          </div>
-          <button type="button" class="addfood-button">Add snack</button>
+
+        <div class="contact-input-container textarea">
+          <textarea name="Message" id="contact_message" autocomplete="off" class="contact-input"></textarea>
+          <label for="">Message</label>
+          <ion-icon class="contact-icon textarea" name="text"></ion-icon>
         </div>
+
+        <div id="attachment-list"></div>
+
+        <div class="contact-buttons">
+          <button class="btn upload">
+              <span><ion-icon name="attach-outline"></ion-icon></span>
+              <label>Add attachment</label>
+              <input type="file" name="attachment" id="fileInput" multiple>
+          </button>
+          <div class="send-button">
+            <ion-icon name="paper-plane" class="send-icon"></ion-icon>
+            <input type="submit" value="Send message" class="btn contact">
+          </div>
+        </div>
+      </form>
     </div>
 
       <!--Login Form-->
@@ -226,13 +181,13 @@
     <footer class="footer">
       <ul class="social_icon">
         <li>
-          <a href="#"><ion-icon name="mail-unread-outline"></ion-icon></a>
+          <a href="mailto:mygymbuddybusiness@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
         </li>
         <li>
-          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
         </li>
         <li>
-          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="https://www.facebook.com/mygymbuddybusiness/"><ion-icon name="logo-instagram"></ion-icon></a>
         </li>
       </ul>
       <ul class="copyright">
