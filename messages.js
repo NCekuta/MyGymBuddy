@@ -9,19 +9,35 @@ function populateMessages() {
             id: 4, 
             messageDate: '2023-12-12',
             subject: 'Greetings from MyGymBuddy', 
-            content: 'Hello Nejc,<br><br>We hope you are enjoying your fitness journey with MyGymBuddy. Keep up the great work!<br><br>Best regards,<br>The MyGymBuddy Team'
+            content: 'Hello Nejc,<br><br>We hope you are enjoying your fitness journey with MyGymBuddy. Keep up the great work!<br><br>Best regards,<br>The MyGymBuddy Team',
+            replies: []
         }, 
         { 
             id: 5, 
             messageDate: '2023-12-15',
             subject: 'Important Update: New Features Added', 
-            content: 'Dear Nejc,<br><br>We are excited to announce new features added to MyGymBuddy. Explore the app to discover the latest enhancements!<br><br>Best regards,<br>The MyGymBuddy Team'
+            content: 'Dear Nejc,<br><br>We are excited to announce new features added to MyGymBuddy. Explore the app to discover the latest enhancements!<br><br>Best regards,<br>The MyGymBuddy Team',
+            replies: [
+                {
+                    id: 6,
+                    messageDate: getCurrentDate(), 
+                    sender: 'John Doe', // Add the sender's name or identifier
+                    content: 'Thank you for the update! I can t wait to try out the new features.'
+                },
+                {
+                    id: 7,
+                    messageDate: getCurrentDate(),
+                    sender: 'Jane Smith',
+                    content: 'The new features sound great! Keep up the good work!',
+                },
+            ]
         },
         { 
             id: 6, 
             messageDate: '2023-12-18',
             subject: 'Congratulations on Your Milestone', 
-            content: 'Hi Nejc,<br><br>Congratulations on reaching a new fitness milestone! Your dedication and hard work are truly inspiring. Keep pushing towards your goals!<br><br>Best regards,<br>The MyGymBuddy Team'
+            content: 'Hi Nejc,<br><br>Congratulations on reaching a new fitness milestone! Your dedication and hard work are truly inspiring. Keep pushing towards your goals!<br><br>Best regards,<br>The MyGymBuddy Team',
+            replies: []
         } 
     )
    
@@ -31,7 +47,7 @@ function populateMessages() {
             id: 1, 
             messageDate: '2023-12-10',
             subject: 'Confirmation: Gym Session Tomorrow', 
-            content: 'Hi John,<br><br>This is a confirmation of our gym session tomorrow at 14:30. Looking forward to working out together!<br><br>Best regards,<br>Nejc',
+            content: 'Hi John,<br><br>This is a confirmation of our gym session tomorrow at 14:30. Looking forward to working out together!<br><br>Best regards,<br>Nejc'
         },
         { 
             id: 2, 
@@ -55,10 +71,44 @@ function populateMessages() {
     const buttonSent = document.getElementById('buttonSent');
   
     // Sample functions for replying and forwarding messages
-    window.replyToMessage = function (messageId) {
-      alert(`Replying to message with ID ${messageId}`);
+    window.replyToMessage = function (messageId, date, subject, content) {
+        mainContent.innerHTML = `
+        <h2>${subject}</h2> 
+        <p>${content}</p>
+        <textarea id="replyToMessage" placeholder="Enter reply text"></textarea> <br>
+        <button onclick="SendReplyMessage(${messageId}, '${date}', '${subject}', '${content}')">Send</button>
+      `;
     };
-  
+    
+    window.SendReplyMessage = function (messageIndex, date, subject, content) {
+        const textareaReply = document.getElementById('replyToMessage');
+        const replyValue = textareaReply.value;
+    
+        const newReply = {
+            id: generateUniqueId(),
+            messageDate: date,
+            subject: "Reply",
+            content: replyValue,
+        };
+    
+        // Ensure messagesReceived[messageIndex] is an object and has a replies property
+        if (!messagesReceived[messageIndex]) {
+            messagesReceived[messageIndex] = { replies: [] };
+        } else if (!messagesReceived[messageIndex].replies) {
+            messagesReceived[messageIndex].replies = [];
+        }
+    
+        messagesReceived[messageIndex].replies.push(newReply);
+        displayReplies(messagesReceived[messageIndex]); // Display the replies for the specific message
+
+        textareaReply.value = " ";
+    };
+    
+    // Replace this with your unique ID generation logic
+    function generateUniqueId() {
+        return Math.random().toString(36).substring(2) + (new Date()).getTime().toString(36);
+    }
+    
     window.showForwardInput = function (messageId, subject, content) {
         mainContent.innerHTML = `
           <h2>${subject}</h2> 
@@ -142,7 +192,7 @@ function populateMessages() {
     mainContent.innerHTML = `
         <h2>${message.subject}</h2> 
         <p>${message.content}</p>
-        <button onclick="replyToMessage(${message.id})">Reply</button>
+        <button onclick="replyToMessage(${message.id}, '${message.messageDate}', '${message.subject}', '${message.content}', this.parentNode)">Reply</button>
         <button onclick="showForwardInput(${message.id}, '${message.subject}', '${message.content}', this.parentNode)">Forward</button>
     `;
   }
@@ -203,6 +253,7 @@ function populateMessages() {
   
       // Add a click event listener
       listItem.addEventListener('click', () => displayMessage(message, listItem));
+      listItem.addEventListener('click', () => displayReplies(message, listItem));
   
       // Append the listItem to the messagesList
       messagesList.appendChild(listItem);
@@ -279,4 +330,38 @@ function populateMessages() {
     const day = currentDate.getDate().toString().padStart(2, '0');
     return `${year}-${month}-${day}`;
   }
-  // ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
+
+//reply to message
+function displayReplies(message) {
+    const repliesContainer = document.querySelector('.messageReply');
+
+    // Clear previous content
+    repliesContainer.innerHTML = '';
+    
+    // Display replies
+    if (message.replies && message.replies.length > 0) {
+        // Create a container for each reply
+        message.replies.forEach(reply => {
+            const replyContainer = document.createElement('div');
+            replyContainer.classList.add('reply');
+
+            const replyContentHTML = `
+                <h2>Reply</h2>
+                <p>${reply.content}</p>
+                <p>${reply.messageDate}</p>
+            `;
+            replyContainer.innerHTML = replyContentHTML;
+
+            // Append each reply container to the main container
+            repliesContainer.appendChild(replyContainer);
+        });
+    } else {
+        // Display a message if there are no replies
+        repliesContainer.innerHTML = '<p>No replies yet.</p>';
+    }
+
+    // Show the container
+    repliesContainer.style.display = 'block';
+}
+

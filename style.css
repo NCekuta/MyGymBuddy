@@ -1505,11 +1505,12 @@ textarea.contact-input::-webkit-scrollbar-track {
   padding-bottom: 0.9rem;
 }
 
-.messageRightContent{
+.messageRightContent {
   background-color: white;
   padding: 10px;
   border-radius: 15px;
   display: none;
+  margin-bottom: 1rem;
 }
 
 #iconOpenMessage {
@@ -1553,7 +1554,7 @@ textarea.contact-input::-webkit-scrollbar-track {
 }
 
 #messageRight button {
-  margin-top: 8rem;
+  margin-top: 1rem;
   padding: 10px;
   background-color: var(--third-color);
   color: white;
@@ -1627,11 +1628,47 @@ textarea.contact-input::-webkit-scrollbar-track {
   margin: 0.4rem;
 }
 
-#forwardEmail:focus {
+#forwardEmail:focus, #replyToMessage:focus {
   border-color: var(--third-color);
   background-color: #fff;
 }
 
+/*reply of message*/
+.messageReply{
+  background-color: transparent;
+}
 
+.reply{
+  background-color: white;
+  margin-bottom: 1rem;
+  padding: 10px;
+  border-radius: 15px;
+  
+}
 
+#replyToMessage {
+  width: 80%;
+  height: 10rem;
+  outline: none;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding: 0.7rem 1rem;
+  color: rgb(54, 54, 54);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.8px; 
+  border-radius: 25px; 
+  transition: 0.3s;
+  margin-top: 1rem;
+  margin-bottom: 0;
+  resize: none;
+}
 
+#replyToMessage::placeholder {
+  position: absolute;
+  top: 0.7rem; /* Adjust as needed */
+  left: 1rem;
+  font-size: 0.8rem; /* Adjusted font size */
+  color: rgba(54, 54, 54, 0.5); /* Adjusted color and opacity */
+  transition: 0.3s;
+}
