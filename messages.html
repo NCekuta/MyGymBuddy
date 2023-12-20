@@ -72,7 +72,7 @@
         </div>
 
         <div class="contact-input-container">
-          <input class="contact-input" id="contact_email" autocomplete="off" name="Email" type="email" required>
+          <input class="contact-input" id="contact_subject" autocomplete="off" name="Email" type="text" required>
           <label>Subject</label>
           <ion-icon class="contact-icon" name="mail"></ion-icon>
         </div>
@@ -93,7 +93,7 @@
           </button>
           <div class="send-button">
             <ion-icon name="paper-plane" class="send-icon"></ion-icon>
-            <input type="submit" value="Send message" class="btn contact">
+            <input type="submit" value="Send message" class="btn contact" id="sendMessageButton">
           </div>
         </div>
       </form>
@@ -204,6 +204,7 @@
       nomodule
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
+    <script src="messages.js"></script>
     <script src="main.js"></script>
   </body>
 </html>
