@@ -91,3 +91,76 @@ body::-webkit-scrollbar{
     display: none;
     border-radius: 0.8rem;
   }
+  .tasks{ 
+    
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    position: relative;
+    padding: 1em 0.5em;
+  }
+
+  .task{ /*posamezno opravilo v containerju*/
+    background-color: whitesmoke;
+    padding: 0.8em 1em;
+    display: grid;
+    grid-template-columns:1fr 8fr 2fr 2fr;
+    gap: 1em;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.3);
+    align-items: center;
+    cursor: pointer;
+  }
+  .task:not(:first-child){ /*opravila so primerno narazen*/
+    margin-top: 1em;
+  }
+  .task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+  }
+  .task input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;    
+  }
+  .task input[type="checkbox"]:checked{
+    background-color: var(--third-color);
+  }
+  .task span{
+    font: 0.9em;
+    font-weight: 400;
+    word-break: break-all;
+  }
+
+  .task button{
+    color: #ffffff;
+    width: 100%;
+    padding: 1em 0;
+    border-radius: 0.5em;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  .edit{
+    background-color: var(--third-color);
+  }
+
+  .delete{
+    background-color: red;
+  }
+
+  #pending-tasks span{
+  color: black;
+  }
+  
+  .completed{
+    text-decoration: line-through;
+    color: #a0a0a0;
+  }
