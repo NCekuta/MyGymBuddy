@@ -1608,11 +1608,29 @@ textarea.contact-input::-webkit-scrollbar-track {
 }
 
 
+/*Forward message input*/
+#forwardEmail{
+  width: 30%;
+  outline: none;
+  border: 2px solid hsla(208, 94%, 54%, 0.137);
+  background-color: hsl(208, 50%, 50%, 6.5%);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  color: rgb(54, 54, 54);
+  font-size: 0.8rem; /* Adjusted font size */
+  font-weight: bold;
+  letter-spacing: 0.8px; 
+  border-radius: 25px; 
+  transition: 0.3s;
+  margin: 0.4rem;
+}
 
-
-
-
-
+#forwardEmail:focus {
+  border-color: var(--third-color);
+  background-color: #fff;
+}
 
 
 

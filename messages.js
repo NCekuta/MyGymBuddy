@@ -59,9 +59,37 @@ function populateMessages() {
       alert(`Replying to message with ID ${messageId}`);
     };
   
-    window.forwardMessage = function (messageId) {
-      alert(`Forwarding message with ID ${messageId}`);
+    window.showForwardInput = function (messageId, subject, content) {
+        mainContent.innerHTML = `
+          <h2>${subject}</h2> 
+          <p>${content}</p>
+          <label for="forwardEmail">Forward to: </label>
+          <input type="email" id="forwardEmail" placeholder="Enter recipient email">
+          <button onclick="forwardMessage(${messageId}, '${subject}', '${content}')">Send</button>
+        `;
     };
+
+    window.forwardMessage = function (messageId, subject, content) {
+        const newMessage = [];
+        const forwardedSubject = "Forwarded message: " + subject;
+
+        newMessage.push(
+            {
+                id: messagesSent.length + 1,
+                messageDate: getCurrentDate(),
+                subject: forwardedSubject,
+                content: content,
+            }
+        )
+
+        messagesSent.push(newMessage);
+        populateMessageList(newMessage, 'sentMessages');
+
+        mainContent.innerHTML = `
+        <h2>${subject}</h2> 
+        <p>${content}</p>
+      `;
+    }
   
     // Event listener for the "Received" button
     buttonReceived.addEventListener('click', function () {
@@ -96,6 +124,7 @@ function populateMessages() {
   }
 
   const mainContent = document.querySelector('.messageRightContent');
+  
   function displayMessage(message, listItem) {
     // Remove the active class from all list items
     document.querySelectorAll('.receivedMessages li, .sentMessages li').forEach(item => {
@@ -111,10 +140,10 @@ function populateMessages() {
 
     mainContent.style.display = 'block';
     mainContent.innerHTML = `
-      <h2>${message.subject}</h2> 
-      <p>${message.content}</p>
-      <button onclick="replyToMessage(${message.id})">Reply</button>
-      <button onclick="forwardMessage(${message.id})">Forward</button>
+        <h2>${message.subject}</h2> 
+        <p>${message.content}</p>
+        <button onclick="replyToMessage(${message.id})">Reply</button>
+        <button onclick="showForwardInput(${message.id}, '${message.subject}', '${message.content}', this.parentNode)">Forward</button>
     `;
   }
 
