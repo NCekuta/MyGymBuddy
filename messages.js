@@ -51,32 +51,8 @@ function populateMessages() {
     // Select elements
     const receivedMessagesContainer = document.querySelector('.receivedMessages');
     const sentMessagesContainer = document.querySelector('.sentMessages');
-    const mainContent = document.querySelector('.messageRightContent');
     const buttonReceived = document.getElementById('buttonReceived');
     const buttonSent = document.getElementById('buttonSent');
-  
-    // Function to display message in the main content area
-    function displayMessage(message, listItem) {
-      // Remove the active class from all list items
-      document.querySelectorAll('.receivedMessages li, .sentMessages li').forEach(item => {
-        item.classList.remove('active-message');
-      });
-  
-      // Add the active class to the clicked list item
-      listItem.classList.add('active-message');
-  
-      document.getElementById('messageRight').style.display = "block";
-      document.getElementById('iconOpenMessage').style.display = "none";
-      document.getElementById('openMessage').style.border = "none";
-  
-      mainContent.style.display = 'block';
-      mainContent.innerHTML = `
-        <h2>${message.subject}</h2> 
-        <p>${message.content}</p>
-        <button onclick="replyToMessage(${message.id})">Reply</button>
-        <button onclick="forwardMessage(${message.id})">Forward</button>
-      `;
-    }
   
     // Sample functions for replying and forwarding messages
     window.replyToMessage = function (messageId) {
@@ -117,6 +93,29 @@ function populateMessages() {
     
     // Call the function for received messages
     populateMessageList(messagesReceived, 'receivedMessages');
+  }
+
+  const mainContent = document.querySelector('.messageRightContent');
+  function displayMessage(message, listItem) {
+    // Remove the active class from all list items
+    document.querySelectorAll('.receivedMessages li, .sentMessages li').forEach(item => {
+      item.classList.remove('active-message');
+    });
+
+    // Add the active class to the clicked list item
+    listItem.classList.add('active-message');
+
+    document.getElementById('messageRight').style.display = "block";
+    document.getElementById('iconOpenMessage').style.display = "none";
+    document.getElementById('openMessage').style.border = "none";
+
+    mainContent.style.display = 'block';
+    mainContent.innerHTML = `
+      <h2>${message.subject}</h2> 
+      <p>${message.content}</p>
+      <button onclick="replyToMessage(${message.id})">Reply</button>
+      <button onclick="forwardMessage(${message.id})">Forward</button>
+    `;
   }
 
   function populateMessageList(messages, containerClass) {
@@ -222,7 +221,6 @@ function populateMessages() {
     const messageContent = document.getElementById("contact_message").value;
   
     // Create a new message object
-
     const newMessage = [];
     newMessage.push(
         {
