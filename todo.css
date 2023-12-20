@@ -66,3 +66,28 @@ body::-webkit-scrollbar{
     border: none;
     border-bottom: 2px solid #d1d3d4;
   }
+  .wrapper input:focus{
+    outline: none;
+    border-color: var(--third-color);
+  }
+  .add-btn{
+    padding: 5px;
+    position: relative;
+    border-radius: 0.5em;
+    font-weight: 500;
+    font-size: 1em;
+    background-color: var(--third-color);
+    border: none;
+    outline: none;
+    color: white;
+    cursor: pointer;
+  }
+  #error{
+    text-align: center;
+    background-color: white;
+    color: red;
+    margin-top: 1.5em;
+    padding: 1em 0;
+    display: none;
+    border-radius: 0.8rem;
+  }
