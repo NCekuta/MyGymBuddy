@@ -1,0 +1,11 @@
+#btnAddFrineds{
+    text-align: center;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    margin-top: 10rem;
+}
+
+#btnAddFrineds:hover{
+    color: var(--third-color);
+}
