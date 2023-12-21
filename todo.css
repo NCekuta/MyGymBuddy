@@ -34,7 +34,114 @@ body::-webkit-scrollbar{
     --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
     --third-color: rgb(121, 202, 255);
   }
+/*NAVBAR------------------------------------------------------------------------------------------------------------*/
 
+.header {
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.navbar{
+  margin-right:35px
+}
+header h1 {
+  font-size: 25px;
+  font-weight: 400px;
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-display: swap;
+  color: var(--secondary-color);
+  margin-left: 40px;
+}
+header .navbar ul{
+  list-style: none;
+  
+}
+.header .navbar ul li{
+  position: relative;
+  float:left;
+  padding: 55px;
+
+}
+.header .navbar ul li a{
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+  
+}
+.header .navbar ul li a:hover {
+  color: var(--third-color);
+}
+/*Dropdown menu celotni blok*/
+.header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  display: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: whitesmoke;
+  z-index: 999;
+}
+/*Dropdown menu posamezne komponente*/
+.header .navbar ul li ul li{
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 15px;
+  
+}
+/*napisi zavihkov znotraj dropdown*/
+.header .navbar ul li ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: black;
+
+}
+/*Postavitev na more*/
+.header .navbar ul li:hover > ul{
+  display: block;
+  
+}
+/*puscica zraven more*/
+.dropdown-arrow {
+  height: 0;
+  width: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #333;
+  position: relative;
+  left: 60px;
+  bottom:15px
+}
+
+/*UNDERLINE EFEKT*/
+.header .navbar a:after{
+  content: "";
+  position: absolute;
+  background-color: var(--third-color);
+  height: 3px;
+  width: 0%;
+  left:0;
+  bottom: -10px;
+  transition: 0.4s;
+}
+.navbar li a.active {
+  color: var(--third-color);
+}
+.navbar a:hover:after{
+  width: 100%;
+}
   /*TODO list*/
   .app{
     position: absolute;
@@ -51,6 +158,7 @@ body::-webkit-scrollbar{
    box-shadow:0 1em 2em rgba(0,0,0,0.3);
    border-radius: 0.8rem;
    color: black;
+   margin-top: 8em;
   }
   .wrapper{
     position: relative;
@@ -164,3 +272,52 @@ body::-webkit-scrollbar{
     text-decoration: line-through;
     color: #a0a0a0;
   }
+
+  /*FOOTER-----------------------------------------------------------------------------------------------------------*/
+.footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 100px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  
+}
+/*Socialna omrežja*/
+.footer .social_icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 13px 0;
+  flex-wrap: wrap;
+}
+.footer .social_icon li {
+  list-style: none;
+}
+.footer .social_icon li a {
+  font-size: 2em;
+  display: inline-block;
+  margin: 0 80px;
+  transition: 0.5s;
+  color: var(--secondary-color);
+}
+.footer .social_icon li a:hover {
+  transform: translateY(-10px);
+}
+
+/*Copyright*/
+.footer .copyright li {
+  list-style: none;
+}
+.footer .copyright li a {
+  font-size: 1.0em;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  color: var(--secondary-color);
+}

@@ -1,27 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="todo.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>MyGoals</title>
 </head>
-<body>
-    <div class="app">
-     <div class="container">
-        <div class="wrapper">
-           <input type="text" placeholder="Task to be done..."/>
-            <button class="add-btn">Add</button>
-        </div>
-        <div class="tasks">
-            <p id="pending-tasks">You have 
-            <span class="count-value">0 </span> task(s) to complete.</p>
-        </div>
-     </div>
-     <p id="error">Input cannot be empty!</p>
-   </div>  
 
-   <script src="mygoals.js"></script>
+<body>
+    <header class="header">
+        <h1>MyGymBuddy</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="main.html" class="active">Dashboard</a></li>
+                <li><a href="diary.html">Diary</a></li>
+                <li><a href="explore.html">Explore</a></li>
+                <li>
+                    <a href="#">More </i></a>
+                    <div class="dropdown-arrow"></div>
+                    <ul>
+                        <li><a href="myprofile.html">MyProfile</li>
+                        <li><a href="mygoals.html">MyGoals</li>
+                        <li><a href="progress.html">Progress</li>
+                        <li><a href="messages.html">Messages</a></li>
+                        <li><a href="contact.html">Contact</li>
+                        <li><a href="settings.html">Settings</li>
+                    </ul>
+                </li>
+                <li><a href="#" id="openLogin">Login</a></li>
+                <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="app">
+        <div class="container">
+            <div class="wrapper">
+                <input type="text" placeholder="Task to be done..." />
+                <button class="add-btn">Add</button>
+            </div>
+            <div class="tasks">
+                <p id="pending-tasks">You have
+                    <span class="count-value">0 </span> task(s) to complete.
+                </p>
+            </div>
+        </div>
+        <p id="error">Input cannot be empty!</p>
+    </div>
+    <footer class="footer">
+        <ul class="social_icon">
+            <li>
+                <a href="mailto:mygymbuddybusiness@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/mygymbuddybusiness/"><ion-icon name="logo-instagram"></ion-icon></a>
+            </li>
+        </ul>
+        <ul class="copyright">
+            <li><a href="#">2023 MyGymBuddy | Projekt RPO</a></li>
+        </ul>
+    </footer>
+
+    <script src="mygoals.js"></script>
 </body>
+
 </html>
