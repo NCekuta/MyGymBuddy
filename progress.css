@@ -31,29 +31,6 @@ html {
   --secondary-color: #fff;
   --third-color: rgb(121, 202, 255);
 }
-/*Icons dark/light mode*/
-
-#moon,
-#sun {
-  font-size: 40px;
-  position: relative;
-  top: -6px;
-}
-
-#moon {
-  color: grey;
-}
-
-#sun {
-  color: black;
-}
-
-#moon:hover,
-#sun:hover {
-  cursor: pointer;
-  transform: scale(1.3);
-  transition: transform 0.3s ease; /* Add a smooth transition effect */
-}
 
 /*light mode*/
 .light-theme {
@@ -61,41 +38,40 @@ html {
   --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
   --third-color: rgb(121, 202, 255);
 }
-/*Kartica z naslovom strani*/
-.settings-main{
+
+.progress-container{
     position: relative;
     background-color: white;
     padding: 1rem;
     border-radius: 10px;
     margin: 0 5%;
 }
-.settings-wrapper{
+.progress-wrapper{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
-    padding: 5px 2rem;
-}
-/*Kartica z menujem*/
-.settings-container{
+    justify-content: center;
+    align-items: center;
+    margin: 0 5%;
     background-color: white;
-    padding: 2rem;
     border-radius: 10px;
-    margin: 1% 5%;
+    margin-top: 1%;
+    height: 35rem;
+    gap: 30rem;
 }
-.settings-title{
-   text-align: center;
+.first-graph-container,
+.second-graph-container{
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 30rem;
+    height: 30rem;
+    transition: 0.5s ease-in-out;
+    margin: 1%;
 }
-.menu{
-    list-style: none
-}
-.menu li{
-    padding: 1rem 0;
-}
-.menu a{
+#progress-icon{
+    position: relative;
+    font-size: 20px;
     color: black;
-    text-decoration: none;
-}
-.menu a:hover{
-    color: var(--third-color);
+    top: 4px;
+    margin-right: 10px;
 }
