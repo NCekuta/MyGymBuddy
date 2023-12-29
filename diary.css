@@ -1,0 +1,400 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary-color);
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*Scroll opcija ostaja skrita ampak se obdrži funkcionalnost*/
+body::-webkit-scrollbar{
+  display: none;
+}
+html {
+  height: 100%;
+}
+
+/*primary dark mode colors*/
+:root {
+  --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --secondary-color: #fff;
+  --third-color: rgb(121, 202, 255);
+}
+
+/*light mode*/
+.light-theme {
+  --primary-color: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
+  --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --third-color: rgb(121, 202, 255);
+}
+
+/*NAVBAR------------------------------------------------------------------------------------------------------------*/
+
+.header {
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.navbar{
+  margin-right:35px
+}
+header h1 {
+  font-size: 25px;
+  font-weight: 400px;
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-display: swap;
+  color: var(--secondary-color);
+  margin-left: 40px;
+}
+header .navbar ul{
+  list-style: none;
+  
+}
+.header .navbar ul li{
+  position: relative;
+  float:left;
+  padding: 55px;
+
+}
+.header .navbar ul li a{
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+  
+}
+.header .navbar ul li a:hover {
+  color: var(--third-color);
+}
+/*Dropdown menu celotni blok*/
+.header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  display: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: whitesmoke
+}
+/*Dropdown menu posamezne komponente*/
+.header .navbar ul li ul li{
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 15px;
+  
+}
+/*napisi zavihkov znotraj dropdown*/
+.header .navbar ul li ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: black;
+
+}
+/*Postavitev na more*/
+.header .navbar ul li:hover > ul{
+  display: block;
+  
+}
+/*puscica zraven more*/
+.dropdown-arrow {
+  height: 0;
+  width: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #333;
+  position: relative;
+  left: 60px;
+  bottom:15px
+}
+
+/*UNDERLINE EFEKT*/
+.header .navbar a:after{
+  content: "";
+  position: absolute;
+  background-color: var(--third-color);
+  height: 3px;
+  width: 0%;
+  left:0;
+  bottom: -10px;
+  transition: 0.4s;
+}
+.navbar li a.active {
+  color: var(--third-color);
+}
+.navbar a:hover:after{
+  width: 100%;
+}
+
+/*CALORIE COUNT-----------------------------------------------------------------------------------------------------------*/
+
+#Calories {
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--secondary-color);
+  }
+  
+  #daily-intake-container{
+    background-color: white;
+    height: 100px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  #water-intake-container, #food-intake-container, #add-exercise-container{
+    background-color: var(--third-color);
+    height: 50px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.0em;
+  }
+  
+  .add-button{
+    margin-left: auto;
+    background: #ffffff1f;
+    border-radius: 999px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: Inter,Helvetica,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Noto Color Emoji","Segoe UI Symbol","Android Emoji",EmojiSymbols,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans",sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 24px;
+    opacity: 1;
+    outline: 0 solid transparent;
+    padding: 5px 15px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: fit-content;
+    word-break: break-word;
+    border: 0;
+  
+  }
+  #meal-intake-container {
+    background-color: transparent;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  .daily-intakes {
+    background-color: var(--third-color);
+    height: 50px;
+    min-width: 22.5%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 1.1em;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .meal-name {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    padding-right: 1.5rem;
+    padding-left: 1rem;
+    color: white;
+    font-size: 1.0em;
+    font-weight: bolder;
+  }
+  
+  .sum {
+    margin-left: 1rem;
+  }
+  
+  .intake-content {
+    background-color: rgb(222, 242, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
+    border: 3px solid var(--third-color);
+  }
+  
+  .intake-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-left: 1rem;
+  }
+  
+  .calories {
+    margin-left: auto;
+    padding-right: 1.5rem;
+  }
+  
+  #calorie-container {
+    background-color: white;
+    height: 190px;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  .addfood-button {
+    background-color: #ffffff1f;
+    color: white;
+    font-weight: bold;
+    padding: 0.3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 1.1rem;
+    border-radius: 10px;
+  }
+  
+  .addfood-button:hover{
+    color: var(--third-color);
+    background-color: #ffffff2e;
+  }
+  
+  .square {
+    background-color: white;
+    height: 180px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+  }
+  
+  #goal,
+  #food,
+  #exercise,
+  #remaining {
+    width: 16%;
+    border: 10px solid white;
+    align-items: last baseline;
+  }
+  
+  #plus,
+  #minus,
+  #enako {
+    width: 10%;
+    font-size: 2.5em;
+  }
+  
+  #calorie-text {
+    margin: 0 10px;
+    font-size: 1.0em;
+  }
+
+  /*Icons dark/light mode*/
+
+#moon,
+#sun {
+  font-size: 40px;
+  position: relative;
+  top: -6px;
+}
+
+#moon {
+  color: grey;
+}
+
+#sun {
+  color: black;
+}
+
+#moon:hover,
+#sun:hover {
+  cursor: pointer;
+  transform: scale(1.3);
+  transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+  /*FOOTER-----------------------------------------------------------------------------------------------------------*/
+.footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+  }
+  /*Socialna omrežja*/
+  .footer .social_icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px 0;
+    flex-wrap: wrap;
+  }
+  .footer .social_icon li {
+    list-style: none;
+  }
+  .footer .social_icon li a {
+    font-size: 2em;
+    display: inline-block;
+    margin: 0 80px;
+    transition: 0.5s;
+    color: var(--secondary-color);
+  }
+  .footer .social_icon li a:hover {
+    transform: translateY(-10px);
+  }
+  
+  /*Copyright*/
+  .footer .copyright li {
+    list-style: none;
+  }
+  .footer .copyright li a {
+    font-size: 1.0em;
+    display: inline-block;
+    transition: 0.5s;
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
