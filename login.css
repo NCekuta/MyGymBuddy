@@ -1,0 +1,494 @@
+/*LOGIN/REGISTRATION -----------------------------------------------------------------------------------------------*/
+.Sign-container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 768px;
+    max-width: 100%;
+    min-height: 480px;
+    font-family: "Montserrat", sans-serif;
+    z-index: 10;
+  }
+  
+  .Sign-container h1 {
+    font-weight: bolder;
+    font-family: "Red Hat Display";
+    color: var(--third-color);
+  }
+  
+  .Sign-container p {
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+  }
+  
+  .Sign-container span {
+    font-size: 12px;
+  }
+  
+  .Sign-container a {
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  
+  .Sign-container button {
+    background-color: var(--third-color);
+    color: white;
+    font-size: 12px;
+    padding: 10px 45px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .Sign-container button:hover {
+    background-color: transparent;
+    color: var(--third-color);
+    border-color: var(--third-color);
+  }
+  
+  .Sign-container button.hidden {
+    background-color: transparent;
+    border-color: #fff;
+  }
+  
+  .Sign-container form {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+  }
+  
+  .sign-input{
+    width: 100%;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    color: rgb(54, 54, 54);
+    font-size: 0.8rem; /* Adjusted font size */
+    font-weight: bold;
+    letter-spacing: 0.8px; 
+    border-radius: 25px; 
+    transition: 0.3s;
+    margin: 0.4rem;
+  }
+  
+  .sign-input:focus {
+    border-color: var(--third-color);
+    background-color: #fff;
+  }
+  
+  .eye-icon{
+    transform: translateY(-170%);
+    color: rgb(94, 94, 94);
+    margin-left: 15rem;
+    cursor: pointer;
+  }
+  
+  .form-container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .log-in {
+    left: 0;
+    width: 50%;
+    z-index: 2;
+  }
+  
+  .Sign-container.active .log-in {
+    transform: translateX(100%);
+  }
+  
+  .sign-up {
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+  }
+  
+  .Sign-container.active .sign-up {
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+  }
+  
+  @keyframes move {
+    0%,
+    49.99% {
+      opacity: 0;
+      z-index: 1; /*prednosti index (nahaja se za vsemi objeki)*/
+    }
+    50%,
+    100% {
+      opacity: 1;
+      z-index: 5;
+    }
+  }
+  
+  .sign-icons {
+    margin: 15px;
+  }
+  
+  .sign-icons a {
+    border: 1px solid var(--third-color);
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  
+  .sign-icons a:hover{
+    transform: translateY(-5px) scale(1.1);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .toggle-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 100px 0 0 100px;
+    z-index: 1000;
+  }
+  
+  .toggle-container h1 {
+    color: #fff;
+  }
+  
+  .toggle-container button:hover {
+    color: var(--third-color);
+    background-color: #fff;
+  }
+  
+  .Sign-container.active .toggle-container {
+    transform: translateX(-100%);
+    border-radius: 0 100px 100px 0;
+  }
+  
+  .toggle {
+    background-color: var(--third-color);
+    height: 100%;
+    background: var(--third-color);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .Sign-container.active .toggle {
+    transform: translateX(50%);
+  }
+  
+  .toggle-panel {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+  }
+  
+  .toggle-left {
+    transform: translateX(-200%);
+  }
+  
+  .Sign-container.active .toggle-left {
+    transform: translateX(0%);
+  }
+  
+  .toggle-right {
+    right: 0;
+    transform: translateX(0);
+  }
+  
+  .Sign-container.active .toggle-right {
+    transform: translateX(200%);
+  }
+  
+  /*da se nevid ko dokler ga ne kliknes*/
+  .loginform {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #checkPassword {
+    color: red;
+    transform: translateY(-100%);
+    font-size: 0.9rem;
+  }
+  #checkPassword.good {
+    color: orange;
+  }
+  #checkPassword.strong {
+    color: green;
+  }
+  
+  /*Indikator*/
+  .strengthIndicator {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transform: translateY(-150%);
+    margin-bottom: 10px;
+  }
+  .strengthIndicator span {
+    height: 100%;
+    flex: 1;
+    height: 10px;
+    margin-right: 5px;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+  
+  #login-close-icon {
+    position: absolute;
+    top: 0.8rem;
+    right: 1rem;
+    cursor: pointer;
+    color: rgba(44, 44, 44, 0.805);
+    font-size: 2rem;
+    z-index: 100000000;
+    font-weight: bold;
+  }
+  
+  #login-close-icon:hover ion-icon {
+    transform: scale(1.3);
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+  }
+  
+  /*Forgot password form ---------------------------------------------------------------------------------------------------------*/
+  
+  #forgotPasswordContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  #forgotPasswordForm {
+    width: 100%;
+    max-width: 500px; /* Adjust the maximum width as needed */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Assuming a vertical layout inside the card */
+    padding: 30px; /* Adjust the padding as needed */
+  }
+  
+  #forgotPasswordForm p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  #forgotPasswordForm h1 {
+    text-align: center;
+    color: var(--third-color);
+  }
+  
+  
+  #forgotPasswordForm input{
+    width: 100%;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding: 0.8rem;
+    color: rgb(54, 54, 54);
+    font-size: 0.9rem; 
+    font-family: "Red Hat Display";
+    font-weight: bold;
+    letter-spacing: 0.8px; 
+    border-radius: 15px; 
+    transition: 0.3s;
+  }
+  
+  #forgotPasswordForm input:focus {
+    border-color: var(--third-color);
+    background-color: #fff;
+  }
+  
+  #iconResetPassword{
+    transform: translateY(-170%);
+    color: rgb(94, 94, 94);
+    margin-left: 25rem;
+    font-size: 1.3rem;
+  }
+  
+  #iconResetPassword:focus{
+    color: var(--third-color);
+  }
+  
+  #forgotPasswordForm input:focus-within #iconResetPassword,
+  #forgotPasswordForm input:focus-within + #iconResetPassword {
+    color: var(--third-color);
+    transition: 0.3s;
+  }
+  
+  #btnResetEmail {
+    background-color: var(--third-color);
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Red Hat Display";
+    cursor: pointer;
+    display: block; /* Ensures the button takes the full width */
+    margin: 0 auto; /* Centers the button horizontally */
+  }
+  
+  #btnResetEmail:hover{
+    background-color: #9fd4ff;
+  }
+  
+  /*Reset password form ----------------------------*/
+  
+  #resetPasswordContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+  }
+  
+  #resetPasswordForm {
+    width: 100%;
+    max-width: 500px; /* Adjust the maximum width as needed */
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Assuming a vertical layout inside the card */
+    padding: 30px; /* Adjust the padding as needed */
+  }
+  
+  #resetPasswordForm p {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  #resetPasswordForm h1 {
+    text-align: center;
+    color: var(--third-color);
+  }
+  
+  #resetPasswordForm input{
+    width: 100%;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding: 0.8rem;
+    color: rgb(54, 54, 54);
+    font-size: 0.9rem; 
+    font-family: "Red Hat Display";
+    font-weight: bold;
+    letter-spacing: 0.8px; 
+    border-radius: 15px; 
+    transition: 0.3s;
+  }
+  
+  #resetPasswordForm input:focus {
+    border-color: var(--third-color);
+    background-color: #fff;
+  }
+  
+  /*eye icon*/
+  #iconEnterPassword{
+    transform: translateY(-170%);
+    color: rgb(94, 94, 94);
+    margin-left: 25rem;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  #iconEnterPassword:focus{
+    color: var(--third-color);
+  }
+  
+  #resetPasswordForm input:focus-within #iconEnterPassword,
+  #resetPasswordForm input:focus-within + #iconEnterPassword {
+    color: var(--third-color);
+    transition: 0.3s;
+  }
+  
+  /*lock icon*/
+  #iconConfirmPassword{
+    transform: translateY(-170%);
+    color: rgb(94, 94, 94);
+    margin-left: 25rem;
+    font-size: 1.3rem;
+  }
+  
+  #iconConfirmPassword:focus{
+    color: var(--third-color);
+  }
+  
+  #resetPasswordForm input:focus-within #iconConfirmPassword,
+  #resetPasswordForm input:focus-within + #iconConfirmPassword {
+    color: var(--third-color);
+    transition: 0.3s;
+  }
+  
+  /*button*/
+  #btnChangePassword{
+    background-color: var(--third-color);
+    padding: 15px;
+    border-radius: 15px;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: "Red Hat Display";
+    cursor: pointer;
+  }
+  
+  #btnChangePassword:hover{
+    background-color: #9fd4ff;
+  }

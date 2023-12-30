@@ -206,7 +206,7 @@ header .navbar ul{
   }
   #meal-intake-container {
     background-color: transparent;
-    height: 300px;
+    height: 100px;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -326,6 +326,78 @@ header .navbar ul{
     font-size: 1.0em;
   }
 
+  /*BMI calculator*/
+  .title-container{
+    display: flex;
+    gap: 28rem;
+    margin-top: 20px;
+  }
+  #bmi-title{
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: var(--secondary-color);
+  }
+  #calculated-protein{
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 30px;
+    color: var(--secondary-color);
+  }
+  .content-container{
+    display: flex;
+  
+
+  }
+  .bmi-container{
+    background-color: white;
+    height: 100px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3.0em;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 0.8em;
+  }
+  .recommended-protein-container{
+    background-color: white;
+    height: 100px;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3.0em;
+    padding: 0.5rem;
+    border-radius: 10px;
+    margin-top: 0.8em;
+  }
+
+  /*Recommended container*/
+  #recommendation{
+    margin-left: 2.5%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--secondary-color);
+  }
+  .recommended-container{
+    background-color: white;
+    height: 100px;
+    width: 30%;
+    margin-left: 3.0em;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 0.8em;
+    position: relative;
+  }
+  .recommended-wrapper{
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;  
+   padding: 12px 1rem; 
+  }
+
   /*Icons dark/light mode*/
 
 #moon,
@@ -349,52 +421,4 @@ header .navbar ul{
   transform: scale(1.3);
   transition: transform 0.3s ease; /* Add a smooth transition effect */
 }
-
-  /*FOOTER-----------------------------------------------------------------------------------------------------------*/
-.footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: 100px;
-    padding: 20px 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    
-    
-  }
-  /*Socialna omrežja*/
-  .footer .social_icon {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 13px 0;
-    flex-wrap: wrap;
-  }
-  .footer .social_icon li {
-    list-style: none;
-  }
-  .footer .social_icon li a {
-    font-size: 2em;
-    display: inline-block;
-    margin: 0 80px;
-    transition: 0.5s;
-    color: var(--secondary-color);
-  }
-  .footer .social_icon li a:hover {
-    transform: translateY(-10px);
-  }
   
-  /*Copyright*/
-  .footer .copyright li {
-    list-style: none;
-  }
-  .footer .copyright li a {
-    font-size: 1.0em;
-    display: inline-block;
-    transition: 0.5s;
-    text-decoration: none;
-    color: var(--secondary-color);
-  }

@@ -1,256 +1,263 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explore</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Explore</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
+
 <body>
-    <header class="header">
-        <h1>MyGymBuddy</h1>
-        <nav class="navbar">
+  <header class="header">
+    <h1>MyGymBuddy</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="main.html" class="active">Dashboard</a></li>
+        <li><a href="diary.html">Diary</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li>
+          <a href="#">More</i></a>
+          <div class="dropdown-arrow"></div>
           <ul>
-            <li><a href="main.html" class="active">Dashboard</a></li>
-            <li><a href="diary.html">Diary</a></li>
-            <li><a href="explore.html">Explore</a></li>
-            <li>
-              <a href="#">More</i></a>
-              <div class="dropdown-arrow"></div>
-              <ul>
-                <li><a href="myprofile.html">MyProfile</li>
-                <li><a href="mygoals.html">MyGoals</li>
-                <li><a href="progress.html">Progress</li>
-                <li><a href="messages.html">Messages</li>
-                <li><a href="contact.html">Contact</li>
-                <li><a href="settings.html">Settings</li> 
-              </ul>
-            </li>
-            <li><a href="#" id="openLogin">Login</a></li>
-            <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
+            <li><a href="myprofile.html">MyProfile</li>
+            <li><a href="mygoals.html">MyGoals</li>
+            <li><a href="progress.html">Progress</li>
+            <li><a href="messages.html">Messages</li>
+            <li><a href="contact.html">Contact</li>
+            <li><a href="settings.html">Settings</li>
           </ul>
-        </nav>
-      </header>
+        </li>
+        <li><a href="#" id="openLogin">Login</a></li>
+        <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
+      </ul>
+    </nav>
+  </header>
 
-      <!--Naslovna kartica-->
-      <div class="explore-card">
-       <div class="welcome-blog-card">
-        <h1 class="blog-header">MyGymBuddy Blog</h1>
-        <h3 class="blog-smallheader">Your source of great content</h3>
-       </div>
-      </div>
-      <!--Pod naslovno kartico-->
-      <div class="post-main-card">
-      <span class="filter-card active-filter" data-filter='all'>All</span>
-      <span class="filter-card" data-filter='plans'>Plans</span>
-      <span class="filter-card" data-filter='facts'>Facts</span>
-      <span class="filter-card" data-filter='diets'>Diets</span>
-      </div>
+  <!--Naslovna kartica-->
+  <div class="explore-card">
+    <div class="welcome-blog-card">
+      <h1 class="blog-header">MyGymBuddy Blog</h1>
+      <h3 class="blog-smallheader">Your source of great content</h3>
+    </div>
+  </div>
+  <!--Pod naslovno kartico-->
+  <div class="post-main-card">
+    <span class="filter-card active-filter" data-filter='all'>All</span>
+    <span class="filter-card" data-filter='plans'>Plans</span>
+    <span class="filter-card" data-filter='facts'>Facts</span>
+    <span class="filter-card" data-filter='diets'>Diets</span>
+  </div>
 
-      <!--Objave v news-->
-      <section class="post container">
-          <!--Post 1-->
-        <div class="post-box plans">
-        <img src="/Slike/pullups.jpg" alt="calisthenics" class="post-img">
-        <h2 class="category">Plans</h2>
-        <a href="https://www.menshealth.com/uk/building-muscle/a759641/complete-guide-to-calisthenics-everything-you-need-to-know/" class="post-title">
-          You can build muscle using bodyweight
-        </a>
-        <span class="post-date">09 Dec 2023</span>
-        <p class="post-description">Build Mass Using Just Your Bodyweight with Our Complete Guide to Calisthenics</p>
-        </div>
-         <!--Post 2-->
-         <div class="post-box plans">
-          <img src="/Slike/flag.jpg" alt="flag" class="post-img">
-          <h2 class="category">Plans</h2>
-          <a href="https://summerfunfitness.com/human-flag-workout/" class="post-title">
-            How to train for a human flag
-          </a>
-          <span class="post-date">05 Dec 2023</span>
-          <p class="post-description">You CAN Human Flag. Here’s How</p>
-          </div>
-          <!--Post 3-->
-        <div class="post-box diets">
-          <img src="/Slike/arnold.jpg" alt="arnold" class="post-img">
-          <h2 class="category">Diet</h2>
-          <a href="https://manofmany.com/lifestyle/fitness/arnold-schwarzenegger-diet-workout-plan" class="post-title">
-            Arnold Schwarzenegger's diet
-          </a>
-          <span class="post-date">04 Dec 2023</span>
-          <p class="post-description">As you can probably guess, the Arnold Schwarzenegger diet plan goes big on protein, and by that we mean big.</p>
-        </div>
-       <!--Post 4-->
-       <div class="post-box facts">
-        <img src="/Slike/cbum.jpg" alt="cbum" class="post-img">
-        <h2 class="category">Facts</h2>
-        <a href="https://www.muscleandfitness.com/flexonline/flex-news/chris-bumstead-crowned-2023-classic-physique-olympia-winner/" class="post-title">
-          Cbum won the 5th olympia title
-        </a>
-        <span class="post-date">10 Dec 2023</span>
-        <p class="post-description">CBum fought off an unexpected challenge from Ramon Rocha Querioz to win title No. 5</p>
-      </div>
+  <!--Objave v news-->
+  <section class="post container">
+    <!--Post 1-->
+    <div class="post-box plans">
+      <img src="/Slike/pullups.jpg" alt="calisthenics" class="post-img">
+      <h2 class="category">Plans</h2>
+      <a href="https://www.menshealth.com/uk/building-muscle/a759641/complete-guide-to-calisthenics-everything-you-need-to-know/"
+        class="post-title">
+        You can build muscle using bodyweight
+      </a>
+      <span class="post-date">09 Dec 2023</span>
+      <p class="post-description">Build Mass Using Just Your Bodyweight with Our Complete Guide to Calisthenics</p>
+    </div>
+    <!--Post 2-->
+    <div class="post-box plans">
+      <img src="/Slike/flag.jpg" alt="flag" class="post-img">
+      <h2 class="category">Plans</h2>
+      <a href="https://summerfunfitness.com/human-flag-workout/" class="post-title">
+        How to train for a human flag
+      </a>
+      <span class="post-date">05 Dec 2023</span>
+      <p class="post-description">You CAN Human Flag. Here’s How</p>
+    </div>
+    <!--Post 3-->
+    <div class="post-box diets">
+      <img src="/Slike/arnold.jpg" alt="arnold" class="post-img">
+      <h2 class="category">Diet</h2>
+      <a href="https://manofmany.com/lifestyle/fitness/arnold-schwarzenegger-diet-workout-plan" class="post-title">
+        Arnold Schwarzenegger's diet
+      </a>
+      <span class="post-date">04 Dec 2023</span>
+      <p class="post-description">As you can probably guess, the Arnold Schwarzenegger diet plan goes big on protein,
+        and by that we mean big.</p>
+    </div>
+    <!--Post 4-->
+    <div class="post-box facts">
+      <img src="/Slike/cbum.jpg" alt="cbum" class="post-img">
+      <h2 class="category">Facts</h2>
+      <a href="https://www.muscleandfitness.com/flexonline/flex-news/chris-bumstead-crowned-2023-classic-physique-olympia-winner/"
+        class="post-title">
+        Cbum won the 5th olympia title
+      </a>
+      <span class="post-date">10 Dec 2023</span>
+      <p class="post-description">CBum fought off an unexpected challenge from Ramon Rocha Querioz to win title No. 5
+      </p>
+    </div>
 
-     <!--Post 5-->
-     <div class="post-box diets">
+    <!--Post 5-->
+    <div class="post-box diets">
       <img src="/Slike/nutrition.jpg" alt="diet" class="post-img">
       <h2 class="category">Diets</h2>
       <a href="https://www.webmd.com/fitness-exercise/ss/slideshow-best-foods-fitness" class="post-title">
         The perfect diet
       </a>
       <span class="post-date">11 Dec 2023</span>
-      <p class="post-description">If you don’t have enough to eat before you exercise, you may not have enough gas in the tank. You might burn fewer calories, too.</p>
+      <p class="post-description">If you don’t have enough to eat before you exercise, you may not have enough gas in
+        the tank. You might burn fewer calories, too.</p>
     </div>
-   <!--Post 6-->
-   <div class="post-box facts">
-    <img src="/Slike/proteinshake.jpg" alt="powder" class="post-img">
-    <h2 class="category">Facts</h2>
-    <a href="https://www.medicalnewstoday.com/articles/323093" class="post-title">
-      Benefits of protein shakes
-    </a>
-    <span class="post-date">02 Dec 2023</span>
-    <p class="post-description">Protein powders are nutritional supplements that may help build muscle, repair tissue, and make enzymes and hormones. Using protein powder may also aid weight loss and help people tone their muscles.</p>
-  </div>
+    <!--Post 6-->
+    <div class="post-box facts">
+      <img src="/Slike/proteinshake.jpg" alt="powder" class="post-img">
+      <h2 class="category">Facts</h2>
+      <a href="https://www.medicalnewstoday.com/articles/323093" class="post-title">
+        Benefits of protein shakes
+      </a>
+      <span class="post-date">02 Dec 2023</span>
+      <p class="post-description">Protein powders are nutritional supplements that may help build muscle, repair tissue,
+        and make enzymes and hormones. Using protein powder may also aid weight loss and help people tone their muscles.
+      </p>
+    </div>
 
-  <!--Post 7-->
-  <div class="post-box diets">
-    <img src="/Slike/supplements.jpg" alt="supps" class="post-img">
-    <h2 class="category">Diets</h2>
-    <a href="https://www.cnet.com/health/nutrition/5-science-backed-fitness-supplements-that-actually-work/" class="post-title">
-      Which fitness supplements to take
-    </a>
-    <span class="post-date">02 Dec 2023</span>
-    <p class="post-description">5 Fitness Supplements That Have Been Scientifically Proven to Work</p>
-  </div>
+    <!--Post 7-->
+    <div class="post-box diets">
+      <img src="/Slike/supplements.jpg" alt="supps" class="post-img">
+      <h2 class="category">Diets</h2>
+      <a href="https://www.cnet.com/health/nutrition/5-science-backed-fitness-supplements-that-actually-work/"
+        class="post-title">
+        Which fitness supplements to take
+      </a>
+      <span class="post-date">02 Dec 2023</span>
+      <p class="post-description">5 Fitness Supplements That Have Been Scientifically Proven to Work</p>
+    </div>
 
-  <!--Post 8-->
-  <div class="post-box">
-    <img src="/Slike/anatomy.jpg" alt="anatomy" class="post-img">
-    <h2 class="category">Facts</h2>
-    <a href="https://www.innerbody.com/image/musfov.html" class="post-title">
-      Concepts of human muscle anatomy
-    </a>
-    <span class="post-date">01 Dec 2023</span>
-    <p class="post-description">Learn about the three types of muscle as you use our 3D models to explore the anatomical structure and physiology of human muscles. </p>
-  </div>
-</section>
+    <!--Post 8-->
+    <div class="post-box">
+      <img src="/Slike/anatomy.jpg" alt="anatomy" class="post-img">
+      <h2 class="category">Facts</h2>
+      <a href="https://www.innerbody.com/image/musfov.html" class="post-title">
+        Concepts of human muscle anatomy
+      </a>
+      <span class="post-date">01 Dec 2023</span>
+      <p class="post-description">Learn about the three types of muscle as you use our 3D models to explore the
+        anatomical structure and physiology of human muscles. </p>
+    </div>
+  </section>
 
-      <!--Login Form-->
-      <div class="loginform" id="loginForm">
-        <!--Log in-->
-        <div class="Sign-container" id="container">
+  <!--Login Form-->
+  <div class="loginform" id="loginForm">
+    <!--Log in-->
+    <div class="Sign-container" id="container">
 
-        <!-- Close Icon -->
-        <div id="login-close-icon">
-          <ion-icon name="close"></ion-icon>
-        </div>
+      <!-- Close Icon -->
+      <div id="login-close-icon">
+        <ion-icon name="close"></ion-icon>
+      </div>
 
-          <div class="form-container log-in">
-            <form action="main.html" method="GET">
-              <h1>Log in</h1>
-              <div class="sign-icons">
-                <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
-              </div>
-              <span>or use your account</span>
-              <input type="email" name="Email" placeholder="Email" class="sign-input"/>
-              <input type="password" name="Password" placeholder="Password" class="sign-input password-field"/>
-              <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
-                <ion-icon name="eye-off-outline"></ion-icon>
-              </i>
-              <a href="forgotPassword.html">Forgot your password?</a>
-              <button type="submit">Log in</button>
-            </form>
+      <div class="form-container log-in">
+        <form action="main.html" method="GET">
+          <h1>Log in</h1>
+          <div class="sign-icons">
+            <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
           </div>
-  
-          <!--Sign up-->
-          <div class="form-container sign-up">
-            <form action="main.html" method="GET">
-              <h1>Create Account</h1>
-              <div class="sign-icons">
-                <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
-              </div>
-              <span>or use your email for registration</span>
-              <input type="text" placeholder="Name" name="Name" class="sign-input"/>
-              <input type="email" placeholder="Email" name="Email" class="sign-input"/>
-              <input type="password" placeholder="Password" name="Password" class="sign-input password-field" oninput="checkPasswordStrength(this.value)"/>
-              <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
-                <ion-icon name="eye-off-outline"></ion-icon>
-              </i>
-              <div class="strengthIndicator">
-                <span class="weekIndicator"></span>
-                <span class="goodIndicator"></span>
-                <span class="strongIndicator"></span>
-              </div>
-              <div id="checkPassword"></div>
-              <button>Sign up</button>
-            </form>
+          <span>or use your account</span>
+          <input type="email" name="Email" placeholder="Email" class="sign-input" />
+          <input type="password" name="Password" placeholder="Password" class="sign-input password-field" />
+          <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
+            <ion-icon name="eye-off-outline"></ion-icon>
+          </i>
+          <a href="forgotPassword.html">Forgot your password?</a>
+          <button type="submit">Log in</button>
+        </form>
+      </div>
+
+      <!--Sign up-->
+      <div class="form-container sign-up">
+        <form action="main.html" method="GET">
+          <h1>Create Account</h1>
+          <div class="sign-icons">
+            <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
           </div>
-  
-          <!--Uno zravn v okvircku-->
-          <div class="toggle-container">
-            <div class="toggle">
-              <div class="toggle-panel toggle-left">
-                <h1>Welcome back!</h1>
-                <p>
-                  Stay in sync with your fitness goals by logging in with your
-                  personal information
-                </p>
-                <button class="hidden" id="login">Log in</button>
-              </div>
-              <div class="toggle-panel toggle-right">
-                <h1>Welcome, fitness enthusiast!</h1>
-                <p>
-                  Provide your personal information to kickstart your
-                  transformative fitness journey with our app
-                </p>
-                <button class="hidden" id="register">Sign up</button>
-              </div>
-            </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Name" name="Name" class="sign-input" />
+          <input type="email" placeholder="Email" name="Email" class="sign-input" />
+          <input type="password" placeholder="Password" name="Password" class="sign-input password-field"
+            oninput="checkPasswordStrength(this.value)" />
+          <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
+            <ion-icon name="eye-off-outline"></ion-icon>
+          </i>
+          <div class="strengthIndicator">
+            <span class="weekIndicator"></span>
+            <span class="goodIndicator"></span>
+            <span class="strongIndicator"></span>
+          </div>
+          <div id="checkPassword"></div>
+          <button>Sign up</button>
+        </form>
+      </div>
+
+      <!--Uno zravn v okvircku-->
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome back!</h1>
+            <p>
+              Stay in sync with your fitness goals by logging in with your
+              personal information
+            </p>
+            <button class="hidden" id="login">Log in</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Welcome, fitness enthusiast!</h1>
+            <p>
+              Provide your personal information to kickstart your
+              transformative fitness journey with our app
+            </p>
+            <button class="hidden" id="register">Sign up</button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-    <footer class="footer">
-      <ul class="social_icon">
-        <li>
-          <a href="mailto:mygymbuddybusiness@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/mygymbuddybusiness/"><ion-icon name="logo-instagram"></ion-icon></a>
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li><a href="#">2023 MyGymBuddy | Projekt RPO</a></li>
-      </ul>
-    </footer>
+  <footer class="footer">
+    <ul class="social_icon">
+      <li>
+        <a href="mailto:mygymbuddybusiness@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/mygymbuddybusiness/"><ion-icon name="logo-instagram"></ion-icon></a>
+      </li>
+    </ul>
+    <ul class="copyright">
+      <li><a href="#">2023 MyGymBuddy | Projekt RPO</a></li>
+    </ul>
+  </footer>
 
-    <!--JQuery-->
-    <script
- src="https://code.jquery.com/jquery-3.7.1.js"
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-  crossorigin="anonymous"></script>
+  <!--JQuery-->
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
 
 
-    <!--Ikone za socialna omrežja-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="main.js"></script>
-    <script src="explore.js"></script>
-  </body>
-</html>
-    
+  <!--Ikone za socialna omrežja-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+  <script src="explore.js"></script>
 </body>
+
+</html>
+
+</body>
+
 </html>

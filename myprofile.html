@@ -1,45 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="MyProfile.css" />
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <title>MyGymBuddy</title>
-  </head>
-  <body>
-    <header class="header">
-      <h1>MyGymBuddy</h1>
-      <nav class="navbar">
-        <ul>
-          <li><a href="main.html" class="active">Dashboard</a></li>
-          <li><a href="diary.html">Diary</a></li>
-          <li><a href="explore.html">Explore</a></li>
-          <li>
-            <a href="#">More </i></a>
-            <div class="dropdown-arrow"></div>
-            <ul>
-              <li><a href="myprofile.html">MyProfile</li>
-              <li><a href="mygoals.html">MyGoals</li>
-              <li><a href="progress.html">Progress</li>
-              <li><a href="messages.html">Messages</li>
-              <li><a href="contact.html">Contact</li>
-              <li><a href="settings.html">Settings</li> 
-            </ul>
-          </li>
-          <li><a href="#" id="openLogin">Login</a></li>
-          <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
-        </ul>
-      </nav>
-    </header>
 
-        <div id="btnAddFrineds">Add friends</div>
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="MyProfile.css" />
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <title>MyGymBuddy</title>
+</head>
 
+<body>
+  <header class="header">
+    <h1>MyGymBuddy</h1>
+    <nav class="navbar">
+      <ul>
+        <li><a href="main.html" class="active">Dashboard</a></li>
+        <li><a href="diary.html">Diary</a></li>
+        <li><a href="explore.html">Explore</a></li>
+        <li>
+          <a href="#">More </i></a>
+          <div class="dropdown-arrow"></div>
+          <ul>
+            <li><a href="myprofile.html">MyProfile</li>
+            <li><a href="mygoals.html">MyGoals</li>
+            <li><a href="progress.html">Progress</li>
+            <li><a href="messages.html">Messages</li>
+            <li><a href="contact.html">Contact</li>
+            <li><a href="settings.html">Settings</li>
+          </ul>
+        </li>
+        <li><a href="#" id="openLogin">Login</a></li>
+        <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
+      </ul>
+    </nav>
+  </header>
 
-
-
+  <div id="btnAddFrineds">Add friends</div>
 
 
 
@@ -62,112 +60,113 @@
 
 
 
-      <!--Login Form-->
-      <div class="loginform" id="loginForm">
-        <!--Log in-->
-        <div class="Sign-container" id="container">
 
-        <!-- Close Icon -->
-        <div id="login-close-icon">
-          <ion-icon name="close"></ion-icon>
-        </div>
 
-          <div class="form-container log-in">
-            <form action="main.html" method="GET">
-              <h1>Log in</h1>
-              <div class="sign-icons">
-                <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
-              </div>
-              <span>or use your account</span>
-              <input type="email" name="Email" placeholder="Email" class="sign-input"/>
-              <input type="password" name="Password" placeholder="Password" class="sign-input password-field"/>
-              <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
-                <ion-icon name="eye-off-outline"></ion-icon>
-              </i>
-              <a href="forgotPassword.html">Forgot your password?</a>
-              <button type="submit">Log in</button>
-            </form>
+
+
+
+  <!--Login Form-->
+  <div class="loginform" id="loginForm">
+    <!--Log in-->
+    <div class="Sign-container" id="container">
+
+      <!-- Close Icon -->
+      <div id="login-close-icon">
+        <ion-icon name="close"></ion-icon>
+      </div>
+
+      <div class="form-container log-in">
+        <form action="main.html" method="GET">
+          <h1>Log in</h1>
+          <div class="sign-icons">
+            <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
           </div>
-  
-          <!--Sign up-->
-          <div class="form-container sign-up">
-            <form action="main.html" method="GET">
-              <h1>Create Account</h1>
-              <div class="sign-icons">
-                <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-                <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
-              </div>
-              <span>or use your email for registration</span>
-              <input type="text" placeholder="Name" name="Name" class="sign-input"/>
-              <input type="email" placeholder="Email" name="Email" class="sign-input"/>
-              <input type="password" placeholder="Password" name="Password" class="sign-input password-field" oninput="checkPasswordStrength(this.value)"/>
-              <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
-                <ion-icon name="eye-off-outline"></ion-icon>
-              </i>
-              <div class="strengthIndicator">
-                <span class="weekIndicator"></span>
-                <span class="goodIndicator"></span>
-                <span class="strongIndicator"></span>
-              </div>
-              <div id="checkPassword"></div>
-              <button>Sign up</button>
-            </form>
+          <span>or use your account</span>
+          <input type="email" name="Email" placeholder="Email" class="sign-input" />
+          <input type="password" name="Password" placeholder="Password" class="sign-input password-field" />
+          <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
+            <ion-icon name="eye-off-outline"></ion-icon>
+          </i>
+          <a href="forgotPassword.html">Forgot your password?</a>
+          <button type="submit">Log in</button>
+        </form>
+      </div>
+
+      <!--Sign up-->
+      <div class="form-container sign-up">
+        <form action="main.html" method="GET">
+          <h1>Create Account</h1>
+          <div class="sign-icons">
+            <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
           </div>
-  
-          <!--Uno zravn v okvircku-->
-          <div class="toggle-container">
-            <div class="toggle">
-              <div class="toggle-panel toggle-left">
-                <h1>Welcome back!</h1>
-                <p>
-                  Stay in sync with your fitness goals by logging in with your
-                  personal information
-                </p>
-                <button class="hidden" id="login">Log in</button>
-              </div>
-              <div class="toggle-panel toggle-right">
-                <h1>Welcome, fitness enthusiast!</h1>
-                <p>
-                  Provide your personal information to kickstart your
-                  transformative fitness journey with our app
-                </p>
-                <button class="hidden" id="register">Sign up</button>
-              </div>
-            </div>
+          <span>or use your email for registration</span>
+          <input type="text" placeholder="Name" name="Name" class="sign-input" />
+          <input type="email" placeholder="Email" name="Email" class="sign-input" />
+          <input type="password" placeholder="Password" name="Password" class="sign-input password-field"
+            oninput="checkPasswordStrength(this.value)" />
+          <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
+            <ion-icon name="eye-off-outline"></ion-icon>
+          </i>
+          <div class="strengthIndicator">
+            <span class="weekIndicator"></span>
+            <span class="goodIndicator"></span>
+            <span class="strongIndicator"></span>
+          </div>
+          <div id="checkPassword"></div>
+          <button>Sign up</button>
+        </form>
+      </div>
+
+      <!--Uno zravn v okvircku-->
+      <div class="toggle-container">
+        <div class="toggle">
+          <div class="toggle-panel toggle-left">
+            <h1>Welcome back!</h1>
+            <p>
+              Stay in sync with your fitness goals by logging in with your
+              personal information
+            </p>
+            <button class="hidden" id="login">Log in</button>
+          </div>
+          <div class="toggle-panel toggle-right">
+            <h1>Welcome, fitness enthusiast!</h1>
+            <p>
+              Provide your personal information to kickstart your
+              transformative fitness journey with our app
+            </p>
+            <button class="hidden" id="register">Sign up</button>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-    <footer class="footer">
-      <ul class="social_icon">
-        <li>
-          <a href="mailto:mygymbuddybusiness@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
-        </li>
-        <li>
-          <a href="https://www.facebook.com/mygymbuddybusiness/"><ion-icon name="logo-instagram"></ion-icon></a>
-        </li>
-      </ul>
-      <ul class="copyright">
-        <li><a href="#">2023 MyGymBuddy | Projekt RPO</a></li>
-      </ul>
-    </footer>
+  <footer class="footer">
+    <ul class="social_icon">
+      <li>
+        <a href="mailto:mygymbuddybusiness@gmail.com"><ion-icon name="mail-unread-outline"></ion-icon></a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com"><ion-icon name="logo-facebook"></ion-icon></a>
+      </li>
+      <li>
+        <a href="https://www.facebook.com/mygymbuddybusiness/"><ion-icon name="logo-instagram"></ion-icon></a>
+      </li>
+    </ul>
+    <ul class="copyright">
+      <li><a href="#">2023 MyGymBuddy | Projekt RPO</a></li>
+    </ul>
+  </footer>
 
-    <!--Ikone za socialna omrežja-->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-    <script src="main.js"></script>
-    <script src="MyProfile&Friends.js"></script>
-  </body>
+  <!--Ikone za socialna omrežja-->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="main.js"></script>
+  <script src="MyProfile&Friends.js"></script>
+</body>
+
 </html>
