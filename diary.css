@@ -398,6 +398,14 @@ header .navbar ul{
    padding: 12px 1rem; 
   }
 
+
+  /*BMI calculator okvirček*/
+  
+  #height_error,
+  #weight_error{
+    color: red;
+  }
+
   /*Icons dark/light mode*/
 
 #moon,

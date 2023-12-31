@@ -91,7 +91,15 @@
   <div class="content-container">
     <div class="bmi-container">
       <div class="bmi-wrapper">
-
+        <p>Height in cm:
+          <input type="text" id="height"><br><span id="height_error"></span>
+        </p>
+        <p>
+          Weight in KG:
+          <input type="text" id="weight"><br><span id="weight_error"></span>
+        </p>
+        <button id="btn">Calculate</button>
+        <p id="output"></p>
       </div>
     </div>
     <div class="recommended-protein-container">
@@ -210,6 +218,7 @@
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="main.js"></script>
+  <script src="bmi.js"></script>
 </body>
 
 </html>
