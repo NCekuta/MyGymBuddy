@@ -30,6 +30,7 @@ button.addEventListener('click', () => {
         }
         else {
             result.innerHTML = 'Overweight: ' + bmi;
+
         }
     }
     else {

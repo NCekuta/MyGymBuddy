@@ -346,16 +346,14 @@ header .navbar ul{
   }
   .content-container{
     display: flex;
-  
 
   }
   .bmi-container{
     background-color: white;
-    height: 100px;
+    height: 150px;
     width: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
     margin-left: 3.0em;
     padding: 0.5rem;
     border-radius: 10px;
@@ -363,7 +361,7 @@ header .navbar ul{
   }
   .recommended-protein-container{
     background-color: white;
-    height: 100px;
+    height: 150px;
     width: 30%;
     display: flex;
     align-items: center;
@@ -376,14 +374,14 @@ header .navbar ul{
 
   /*Recommended container*/
   #recommendation{
-    margin-left: 2.5%;
+    margin-left: -15px;
     margin-bottom: 20px;
     margin-top: 20px;
     color: var(--secondary-color);
   }
   .recommended-container{
     background-color: white;
-    height: 100px;
+    height: 150px;
     width: 30%;
     margin-left: 3.0em;
     padding: 1em;
@@ -397,13 +395,35 @@ header .navbar ul{
    flex-wrap: wrap;  
    padding: 12px 1rem; 
   }
-
-
   /*BMI calculator okvirček*/
   
   #height_error,
   #weight_error{
     color: red;
+    font-size: 13px;
+  }
+  #height-tag,
+  #weight-tag{
+    font-size: 15px;
+    padding: 0.4rem;
+    font-weight: bold;
+  }
+  #output{
+    position: absolute;
+    left: 12em;
+    bottom: -30px;
+  }
+  #btn{
+    background-color: var(--third-color);
+    color: white;
+    font-weight: bold;
+    padding: 0.1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 35%;
+    margin-top: 0.3rem;
+    border-radius: 10px;
+    border-color: var(--third-color);
   }
 
   /*Icons dark/light mode*/

@@ -87,15 +87,16 @@
   <div class="title-container">
     <h3 id="bmi-title">BMI calculator</h3>
     <h3 id="calculated-protein">Recommended protein</h3>
+    <h3 id="recommendation">Recommendations</h3>
   </div>
   <div class="content-container">
     <div class="bmi-container">
       <div class="bmi-wrapper">
-        <p>Height in cm:
+        <p id="height-tag">Height in cm:
           <input type="text" id="height"><br><span id="height_error"></span>
         </p>
-        <p>
-          Weight in KG:
+        <p id="weight-tag">
+          Weight in kg:
           <input type="text" id="weight"><br><span id="weight_error"></span>
         </p>
         <button id="btn">Calculate</button>
@@ -107,15 +108,13 @@
 
       </div>
     </div>
-  </div>
-
-  <!--Recommended intake-->
-  <h3 id="recommendation">Recommendations</h3>
-  <div class="recommended-container">
-    <div class="recommended-wrapper">
+    <div class="recommended-container">
+      <div class="recommended-wrapper">
+      </div>
     </div>
   </div>
   </div>
+
 
   <!--Login Form-->
   <div class="loginform" id="loginForm">
