@@ -46,3 +46,4 @@ function handleButtonClick(button) {
   }
 }
   
+//suggestions

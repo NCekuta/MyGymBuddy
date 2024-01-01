@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
+
 #btnAddFrineds{
     text-align: center;
     font-size: 3rem;
@@ -81,18 +83,22 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    position: relative; /* Ensure relative positioning for absolute children */
-    z-index: 1; /* Set a lower z-index to keep it behind other elements */
+    position: relative;
+    max-height: 250px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    padding: 0.5rem;
 }
 
-.card {
+.AddFriendCard {
     display: flex;
     align-items: center;
     box-shadow: 0 0 10px var(--third-color);
     border-radius: 15px;
+    margin-bottom: 10px; /* Add margin between cards */
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
 
 .picture {
     font-size: 4rem;
@@ -107,7 +113,7 @@
     margin-right: auto;
 }
 
-.UserAdd {
+.UserAdd, .ViewProfile {
     padding: 10px;
     background-color: var(--third-color);
     color: white;
@@ -117,10 +123,20 @@
     font-weight: bold;
     font-size: 15px;
     font-family: "Red Hat Display";
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.ViewProfile {
+    margin-right: 10px; /* Add margin to the right of ViewProfile button */
+}
+
+.UserAdd {
+    margin-left: 10px; /* Add margin to the left of UserAdd button */
 }
 
 
-.UserAdd:hover {
+.UserAdd:hover, .ViewProfile:hover {
     background-color: rgb(207, 207, 255);
 }
 
@@ -133,4 +149,91 @@
 }
 
 
+/*Scroll*/
+.user-cards::-webkit-scrollbar {
+    width: 12px; 
+}
+  
+.user-cards::-webkit-scrollbar-thumb {
+    background-color: var(--third-color);
+    border-radius: 6px;
+}
+  
+.user-cards::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
 
+/*Uno spodi suggestions ----------------------------------------------------------------------------------------------------*/
+
+.card {
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 20px 60px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .card .image {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border: 3px solid var(--third-color);
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  .card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .card h3 {
+    text-align: center;
+  }
+
+  .card p {
+    color: var(--third-color);
+    text-align: center;
+  }
+
+  .swiper-container {
+    position: relative;
+    margin: 0 auto;
+    width: 80%;
+    margin-top: 3rem;
+  }
+
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    color: var(--third-color);
+  }
+
+  .swiper-button-next:hover {
+    transform: scale(1.2) translateX(80%);
+  }
+
+  .swiper-button-prev:hover {
+    transform: scale(1.2) translateX(-80%);
+  }
+
+  .swiper-button-next {
+    transform: translateX(100%);
+  }
+
+  .swiper-button-prev {
+    transform: translateX(-100%);
+  }
+
+  .swiper-pagination {
+    transform: translateY(200%);
+  }
