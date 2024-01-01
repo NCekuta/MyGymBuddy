@@ -128,5 +128,9 @@
     display: none;
 }
 
+.UserAdd.removed {
+    background-color: red;
+}
+
 
 

@@ -33,3 +33,16 @@ fetch("https://jsonplaceholder.typicode.com/users")
       return { name: user.name, element: card }
     })
   })
+
+
+// button click
+function handleButtonClick(button) {
+  if (button.innerHTML === "Add") {
+      button.innerHTML = "Remove";
+      button.classList.add("removed");
+  } else {
+      button.innerHTML = "Add";
+      button.classList.remove("removed");
+  }
+}
+  
