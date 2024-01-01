@@ -22,7 +22,6 @@ searchInput.addEventListener("input", e => {
     });
   });
   
-
 fetch("https://jsonplaceholder.typicode.com/users")
   .then(res => res.json())
   .then(data => {
@@ -34,10 +33,3 @@ fetch("https://jsonplaceholder.typicode.com/users")
       return { name: user.name, element: card }
     })
   })
-
-
-//my profile
-const btnAddFriends = document.getElementById("btnAddFrineds");
-btnAddFriends.addEventListener('click', () => {
-    window.location.href = 'AddFriends.html';
-});
