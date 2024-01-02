@@ -46,4 +46,15 @@ function handleButtonClick(button) {
   }
 }
   
-//suggestions
+//icon add button
+function AddIconClick(button) {
+  var icon = button.querySelector('ion-icon');
+
+  if (icon.getAttribute('name') === "person-add") {
+    icon.setAttribute('name', "person-remove");
+    button.classList.add("removed");
+  } else {
+    icon.setAttribute('name', "person-add");
+    button.classList.remove("removed");
+  }
+}
