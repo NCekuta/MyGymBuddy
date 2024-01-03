@@ -32,12 +32,15 @@ a {
     text-decoration: none;
 }
 
+.cols__container{
+    margin-top: 2.5rem;
+}
+
 .profile{
     width: 100%;
     background-color: #fff;
     box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.1);
     z-index: 1000;
-    overflow: hidden;
     display: flex;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -47,8 +50,7 @@ a {
     width: 25%;
     padding: 10px;
     box-sizing: border-box;
-    overflow-y: auto;
-    background: linear-gradient(to bottom , var(--third-color) 5px, white 230px);
+    background: linear-gradient(to bottom, var(--third-color) 5px, white 230px);
     border-right: solid var(--third-color) 2px;
 }
 
@@ -72,7 +74,9 @@ a {
     border-radius: 50%;
     display: block;
     box-shadow: 1px 3px 12px rgb(255, 255, 255);
+    /* margin-top: -18% */;
 }
+
 
 #editLogo {
     position: absolute;
@@ -93,6 +97,7 @@ a {
     text-align: center;
     font-weight: 2rem;
     font-size: 1.5rem;
+    margin-top: 1rem;
     margin-bottom: 5px;
     color: black;
 }
@@ -149,7 +154,6 @@ a {
     color: var(--third-color);
     cursor: pointer;
     font-size: 1.5rem;
-
 }
 
 .socialIcons-bio{
