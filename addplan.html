@@ -1,107 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="login.css">
-  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-  <title>MyGymBuddy</title>
-</head>
-
-<body>
-  <header class="header">
-    <h1>MyGymBuddy</h1>
-    <nav class="navbar">
-      <ul>
-        <li><a href="main.html" class="active">Dashboard</a></li>
-        <li><a href="diary.html">Diary</a></li>
-        <li><a href="explore.html">Explore</a></li>
-        <li>
-          <a href="#">More </i></a>
-          <div class="dropdown-arrow"></div>
-          <ul>
-            <li><a href="myprofile.html">MyProfile</li>
-            <li><a href="mygoals.html">MyGoals</li>
-            <li><a href="progress.html">Progress</li>
-            <li><a href="messages.html">Messages</li>
-            <li><a href="contact.html">Contact</li>
-            <li><a href="settings.html">Settings</li>
-            <li><a href="addplan.html">Add plan</li>
-          </ul>
-        </li>
-        <li><a href="#" id="openLogin">Login</a></li>
-        <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
-      </ul>
-    </nav>
-  </header>
-  <!--Primary kartica-->
-  <div class="dashboard-content">
-    <div class="dashboard-wrapper">
-      <div class="dashboard-title">
-        <span>Primary</span>
-        <h2>Dashboard</h2>
-      </div>
-      <div class="search-bar">
-        <i class="magnifying-glass"><ion-icon name="search-outline"></ion-icon></i>
-        <input type="text" placeholder="search" />
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>MyGymBuddy</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>MyGymBuddy</h1>
+      <nav class="navbar">
+        <ul>
+          <li><a href="main.html" class="active">Dashboard</a></li>
+          <li><a href="diary.html">Diary</a></li>
+          <li><a href="explore.html">Explore</a></li>
+          <li>
+            <a href="#">More </i></a>
+            <div class="dropdown-arrow"></div>
+            <ul>
+              <li><a href="myprofile.html">MyProfile</li>
+              <li><a href="mygoals.html">MyGoals</li>
+              <li><a href="progress.html">Progress</li>
+              <li><a href="messages.html">Messages</li>
+              <li><a href="contact.html">Contact</li>
+              <li><a href="settings.html">Settings</li> 
+            </ul>
+          </li>
+          <li><a href="#" id="openLogin">Login</a></li>
+          <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
+        </ul>
+      </nav>
+    </header>
+    <!--Calorie count-->
+    <h1 id="Calorieh">Plan Editor</h1>
+    <div id="plan-editor" contenteditable="true">
     </div>
-  </div>
-
-  <!--Kartica welcome-->
-  <div class="card-welcome">
-    <h2 class="card-title">Today's macros:</h2>
-    <div class="card-wrapper">
-      <div class="protein-counter">
-        <div class="protein-header">
-          <div class="protein-amount">
-            <span class="protein-title">
-              Protein:
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="carb-counter">
-        <div class="carb-header">
-          <div class="carb-amount">
-            <span class="carb-title">
-              Carbs:
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="fat-counter">
-        <div class="fat-header">
-          <div class="-fat-amount">
-            <span class="fat-title">
-              Fat:
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="carb-counter">
-        <div class="carb-header">
-          <div class="carb-amount">
-            <span class="carb-title">
-              Sugar:
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="total-calories">
-    <h2 class="total-calories-title">Total calories:</h2>
-    <div class="total-calories-wrapper">
-      <div class="total-calories-counter">
-        <div class="total-calories-amount">
-        </div>
-      </div>
-    </div>
-  </div>
+    <button type="button" class="save-button">save</button> 
 
   <!--Login Form-->
   <div class="loginform" id="loginForm">
