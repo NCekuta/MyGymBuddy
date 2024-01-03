@@ -41,14 +41,58 @@
   <!--Calorie count-->
   <h2 id="Calories">Calorie count</h2>
   <div id="calorie-container">
-    <div id="goal" class="square">Goal</div>
-    <div id="minus" class="square">-</div>
-    <div id="food" class="square">Food</div>
-    <div id="plus" class="square">+</div>
-    <div id="exercise" class="square">Exercise</div>
-    <div id="enako" class="square">=</div>
-    <div id="remaining" class="square">Remaining</div>
+    <div id="goal" class="square">
+      <div id="goalnum" class="square2">GoalNum</div>
+      Goal
+    </div>
+    <div id="minus" class="square3">
+      -
+    </div>
+    <div id="food" class="square">
+      <div id="foodnum" class="square2">FoodNum</div>
+      Food
+    </div>
+    <div id="plus" class="square3">
+
+      +
+    </div>
+    <div id="exercise" class="square">
+      <div id="exercisenum" class="square2">ExerciseNum</div>
+      Exercise
+    </div>
+    <div id="enako" class="square3">
+
+      =
+    </div>
+    <div id="remaining" class="square">
+      <div id="remainingnum" class="square2">RemainingNum</div>
+      Remaining
+    </div>
   </div>
+
+  <!--Računanje kalorij-->
+
+  <script>
+    const goalInput = document.getElementById('goalnum');
+    const foodInput = document.getElementById('foodnum');
+    const exerciseInput = document.getElementById('exercisenum');
+    const remainingValue = document.getElementById('remainingnum');
+  
+    function calculateRemaining() {
+      const goal = parseFloat(goalInput.value) || 0;
+      const food = parseFloat(foodInput.value) || 0;
+      const exercise = parseFloat(exerciseInput.value) || 0;
+  
+      const remaining = goal - food + exercise;
+      remainingValue.textContent = remaining;
+    }
+  
+    goalInput.addEventListener('input', calculateRemaining);
+    foodInput.addEventListener('input', calculateRemaining);
+    exerciseInput.addEventListener('input', calculateRemaining);
+  
+    calculateRemaining(); // Initial calculation on page load
+  </script>
 
   <h2 id="Calories">Daily intake</h2>
   <div id="daily-intake-container">

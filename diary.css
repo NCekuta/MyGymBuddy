@@ -290,19 +290,38 @@ header .navbar ul{
     border-radius: 10px;
   }
   
-  .addfood-button:hover{
-    color: var(--third-color);
-    background-color: #ffffff2e;
-  }
-  
   .square {
-    background-color: white;
-    height: 180px;
-    margin: 5px;
+    height: 50px;
+    display: flex;
+    font-size: 20px;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
+    margin-top: auto;
+  }
+
+  .square2 {
+    font-size: 30px;
+    position: absolute;
+    top: -70px; /* Adjust this value as needed */
+    text-align: center; 
+    width: 100%; /* Ensures text is centered */
+  }
+
+  .square3 {
+    height: 50px;
+    display: flex;
+    font-size: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .addfood-button:hover{
+    color: var(--third-color);
+    background-color: #ffffff2e;
   }
   
   #goal,
