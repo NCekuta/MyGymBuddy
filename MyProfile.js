@@ -4,6 +4,12 @@ btnAddFriends.addEventListener('click', () => {
     window.location.href = 'AddFriends.html';
 });
 
+//edit gumb
+const btnEdit = document.getElementById("btnEdit");
+btnEdit.addEventListener('click', () => {
+    window.location.href = 'EditProfile.html';
+});
+
 //nav bar
 $(document).ready(function() {
     // Your jQuery code using $
