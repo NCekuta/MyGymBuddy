@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/*Add friends -------------------------------------------------------------------------*/
+.addFriendsContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.addFriends {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    position: relative;
+}
+
+
+#headTxt {
+    text-align: center;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: bolder;
+    color: var(--third-color);
+    z-index: 2; /* Set a higher z-index to keep it on top */
+}
+
+#searchBar {
+    text-align: center;
+    padding-bottom: 1rem;
+    position: relative; /* Set position to relative for absolute positioning inside */
+    z-index: 2; /* Set a higher z-index to keep it on top */
+}
+
+#searchIcon {
+    position: absolute;
+    left: 10px;
+    top: 37%;
+    transform: translateY(-50%);
+    color: hsla(208, 94%, 54%, 0.5);
+    font-size: 1.5rem;
+    z-index: 3; /* Set a higher z-index to keep it on top */
+}
+
+#search {
+    width: 100%;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding: 0.8rem 2rem 0.8rem 2.5rem;
+    color: rgb(54, 54, 54);
+    font-size: 1rem;
+    font-family: "Red Hat Display";
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    border-radius: 25px;
+    transition: 0.3s;
+    z-index: 2; /* Set a higher z-index to keep it on top */
+}
+
+#search:focus {
+    border-color: var(--third-color);
+    background-color: #fff;
+}
+
+.user-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    max-height: 250px; /* Set a fixed height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    padding: 0.5rem;
+}
+
+.AddFriendCard {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 10px var(--third-color);
+    border-radius: 15px;
+    margin-bottom: 10px; /* Add margin between cards */
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+.picture {
+    font-size: 4rem;
+    margin-right: 10px;
+    margin-top: 1rem;
+    color: var(--third-color);
+}
+
+.UserName {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    margin-right: auto;
+}
+
+.UserAdd, .ViewProfile {
+    padding: 10px;
+    background-color: var(--third-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Red Hat Display";
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.ViewProfile {
+    margin-right: 10px; /* Add margin to the right of ViewProfile button */
+}
+
+.UserAdd {
+    margin-left: 10px; /* Add margin to the left of UserAdd button */
+}
+
+
+.UserAdd:hover, .ViewProfile:hover {
+    background-color: rgb(207, 207, 255);
+}
+
+.hide{
+    display: none;
+}
+
+.UserAdd.removed {
+    background-color: red;
+}
+
+
+/*Scroll*/
+.user-cards::-webkit-scrollbar {
+    width: 12px; 
+}
+  
+.user-cards::-webkit-scrollbar-thumb {
+    background-color: var(--third-color);
+    border-radius: 6px;
+}
+  
+.user-cards::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/*Uno spodi suggestions ----------------------------------------------------------------------------------------------------*/
+.card {
+    position: relative;
+    border-radius: 20px;
+    padding: 20px 60px;
+    box-shadow: 0 0 10px #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--third-color) 40%, white 60%);
+}
+
+.card .image {
+    width: 150px;
+    height: 150px;
+    padding: 3px;
+    border: 3px solid var(--third-color);
+    background: #fff;
+    border-radius: 50%;
+    margin-bottom: 0.2rem;
+}
+
+.card .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card h3 {
+    text-align: center;
+    cursor: pointer;
+}
+
+.card p {
+    color: var(--third-color);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.swiper-container {
+    position: relative;
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 3rem;
+}
+
+.swiper-button-next::after{ 
+    color: var(--third-color);
+    margin-left: 2rem;
+}
+
+.swiper-button-prev::after{
+  color: var(--third-color);
+  margin-right: 2rem;
+}
+
+.swiper-button-next:hover {
+    transform: scale(1.2) translateX(80%);
+}
+
+.swiper-button-prev:hover {
+    transform: scale(1.2) translateX(-80%);
+}
+
+.swiper-button-next {
+    transform: translateX(100%);
+}
+
+.swiper-button-prev {
+    transform: translateX(-100%);
+}
+
+.swiper-pagination {
+    transform: translateY(200%);
+}
+
+
+.addbutton{
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.addbutton:hover{
+  transform: scale(1.2);
+}

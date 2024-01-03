@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
 #btnAddFrineds{
-    text-align: center;
-    font-size: 3rem;
+    font-size: 1rem;
     cursor: pointer;
     color: white;
     margin-top: 10rem;
@@ -12,247 +12,163 @@
     color: var(--third-color);
 }
 
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    font-family: "Red Hat Display";
+}
 
-/*Add friends -------------------------------------------------------------------------*/
-.addFriendsContainer {
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+.profile{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 20px 1px rgba(255, 255, 255, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.left__col {
+    width: 30%;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background: linear-gradient(to bottom , var(--third-color) 10%, white 50%);
+    border-right: solid var(--third-color) 2px;
+}
+
+.right__col{
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: white;
+    display: block;
+}
+
+.img__container {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
-.addFriends {
-    width: 100%;
-    max-width: 500px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    padding: 1rem;
-    position: relative;
-}
-
-
-#headTxt {
-    text-align: center;
-    padding-bottom: 1rem;
-    font-size: 2rem;
-    font-weight: bolder;
-    color: var(--third-color);
-    z-index: 2; /* Set a higher z-index to keep it on top */
-}
-
-#searchBar {
-    text-align: center;
-    padding-bottom: 1rem;
-    position: relative; /* Set position to relative for absolute positioning inside */
-    z-index: 2; /* Set a higher z-index to keep it on top */
-}
-
-#searchIcon {
-    position: absolute;
-    left: 10px;
-    top: 37%;
-    transform: translateY(-50%);
-    color: hsla(208, 94%, 54%, 0.5);
-    font-size: 1.5rem;
-    z-index: 3; /* Set a higher z-index to keep it on top */
-}
-
-#search {
-    width: 100%;
-    outline: none;
-    border: 2px solid hsla(208, 94%, 54%, 0.137);
-    background-color: hsl(208, 50%, 50%, 6.5%);
-    padding: 0.8rem 2rem 0.8rem 2.5rem;
-    color: rgb(54, 54, 54);
-    font-size: 1rem;
-    font-family: "Red Hat Display";
-    font-weight: bold;
-    letter-spacing: 0.8px;
-    border-radius: 25px;
-    transition: 0.3s;
-    z-index: 2; /* Set a higher z-index to keep it on top */
-}
-
-#search:focus {
-    border-color: var(--third-color);
-    background-color: #fff;
-}
-
-.user-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    position: relative;
-    max-height: 250px; /* Set a fixed height for the container */
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
-    padding: 0.5rem;
-}
-
-.AddFriendCard {
-    display: flex;
-    align-items: center;
-    box-shadow: 0 0 10px var(--third-color);
-    border-radius: 15px;
-    margin-bottom: 10px; /* Add margin between cards */
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-
-.picture {
-    font-size: 4rem;
-    margin-right: 10px;
-    margin-top: 1rem;
-    color: var(--third-color);
-}
-
-.UserName {
-    font-size: 1.2rem;
-    font-weight: bolder;
-    margin-right: auto;
-}
-
-.UserAdd, .ViewProfile {
-    padding: 10px;
-    background-color: var(--third-color);
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 15px;
-    font-weight: bold;
-    font-size: 15px;
-    font-family: "Red Hat Display";
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-}
-
-.ViewProfile {
-    margin-right: 10px; /* Add margin to the right of ViewProfile button */
-}
-
-.UserAdd {
-    margin-left: 10px; /* Add margin to the left of UserAdd button */
-}
-
-
-.UserAdd:hover, .ViewProfile:hover {
-    background-color: rgb(207, 207, 255);
-}
-
-.hide{
-    display: none;
-}
-
-.UserAdd.removed {
-    background-color: red;
-}
-
-
-/*Scroll*/
-.user-cards::-webkit-scrollbar {
-    width: 12px; 
-}
-  
-.user-cards::-webkit-scrollbar-thumb {
-    background-color: var(--third-color);
-    border-radius: 6px;
-}
-  
-.user-cards::-webkit-scrollbar-track {
-    background-color: var(--primary-color);
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-/*Uno spodi suggestions ----------------------------------------------------------------------------------------------------*/
-.card {
-    position: relative;
-    border-radius: 20px;
-    padding: 20px 60px;
-    box-shadow: 0 0 10px #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    background: linear-gradient(to bottom, var(--third-color) 40%, white 60%);
-}
-
-.card .image {
-    width: 150px;
-    height: 150px;
-    padding: 3px;
-    border: 3px solid var(--third-color);
-    background: #fff;
-    border-radius: 50%;
-    margin-bottom: 0.2rem;
-}
-
-.card .image img {
-    width: 100%;
-    height: 100%;
+.img__container img {
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px rgb(255, 255, 255);
 }
 
-.card h3 {
+#fullName {
     text-align: center;
-    cursor: pointer;
+    font-weight: 2rem;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: black;
 }
 
-.card p {
-    color: var(--third-color);
+#job, #personal_mail{
     text-align: center;
-    margin-bottom: 1rem;
+    color: #818181;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
-.swiper-container {
+.about {
+    justify-content: space-between;
     position: relative;
-    margin: 0 auto;
-    width: 70%;
-    margin-top: 3rem;
+    margin: 35px 0;
+    text-align: center;
 }
 
-.swiper-button-next::after{ 
+.about li {
+    display: flex;
+    flex-direction: column;
+    color: black;
+    font-size: 1rem;
+}
+
+.number {
     color: var(--third-color);
-    margin-left: 2rem;
+    font-weight: 600;
 }
 
-.swiper-button-prev::after{
-  color: var(--third-color);
-  margin-right: 2rem;
+.about:after {
+    position: absolute;
+    content: "";
+    bottom: -16px;
+    display: block;
+    background: #cccccc;
+    height: 1px;
+    width: 100%;
 }
 
-.swiper-button-next:hover {
-    transform: scale(1.2) translateX(80%);
+#bio {
+    font-size: 1rem;
+    color: black;
+    font-weight: 300;
+    text-align: center;
 }
 
-.swiper-button-prev:hover {
-    transform: scale(1.2) translateX(-80%);
+.content ul {
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    color: var(--third-color);
 }
 
-.swiper-button-next {
-    transform: translateX(100%);
+.nav {
+    width: 100%;
+    z-index: -1;
 }
 
-.swiper-button-prev {
-    transform: translateX(-100%);
+.nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    height: 40px;
+    background: #fff;
+    box-shadow: 0px 2px 5px rgba(0,0,0,.3);
 }
 
-.swiper-pagination {
-    transform: translateY(200%);
+.nav ul li {
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    transition: all .2s ease-in-out;
 }
 
-
-.addbutton{
-  color: white;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  font-size: 2rem;
+.nav ul li.active,
+.nav ul li:hover {
+    box-shadow: 0px -3px 0px var(--third-color) inset;
 }
 
-.addbutton:hover{
-  transform: scale(1.2);
+.profile-body{
+    width: 100%;
+    z-index: -1;
+}
+
+.tab{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: none;
 }
