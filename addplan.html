@@ -38,8 +38,35 @@
   </header>
   <!--Calorie count-->
   <h1 id="Calorieh">Plan Editor</h1>
-  <div id="plan-editor" contenteditable="true">
-  </div>
+  <textarea id="fontInput" placeholder="Enter a font"></textarea>
+<textarea id="colorInput" placeholder="Enter a color"></textarea>
+<textarea id="fontSizeInput" placeholder="Enter a font size"></textarea>
+
+<div id="plan-editor" contenteditable="true">
+  <span id="textStyling" style='font-family: Arial; color: black; font-size: 16px;'>Sample Text</span>
+</div>
+
+<script>
+  const fontInput = document.getElementById('fontInput');
+  const colorInput = document.getElementById('colorInput');
+  const fontSizeInput = document.getElementById('fontSizeInput');
+  const textStyling = document.getElementById('textStyling');
+
+  fontInput.addEventListener('input', function() {
+    const font = this.value;
+    textStyling.style.fontFamily = font;
+  });
+
+  colorInput.addEventListener('input', function() {
+    const color = this.value;
+    textStyling.style.color = color;
+  });
+
+  fontSizeInput.addEventListener('input', function() {
+    const fontSize = this.value;
+    textStyling.style.fontSize = fontSize + 'px';
+  });
+  </script>
   <button type="button" class="save-button">save</button>
 
   <!--Login Form-->
