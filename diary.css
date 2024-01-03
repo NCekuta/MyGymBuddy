@@ -378,18 +378,6 @@ header .navbar ul{
     border-radius: 10px;
     margin-top: 0.8em;
   }
-  .recommended-protein-container{
-    background-color: white;
-    height: 150px;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 3.0em;
-    padding: 0.5rem;
-    border-radius: 10px;
-    margin-top: 0.8em;
-  }
 
   /*Recommended container*/
   #recommendation{
@@ -443,6 +431,68 @@ header .navbar ul{
     margin-top: 0.3rem;
     border-radius: 10px;
     border-color: var(--third-color);
+  }
+  #btn:hover{
+    color: var(--primary-color);
+    transition: 1s;
+   }
+
+  /*Recommended protein intake okvirček*/
+  .recommended-protein-container{
+    background-color: white;
+    height: 150px;
+    width: 30%;
+    margin-left: 3.0em;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 0.8em;
+    position: relative;
+  }
+  .recommended-protein-wrapper{
+   
+  }
+  .recommended-protein-title-container{
+    border-radius: 10px;
+    background-color: var(--third-color);
+    color: white;
+    padding: 0.5em;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 10px;
+  }
+  #btn-protein-calculate{
+    background-color: var(--third-color);
+    color: white;
+    font-weight: bold;
+    padding: 0.1em;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 20%;
+    margin-top: 0.3rem;
+    border-radius: 10px;
+    border-color: var(--third-color);
+  }
+
+  #btn-protein-calculate:hover{
+   color: var(--primary-color);
+   transition: 1s;
+  }
+
+  /*Recommendations okvirček*/
+
+  .recommendation-title-wrapper{
+    background-color: var(--third-color);
+    margin-top: -25px;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 100%;
+  }
+  #recommendation-title{
+    color: white;
+  }
+  #meats-recommendation,
+  #supplements-recommendation{
+    font-weight: 100;
   }
 
   /*Icons dark/light mode*/

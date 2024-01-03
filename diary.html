@@ -77,20 +77,20 @@
     const foodInput = document.getElementById('foodnum');
     const exerciseInput = document.getElementById('exercisenum');
     const remainingValue = document.getElementById('remainingnum');
-  
+
     function calculateRemaining() {
       const goal = parseFloat(goalInput.value) || 0;
       const food = parseFloat(foodInput.value) || 0;
       const exercise = parseFloat(exerciseInput.value) || 0;
-  
+
       const remaining = goal - food + exercise;
       remainingValue.textContent = remaining;
     }
-  
+
     goalInput.addEventListener('input', calculateRemaining);
     foodInput.addEventListener('input', calculateRemaining);
     exerciseInput.addEventListener('input', calculateRemaining);
-  
+
     calculateRemaining(); // Initial calculation on page load
   </script>
 
@@ -150,11 +150,26 @@
     </div>
     <div class="recommended-protein-container">
       <div class="recommended-protein-wrapper">
-
+        <div class="recommended-protein-title-container">
+          <h4 id="recommended-protein-title">Our calculations are based on your bodyweight</h4>
+        </div>
+        <p id="Weight-tag-protein">Weight in kg:</p>
+        <input type="text" id="weight-protein"><br><span id="weight-protein-error"></span>
+        <button id="btn-protein-calculate">Calculate</button>
+        <p id="output"></p>
       </div>
     </div>
     <div class="recommended-container">
       <div class="recommended-wrapper">
+        <div class="recommendation-title-wrapper">
+          <h4 id="recommendation-title">Our recommendations:</h4>
+        </div>
+        <br><br>
+        <p id="meats-recommendation">Meats: chicken, turkey, ground beef and fish. Don't forget the vegetables !</p>
+        <br>
+        <p id="supplements-recommendation">Supplements: whey protein isolate, omega 3, zinc and magnesium</p>
+        <br>
+        <p id="rest-recommendation">Take rest when nedded and get your 8 hours of sleep</p>
       </div>
     </div>
   </div>

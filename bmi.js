@@ -38,3 +38,6 @@ button.addEventListener('click', () => {
         result.innerHTML = '';
     }
 });
+
+// Protein counter - functionallity
+
