@@ -465,4 +465,10 @@ header .navbar ul{
   margin-top: 10px;
   width: 10%;
 }
+
+#fontSizeInput, #fontInput, #colorInput{
+  margin-left: 30px;
+  margin-bottom: 10px;
+  width: 10%;
+}
   

@@ -38,34 +38,67 @@
   </header>
   <!--Calorie count-->
   <h1 id="Calorieh">Plan Editor</h1>
-  <textarea id="fontInput" placeholder="Enter a font"></textarea>
-<textarea id="colorInput" placeholder="Enter a color"></textarea>
-<textarea id="fontSizeInput" placeholder="Enter a font size"></textarea>
-
-<div id="plan-editor" contenteditable="true">
-  <span id="textStyling" style='font-family: Arial; color: black; font-size: 16px;'>Sample Text</span>
-</div>
-
-<script>
-  const fontInput = document.getElementById('fontInput');
-  const colorInput = document.getElementById('colorInput');
-  const fontSizeInput = document.getElementById('fontSizeInput');
-  const textStyling = document.getElementById('textStyling');
-
-  fontInput.addEventListener('input', function() {
-    const font = this.value;
-    textStyling.style.fontFamily = font;
-  });
-
-  colorInput.addEventListener('input', function() {
-    const color = this.value;
-    textStyling.style.color = color;
-  });
-
-  fontSizeInput.addEventListener('input', function() {
-    const fontSize = this.value;
-    textStyling.style.fontSize = fontSize + 'px';
-  });
+    <label for="fontInput">Font:</label>
+    <select id="fontInput" onchange="changeFont()">
+      <option value="Arial">Arial</option>
+      <option value="Verdana">Verdana</option>
+      <option value="Times New Roman">Times New Roman</option>
+      <option value="Courier New">Courier New</option>
+      <!-- Add more font options as needed -->
+    </select>
+  
+    <label for="colorInput">Color:</label>
+    <select id="colorInput" onchange="changeColor()">
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="black">Black</option>
+      <!-- Add more color options as needed -->
+    </select>
+  
+    <label for="fontSizeInput">Font Size:</label>
+    <select id="fontSizeInput" onchange="changeFontSize()">
+      <option value="12">12px</option>
+      <option value="14">14px</option>
+      <option value="16">16px</option>
+      <option value="18">18px</option>
+      <!-- Add more font size options as needed -->
+    </select>
+  
+  <div id="plan-editor" contenteditable="true">
+    <span id="textStyling" style='font-family: Arial; color: red; font-size: 16px;'>Sample Text</span>
+  </div>
+  
+  <script>
+    function changeFont() {
+      const fontInput = document.getElementById('fontInput');
+      const selectedText = window.getSelection().toString();
+      if (selectedText === '') {
+        document.getElementById('plan-editor').style.fontFamily = fontInput.value;
+      } else {
+        document.execCommand('fontName', false, fontInput.value);
+      }
+    }
+  
+    function changeColor() {
+      const colorInput = document.getElementById('colorInput');
+      const selectedText = window.getSelection().toString();
+      if (selectedText === '') {
+        document.getElementById('plan-editor').style.color = colorInput.value;
+      } else {
+        document.execCommand('foreColor', false, colorInput.value);
+      }
+    }
+  
+    function changeFontSize() {
+      const fontSizeInput = document.getElementById('fontSizeInput');
+      const selectedText = window.getSelection().toString();
+      if (selectedText === '') {
+        document.getElementById('plan-editor').style.fontSize = fontSizeInput.value + 'px';
+      } else {
+        document.execCommand('fontSize', false, fontSizeInput.value);
+      }
+    }
   </script>
   <button type="button" class="save-button">save</button>
 
