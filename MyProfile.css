@@ -301,3 +301,92 @@ a {
     font-size: 0.8rem;
     font-weight: 400;
 }
+
+/*Personal info ----------------------------------------*/
+
+.InfoHeader{
+    text-align: left;
+}
+
+#profilePicture img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+    border-radius: 50%;
+}
+
+.profile-info button {
+    background-color: var(--third-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    border: solid 2px transparent;
+}
+
+button:hover {
+    color: var(--third-color);
+    background-color: transparent;
+    border: solid 2px var(--third-color);
+}
+
+
+.twoTogether{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    grid-column: span 2;
+}
+
+
+.form-info {
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.radioLabel{
+    margin-left: 2rem;
+}
+
+.formInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formInput:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+}
+
+#infoBio{
+  margin-top: 1rem;
+}
+
+#infoBio textarea{
+    resize: none;
+}
+
+#saveButton{
+    margin-top: 2rem;
+}

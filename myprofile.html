@@ -88,7 +88,9 @@
             </ul>
           </div>
           <div class="profile-body">
-            <div class="profile-posts tab">posts</div>
+            <div class="profile-posts tab">
+              No posts yet
+            </div>
             <div class="profile-rewards tab">
               <div class="rewards-container">
                 <div class="reward">
@@ -110,7 +112,7 @@
                     <img src="Slike/Rewards/reward6.png" alt="">
                   </div>
                   <div class="rewardName">Move Goal 200%</div>
-                  <div class="rewardDate"></div>
+                  <div class="rewardDate">11/05/2018</div>
                 </div>
                 <div class="reward">
                   <div class="rewardImage">
@@ -173,7 +175,7 @@
                     <img src="Slike/Rewards/reward7.png" alt="">
                   </div>
                   <div class="rewardName">Move Goal 300%</div>
-                  <div class="rewardDate"></div>
+                  <div class="rewardDate">04/07/2020</div>
                 </div>
                 <div class="reward">
                   <div class="rewardImage">
@@ -243,7 +245,7 @@
                     <img src="Slike/Rewards/reward8.png" alt="">
                   </div>
                   <div class="rewardName">Move Goal 400%</div>
-                  <div class="rewardDate"></div>
+                  <div class="rewardDate">22/03/2020</div>
                 </div>
                 <div class="reward">
                   <div class="rewardImage">
@@ -264,7 +266,7 @@
                     <img src="Slike/Rewards/reward19.png" alt="">
                   </div>
                   <div class="rewardName">7-Workout Week</div>
-                  <div class="rewardDate"></div>
+                  <div class="rewardDate">14/07/2019</div>
                 </div>
                 <div class="reward">
                   <div class="rewardImage">
@@ -318,7 +320,71 @@
                 <div id="btnAddFrineds">Add friends</div>
               </div>
             </div>
-            <div class="profile-info tab">Personal Info</div> 
+            <div class="profile-info tab">
+              <div id="profilePicture">
+                <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="">
+              </div>
+              <button>Upload new photo</button>
+              <div class="infoBody">
+                <h2 class="InfoHeader">Personal Info</h2>
+                <div class="twoTogether">
+                  <div class="form-info">
+                    <label class="form-label">First Name</label>
+                    <input type="text" class="formInput" value="Alex" required>
+                  </div>
+                  <div class="form-info">
+                    <label class="form-label">Last Name</label>
+                    <input type="text" class="formInput" value="Smith" required>
+                  </div>
+                </div>
+                <div class="twoTogether">
+                  <div class="form-info">
+                    <label class="form-label">Email</label>
+                    <input type="text" class="formInput" value="alex.smith@gmail.com" required>
+                  </div>
+                  <div class="form-info">
+                    <label class="form-label">Phone number</label>
+                    <input type="text" class="formInput" value="+38640213477">
+                  </div>
+                </div>
+                <div class="twoTogether">
+                  <div class="form-info">
+                    <label class="form-label">Birthday date</label>
+                    <input type="date" class="formInput" value="1999-08-27">
+                  </div>
+                  <div class="form-info">
+                    <label class="form-label">Gender:</label>
+                      <label>
+                        <input type="radio" class="radioLabel" name="gender" value="male" checked required>
+                        Male
+                      </label>
+                      <label>
+                        <input type="radio" class="radioLabel" name="gender" value="female" required>
+                        Female
+                      </label>
+                      <label>
+                        <input type="radio" class="radioLabel" name="gender" value="other" required>
+                        Other
+                      </label>
+                  </div>
+                </div>
+                <div class="twoTogether">
+                  <div class="form-info">
+                    <label class="form-label">Weight (kg)</label>
+                    <input type="number" class="formInput" value="80" required>
+                  </div>
+                  <div class="form-info">
+                    <label class="form-label">Height (cm)</label>
+                    <input type="number" class="formInput" value="180" required>
+                  </div>
+                </div>
+                <div class="form-info" id="infoBio">
+                  <label class="form-label">Bio</label>
+                  <textarea class="formInput" cols="100" rows="10">Passionate about fitness and well-being. 💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced approach to health. Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate</textarea>
+                </div>
+              </div>
+              <button id="saveButton">Save Changes</button>
+            </div> 
           </div>
         </div>
       </div>

@@ -4,15 +4,37 @@ btnAddFriends.addEventListener('click', () => {
     window.location.href = 'AddFriends.html';
 });
 
-//edit gumb
+// Edit button click event
 const btnEdit = document.getElementById("btnEdit");
 btnEdit.addEventListener('click', () => {
-    window.location.href = 'EditProfile.html';
+    // Remove 'active' class from all tabs
+    $('.nav ul li').removeClass('active');
+    
+    // Make the 'Personal Info' tab active
+    $('.user-info').addClass('active');
+
+    // Display the content of the 'Personal Info' tab
+    const panelIndex = $('.user-info').index(); // Get the index of the 'Personal Info' tab
+    tabs(panelIndex);
 });
+
+function tabs(panelIndex) {
+    const tab = document.querySelectorAll('.tab');
+
+    // Hide all tabs
+    tab.forEach(function(node) {
+        node.style.display = 'none';
+    });
+
+    // Show the selected tab
+    tab[panelIndex].style.display = 'block';
+}
+
+
 
 //nav bar
 $(document).ready(function() {
-    // Your jQuery code using $
+    
     $('.nav ul li').click(function() {
         $(this).addClass("active").siblings().removeClass('active');
     });
