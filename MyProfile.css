@@ -269,16 +269,18 @@ a {
 
 /*REWARDS------------------------------------------------*/
 
-
-.rewards-container {
-    width: 100%;
-    height: auto;
+/* Container for all sections */
+.sections-container {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around; /* Adjust as needed */
 }
 
+/* Container for each section */
+.section {
+    width: 100%;
+}
+
+/* Individual reward item styles */
 .reward {
     text-align: center;
     font-size: smaller;
@@ -296,10 +298,18 @@ a {
     margin-left: 2.5px;
 }
 
-.rewardDate{
+.rewardDate {
     color: #818181;
     font-size: 0.8rem;
     font-weight: 400;
+}
+
+/* Styles for the rewards container within each section */
+.rewards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*Personal info ----------------------------------------*/
