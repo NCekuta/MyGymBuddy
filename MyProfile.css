@@ -1,17 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-#btnAddFrineds{
-    font-size: 1rem;
-    cursor: pointer;
-    color: black;
-    margin-right: auto;
-}
-
-#btnAddFrineds:hover{
-    color: var(--third-color);
-}
-
 body {
     width: 100%;
     margin: 0;
@@ -203,3 +192,80 @@ a {
     text-align: center;
     display: none;
 }
+
+/*Tabs ------------------------------------------------------------------------------------------------------*/
+
+/*FRIENDS*/
+
+.friends-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.friend{
+    height: 135px;
+    width: 135px;
+    text-align: center;
+    font-size: smaller;
+    margin: 30px;
+    background-color: var(--third-color);
+    border-radius: 50%;
+}
+
+.friendImage img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    box-shadow: 1px 3px 12px var(--third-color);
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+}
+
+.friendName{
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.friendName:hover{
+    color: var(--third-color);
+}
+
+.btnContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnAddFrineds{
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+    margin-top: 5rem;
+    width: 150px;
+    height: 50px;
+    background-color: var(--third-color);
+    border-radius: 15px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border: solid 2px transparent;
+    padding: 1rem;
+    position: relative;
+    color: white;
+}
+
+#btnAddFrineds:hover{
+    background-color: transparent;
+    border: solid 2px var(--third-color);
+    color: var(--third-color);
+}
+
+
+
+
