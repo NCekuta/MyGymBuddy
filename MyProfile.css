@@ -52,12 +52,12 @@ a {
     display: block;
 }
 
-.img__container {
+#img__container {
     display: flex;
     justify-content: center;
 }
 
-.img__container img {
+#img__container img {
     width: 120px;
     height: 120px;
     object-fit: cover;

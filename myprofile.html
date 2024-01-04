@@ -43,8 +43,8 @@
       <div class="profile">
       <!--leva stran-->
         <div class="left__col">
-          <div class="img__container">
-            <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" />
+          <div id="img__container">
+            <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" id="mainImage" />
           </div>
 
           <div id="editLogo">
@@ -56,9 +56,9 @@
           <p id="personal_mail">alex.smith@gmail.com</p>
 
           <ul class="about">
-            <li><span class="number">25</span>Age</li>
-            <li><span class="number">80</span>Weight</li>
-            <li><span class="number">505</span>Friends</li>
+            <li><span class="number" id="age">25</span>Age</li>
+            <li><span class="number" id="weight">80</span>Weight</li>
+            <li><span class="number" id="friends">505</span>Friends</li>
           </ul>
 
           <div class="content">
@@ -324,33 +324,33 @@
               <div id="profilePicture">
                 <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="">
               </div>
-              <button>Upload new photo</button>
+              <button id="uploadButton">Upload new photo</button>
               <div class="infoBody">
                 <h2 class="InfoHeader">Personal Info</h2>
                 <div class="twoTogether">
                   <div class="form-info">
                     <label class="form-label">First Name</label>
-                    <input type="text" class="formInput" value="Alex" required>
+                    <input type="text" class="formInput" value="Alex" id="firstNameInput" required>
                   </div>
                   <div class="form-info">
                     <label class="form-label">Last Name</label>
-                    <input type="text" class="formInput" value="Smith" required>
+                    <input type="text" class="formInput" value="Smith" id="lastNameInput" required>
                   </div>
                 </div>
                 <div class="twoTogether">
                   <div class="form-info">
                     <label class="form-label">Email</label>
-                    <input type="text" class="formInput" value="alex.smith@gmail.com" required>
+                    <input type="text" class="formInput" value="alex.smith@gmail.com" id="emailInput" required>
                   </div>
                   <div class="form-info">
                     <label class="form-label">Phone number</label>
-                    <input type="text" class="formInput" value="+38640213477">
+                    <input type="text" class="formInput" value="+38640213477" id="phoneInput">
                   </div>
                 </div>
                 <div class="twoTogether">
                   <div class="form-info">
                     <label class="form-label">Birthday date</label>
-                    <input type="date" class="formInput" value="1999-08-27">
+                    <input type="date" class="formInput" value="1999-08-27" id="birthdayInput">
                   </div>
                   <div class="form-info">
                     <label class="form-label">Gender:</label>
@@ -371,27 +371,25 @@
                 <div class="twoTogether">
                   <div class="form-info">
                     <label class="form-label">Weight (kg)</label>
-                    <input type="number" class="formInput" value="80" required>
+                    <input type="number" class="formInput" value="80" id="weightInput" required>
                   </div>
                   <div class="form-info">
                     <label class="form-label">Height (cm)</label>
-                    <input type="number" class="formInput" value="180" required>
+                    <input type="number" class="formInput" value="180" id="heightInput" required>
                   </div>
                 </div>
                 <div class="form-info" id="infoBio">
                   <label class="form-label">Bio</label>
-                  <textarea class="formInput" cols="100" rows="10">Passionate about fitness and well-being. 💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced approach to health. Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate</textarea>
+                  <textarea class="formInput" cols="100" rows="10" id="bioInput">Passionate about fitness and well-being. 💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced approach to health. Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate</textarea>
                 </div>
               </div>
+              <input type="file" id="fileInput" style="display:none;">
               <button id="saveButton">Save Changes</button>
             </div> 
           </div>
         </div>
       </div>
     </div>
-
-
-
 
   <!--Login Form-->
   <div class="loginform" id="loginForm">
