@@ -23,6 +23,7 @@ a {
 
 .cols__container{
     margin-top: 2.5rem;
+    margin-bottom: 7rem;
 }
 
 .profile{
@@ -195,7 +196,7 @@ a {
 
 /*Tabs ------------------------------------------------------------------------------------------------------*/
 
-/*FRIENDS*/
+/*FRIENDS-----------------------------------------*/
 
 .friends-container{
     width: 100%;
@@ -266,6 +267,37 @@ a {
     color: var(--third-color);
 }
 
+/*REWARDS------------------------------------------------*/
 
 
+.rewards-container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
+.reward {
+    text-align: center;
+    font-size: smaller;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rewardImage img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+}
+
+.rewardDate{
+    color: #818181;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
