@@ -16,31 +16,31 @@
     <div id="welcomeMessage"></div>
 
     <script>
-        // Function to get query parameters from the URL
-        function getQueryVariable(variable) {
-            const query = window.location.search.substring(1);
-            const vars = query.split('&');
-            for (let i = 0; i < vars.length; i++) {
-                const pair = vars[i].split('=');
-                if (decodeURIComponent(pair[0]) === variable) {
-                    return decodeURIComponent(pair[1]);
-                }
-            }
-            console.error('Query variable %s not found', variable);
+      // Function to get query parameters from the URL
+      function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split('&');
+        for (let i = 0; i < vars.length; i++) {
+          const pair = vars[i].split('=');
+          if (decodeURIComponent(pair[0]) === variable) {
+            return decodeURIComponent(pair[1]);
+          }
         }
+        console.error('Query variable %s not found', variable);
+      }
 
-        // Get the 'Ime' value from the query parameter
-        const Ime = getQueryVariable('Ime');
+      // Get the 'Ime' value from the query parameter
+      const Ime = getQueryVariable('Ime');
 
-        // Get the welcomeMessage element
-        const welcomeMessageElement = document.getElementById('welcomeMessage');
+      // Get the welcomeMessage element
+      const welcomeMessageElement = document.getElementById('welcomeMessage');
 
-        // Display a welcome message with the 'Ime' value
-        if (Ime) {
-            welcomeMessageElement.innerHTML = `<p>Welcome, ${Ime}!</p>`;
-        } else {
-            welcomeMessageElement.innerHTML = '<p>Welcome</p>';
-        }
+      // Display a welcome message with the 'Ime' value
+      if (Ime) {
+        welcomeMessageElement.innerHTML = `<p>Welcome, ${Ime}!</p>`;
+      } else {
+        welcomeMessageElement.innerHTML = '<p>Welcome</p>';
+      }
     </script>
     <nav class="navbar">
       <ul>
@@ -87,7 +87,7 @@
         <div class="protein-header">
           <div class="protein-amount">
             <span class="protein-title">
-              Protein:
+              Protein: <span class="grams">132g</span>
             </span>
           </div>
         </div>
@@ -96,7 +96,7 @@
         <div class="carb-header">
           <div class="carb-amount">
             <span class="carb-title">
-              Carbs:
+              Carbs: <span class="grams">250g</span>
             </span>
           </div>
         </div>
@@ -105,7 +105,7 @@
         <div class="fat-header">
           <div class="-fat-amount">
             <span class="fat-title">
-              Fat:
+              Fat: <span class="grams"> 45g</span>
             </span>
           </div>
         </div>
@@ -114,7 +114,7 @@
         <div class="carb-header">
           <div class="carb-amount">
             <span class="carb-title">
-              Sugar:
+              Sugar: <span class="grams">10g</span>
             </span>
           </div>
         </div>
@@ -123,7 +123,7 @@
   </div>
 
   <div class="total-calories">
-    <h2 class="total-calories-title">Total calories:</h2>
+    <h2 class="total-calories-title">Total calories: <span class="grams">2456</span></h2>
     <div class="total-calories-wrapper">
       <div class="total-calories-counter">
         <div class="total-calories-amount">
