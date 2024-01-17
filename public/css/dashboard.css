@@ -1,0 +1,92 @@
+/*Primary dasboard*/
+.dashboard-content {
+    position: relative;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0 2%;
+  }
+  .dashboard-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 2rem;
+  }
+  .search-bar {
+    background: rgb(237,237,237);
+    border-radius: 15px;
+    color: rgba(113, 99, 186, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+  }
+  .search-bar input{
+    background: transparent;
+    padding: 3px;
+  }
+  .search-bar i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+  }
+  .search-bar i:hover{
+    transform: scale(1.2);
+  }
+  .grams{
+    font-weight: bold;
+  }
+  
+/*Macro container*/
+
+.card-welcome{
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 1% 2%;
+  }
+  .card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .card-title{
+    padding-bottom: 20px;
+    font-size: 20px;
+  }
+  .protein-counter,
+  .carb-counter,
+  .fat-counter,
+  .sugar-counter{
+      background-color: rgb(205, 205, 205);
+      border-radius: 10px;
+      padding: 1.2rem;
+      width: 20%;
+      height: 25%;
+      transition: 0.5s ease-in-out;  
+      margin: 15px;  
+  }
+  .protein-counter:hover,
+  .carb-counter:hover,
+  .fat-counter:hover,
+  .sugar-counter{
+    transform: translateY(-5px);
+  }
+
+  /*total calories container*/
+  .total-calories{
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-right: 80%;
+    margin-left: 2%;
+  }
+  .total-calories-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .total-calories-title{
+    font-size: 20px;
+  }

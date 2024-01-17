@@ -1,0 +1,274 @@
+/*Messages zavihek -------------------------------------------------------------------------------------------------------------------------*/
+
+.messages-container {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .messages {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /*leva stran*/
+  #sidebar {
+    width: 25%;
+    background-color: var(--third-color);
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+  }
+  
+  .sidebarContent{
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  
+  .inboxHead {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    color: white;
+  }
+  
+  #newMessage {
+    cursor: pointer;
+    transform: translatey(10%);
+    font-size: 2.5rem;
+  }
+  
+  .receivedSent{
+    width: 100%;
+    border-radius: 15px;
+    z-index: 1000;
+    overflow: hidden;
+    display: flex;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  #buttonReceived, #buttonSent{
+    flex: 1;
+    padding: 8px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    cursor: pointer;
+    border: solid 2px transparent;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: "Red Hat Display";
+    background-color: hsla(208, 50%, 50%, 0.089);
+    color: rgb(94, 94, 94);
+  }
+  
+  #buttonReceived:hover, #buttonSent:hover{
+    border: solid 2px var(--third-color)
+  }
+  
+  #buttonReceived.active-button {
+    background-color: var(--third-color);
+    color: white; 
+  }
+  
+  #buttonSent.active-button {
+    background-color: var(--third-color);
+    color: white; 
+  }
+  
+  /*desna stran*/
+  #messageRight {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    background-color: var(--third-color);
+    display: block;
+  }
+  
+  #messageRight h1{
+    color: white;
+    text-align: center;
+  }
+  
+  #openMessage{
+    border-bottom: solid 2px #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.9rem;
+  }
+  
+  .messageRightContent {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: none;
+    margin-bottom: 1rem;
+  }
+  
+  #iconOpenMessage {
+    font-size: 20rem;
+    color: white;
+    text-align: center;
+  }
+  
+  
+  .messages ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .messages li {
+    cursor: pointer;
+    padding: 8px;
+    background-color: hsla(208, 50%, 50%, 0.089);
+    border-radius: 15px;
+    margin-top: 1rem;
+    font-size: 15px;
+    font-family: "Red Hat Display";
+    color: rgb(94, 94, 94);
+  }
+  
+  .messages li:hover {
+    background-color: var(--third-color);
+    color: #fff;
+  }
+  
+  .receivedMessages li.active-message,
+  .sentMessages li.active-message {
+    background-color: var(--third-color);
+    color: white;
+  }
+  
+  /* Message content styles */
+  #messageRight h2 {
+    margin-bottom: 10px;
+  }
+  
+  #messageRight button {
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: var(--third-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: "Red Hat Display";
+  }
+  
+  .message-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar-icon {
+    font-size: 2.5rem;
+    margin-right: 10px;
+  }
+  
+  .message-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1; /* Allow text to take remaining space */
+  }
+  
+  .message-date {
+    align-self: flex-end; /* Align to the bottom right */
+  }
+  
+  .message-subject {
+    font-size: 17px;
+    font-weight: bolder;
+  }
+  
+  /*Create new message--------------------------------------------------------------------------------------------------*/
+  #newMessageForm {
+    width: 60%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 10000;
+    overflow: hidden;
+    padding: 1rem;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none; /* Initially hide the form */
+  }
+  
+  
+  /*Forward message input*/
+  #forwardEmail{
+    width: 30%;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    color: rgb(54, 54, 54);
+    font-size: 0.8rem; /* Adjusted font size */
+    font-weight: bold;
+    letter-spacing: 0.8px; 
+    border-radius: 25px; 
+    transition: 0.3s;
+    margin: 0.4rem;
+  }
+  
+  #forwardEmail:focus, #replyToMessage:focus {
+    border-color: var(--third-color);
+    background-color: #fff;
+  }
+  
+  /*reply of message*/
+  .messageReply{
+    background-color: transparent;
+  }
+  
+  .reply{
+    background-color: white;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 15px;
+    
+  }
+  
+  #replyToMessage {
+    width: 80%;
+    height: 10rem;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding: 0.7rem 1rem;
+    color: rgb(54, 54, 54);
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 0.8px; 
+    border-radius: 25px; 
+    transition: 0.3s;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    resize: none;
+  }
+  
+  #replyToMessage::placeholder {
+    position: absolute;
+    top: 0.7rem; /* Adjust as needed */
+    left: 1rem;
+    font-size: 0.8rem; /* Adjusted font size */
+    color: rgba(54, 54, 54, 0.5); /* Adjusted color and opacity */
+    transition: 0.3s;
+  }
+  

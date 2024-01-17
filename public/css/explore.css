@@ -1,0 +1,103 @@
+
+/*Explore zavihek*/
+
+/*Explore main card*/
+.explore-card{
+    width: 100%;
+    background-color: white;
+    height: 35vh;
+   
+  }
+  .welcome-blog-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 6%
+  }
+  .blog-header{
+    font-weight: bold;
+    font-size: 45px;
+  }
+  .blog-smallheader{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  /*Explore undercard*/
+  .post-main-card{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    column-gap: 2.5rem;
+    margin-top: 2rem;
+  
+  }
+  .filter-card{
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  .active-filter{
+    background: var(--third-color);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+  }
+  /*News main posts*/
+  .post{
+    margin: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 200px));
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .post-box{
+    background: whitesmoke;
+    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    padding: 15px;
+    border-radius: 0.5rem;
+  }
+  .post-img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+  }
+  .category{
+    margin-top: 5px;
+    font-size: 0.67rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+  }
+  .post-title{
+    font-size: 1rem;
+    font-weight: 600;
+    /*obdrzi naslov v eni vrstici*/
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--third-color);
+  }
+  .post-date{
+    display: flex;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-top: 4px;
+  
+  }
+  .post-description{
+   font-size: 0.9rem;
+   line-height: 1.5rem;
+   margin: 5px 0 10px;
+   /*obdrzi text v treh vrsticah*/
+   display: -webkit-box;
+   -webkit-line-clamp: 3;
+   -webkit-box-orient: vertical;
+   overflow: hidden;
+  }

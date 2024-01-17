@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="MyProfile.css" />
-  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/MyProfile.css" />
+  <link rel="stylesheet" href="css/login.css">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <title>MyGymBuddy</title>
@@ -39,376 +39,398 @@
     </nav>
   </header>
 
-    <div class="cols__container">
-      <div class="profile">
+  <div class="cols__container">
+    <div class="profile">
       <!--leva stran-->
-        <div class="left__col">
-          <div id="img__container">
-            <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" id="mainImage" />
-          </div>
-
-          <div id="editLogo">
-            <ion-icon name="create-outline" id="btnEdit"></ion-icon>
-          </div>
-
-          <h2 id="fullName">Alex Smith</h2>
-          <p id="job">Personal trainer</p>
-          <p id="personal_mail">alex.smith@gmail.com</p>
-
-          <ul class="about">
-            <li><span class="number" id="age">25</span>Age</li>
-            <li><span class="number" id="weight">80</span>Weight</li>
-            <li><span class="number" id="friends">505</span>Friends</li>
-          </ul>
-
-          <div class="content">
-            <p id="bio">
-              Passionate about fitness and well-being. 
-              💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced approach to health. 
-              Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate
-            </p>
-
-            <ul>
-              <ion-icon name="logo-pinterest" color="danger" class="socialIcons-bio"></ion-icon>
-              <ion-icon name="logo-instagram" color="warning" class="socialIcons-bio"></ion-icon>
-              <ion-icon name="logo-facebook" color="primary" class="socialIcons-bio"></ion-icon>
-              <ion-icon name="logo-twitter" class="socialIcons-bio"></ion-icon>
-            </ul>
-          </div>
+      <div class="left__col">
+        <div id="img__container">
+          <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" id="mainImage" />
         </div>
 
-        <!--desna stran-->
-        <div class="right__col">
-          <div class="nav">
-            <ul>
-              <li class="user-post active">Posts</li>
-              <li class="user-rewards">Rewards</li>
-              <li class="user-friends">Friends</li>
-              <li class="user-info">Personal Info</li>
-            </ul>
-          </div>
-          <div class="profile-body">
-            <div class="profile-posts tab">
-              No posts yet
-            </div>
-            <div class="profile-rewards tab">
-              <div class="rewards-container">
-                <div class="sections-container">
-                  <div class="section">
-                    <h2>Limited Edition</h2>
-                    <div class="rewards-container">
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward13.png" alt="">
-                        </div>
-                        <div class="rewardName">Ring in the New Year Challenge</div>
-                        <div class="rewardDate">08/01/2017</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward14.png" alt="">
-                        </div>
-                        <div class="rewardName">Earth Day Challenge</div>
-                        <div class="rewardDate">22/04/2018</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward10.png" alt="">
-                        </div>
-                        <div class="rewardName">Perfect Month</div>
-                        <div class="rewardDate">January 2017</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward18.png" alt="">
-                        </div>
-                        <div class="rewardName">International Women's Day Challenge</div>
-                        <div class="rewardDate">08/03/2018</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward11.png" alt="">
-                        </div>
-                        <div class="rewardName">Perfect Month</div>
-                        <div class="rewardDate">February 2017</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward12.png" alt="">
-                        </div>
-                        <div class="rewardName">Perfect Month</div>
-                        <div class="rewardDate">March 2017</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward15.png" alt="">
-                        </div>
-                        <div class="rewardName">National Parks Challenge</div>
-                        <div class="rewardDate">15/07/2017</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward16.png" alt="">
-                        </div>
-                        <div class="rewardName">Ring in the New Year Challenge</div>
-                        <div class="rewardDate">07/01/2018</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward17.png" alt="">
-                        </div>
-                        <div class="rewardName">Hearth Month Challenge</div>
-                        <div class="rewardDate">14/02/2018</div>
-                      </div>
-                    </div> 
-                  </div>
+        <div id="editLogo">
+          <ion-icon name="create-outline" id="btnEdit"></ion-icon>
+        </div>
 
-                  <div class="section">
-                    <h2>Workouts</h2>
-                    <div class="rewards-container">
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward1.png" alt="">
-                        </div>
-                        <div class="rewardName">Firts Swimming Workout</div>
-                        <div class="rewardDate">27/04/2017</div>
+        <h2 id="fullName">Alex Smith</h2>
+        <p id="job">Personal trainer</p>
+        <p id="personal_mail">alex.smith@gmail.com</p>
+
+        <ul class="about">
+          <li><span class="number" id="age">25</span>Age</li>
+          <li><span class="number" id="weight">80</span>Weight</li>
+          <li><span class="number" id="friends">505</span>Friends</li>
+        </ul>
+
+        <div class="content">
+          <p id="bio">
+            Passionate about fitness and well-being.
+            💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced
+            approach to health.
+            Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate
+          </p>
+
+          <ul>
+            <ion-icon name="logo-pinterest" color="danger" class="socialIcons-bio"></ion-icon>
+            <ion-icon name="logo-instagram" color="warning" class="socialIcons-bio"></ion-icon>
+            <ion-icon name="logo-facebook" color="primary" class="socialIcons-bio"></ion-icon>
+            <ion-icon name="logo-twitter" class="socialIcons-bio"></ion-icon>
+          </ul>
+        </div>
+      </div>
+
+      <!--desna stran-->
+      <div class="right__col">
+        <div class="nav">
+          <ul>
+            <li class="user-post active">Posts</li>
+            <li class="user-rewards">Rewards</li>
+            <li class="user-friends">Friends</li>
+            <li class="user-info">Personal Info</li>
+          </ul>
+        </div>
+        <div class="profile-body">
+          <div class="profile-posts tab">
+            No posts yet
+          </div>
+          <div class="profile-rewards tab">
+            <div class="rewards-container">
+              <div class="sections-container">
+                <div class="section">
+                  <h2>Limited Edition</h2>
+                  <div class="rewards-container">
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward13.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward2.png" alt="">
-                        </div>
-                        <div class="rewardName">Running Workout Record</div>
-                        <div class="rewardDate">13/07/2016</div>
+                      <div class="rewardName">Ring in the New Year Challenge</div>
+                      <div class="rewardDate">08/01/2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward14.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward3.png" alt="">
-                        </div>
-                        <div class="rewardName">7-Workout Week</div>
-                        <div class="rewardDate">27/12/2015</div>
+                      <div class="rewardName">Earth Day Challenge</div>
+                      <div class="rewardDate">22/04/2018</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward10.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward19.png" alt="">
-                        </div>
-                        <div class="rewardName">7-Workout Week</div>
-                        <div class="rewardDate">14/07/2019</div>
+                      <div class="rewardName">Perfect Month</div>
+                      <div class="rewardDate">January 2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward18.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward20.png" alt="">
-                        </div>
-                        <div class="rewardName">First Cycling Workout</div>
-                        <div class="rewardDate">28/08/2015</div>
+                      <div class="rewardName">International Women's Day Challenge</div>
+                      <div class="rewardDate">08/03/2018</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward11.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward21.png" alt="">
-                        </div>
-                        <div class="rewardName">First Elliptical Workout</div>
-                        <div class="rewardDate">25/11/2015</div>
+                      <div class="rewardName">Perfect Month</div>
+                      <div class="rewardDate">February 2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward12.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward22.png" alt="">
-                        </div>
-                        <div class="rewardName">First Rowing Workout</div>
-                        <div class="rewardDate">09/12/2015</div>
+                      <div class="rewardName">Perfect Month</div>
+                      <div class="rewardDate">March 2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward15.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward23.png" alt="">
-                        </div>
-                        <div class="rewardName">First Running Workout</div>
-                        <div class="rewardDate">26/07/2015</div>
+                      <div class="rewardName">National Parks Challenge</div>
+                      <div class="rewardDate">15/07/2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward16.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward24.png" alt="">
-                        </div>
-                        <div class="rewardName">First Stair-Stepper Workout</div>
-                        <div class="rewardDate">04/08/2016</div>
+                      <div class="rewardName">Ring in the New Year Challenge</div>
+                      <div class="rewardDate">07/01/2018</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward17.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward25.png" alt="">
-                        </div>
-                        <div class="rewardName">First Swimming Workout</div>
-                        <div class="rewardDate">27/04/2017</div>
-                      </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward26.png" alt="">
-                        </div>
-                        <div class="rewardName">First Walking Workout</div>
-                        <div class="rewardDate">09/12/2015</div>
-                      </div>
+                      <div class="rewardName">Hearth Month Challenge</div>
+                      <div class="rewardDate">14/02/2018</div>
                     </div>
                   </div>
+                </div>
 
-                  <div class="section">
-                    <h2>Close Your Cicrles</h2>
-                    <div class="rewards-container">
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward4.png" alt="">
-                        </div>
-                        <div class="rewardName">New Move Record</div>
-                        <div class="rewardDate">2,019 Calories</div>
+                <div class="section">
+                  <h2>Workouts</h2>
+                  <div class="rewards-container">
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward1.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward5.png" alt="">
-                        </div>
-                        <div class="rewardName">New Exercise Record</div>
-                        <div class="rewardDate">199 minutes</div>
+                      <div class="rewardName">Firts Swimming Workout</div>
+                      <div class="rewardDate">27/04/2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward2.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward6.png" alt="">
-                        </div>
-                        <div class="rewardName">Move Goal 200%</div>
-                        <div class="rewardDate">11/05/2018</div>
+                      <div class="rewardName">Running Workout Record</div>
+                      <div class="rewardDate">13/07/2016</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward3.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward7.png" alt="">
-                        </div>
-                        <div class="rewardName">Move Goal 300%</div>
-                        <div class="rewardDate">04/07/2020</div>
+                      <div class="rewardName">7-Workout Week</div>
+                      <div class="rewardDate">27/12/2015</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward19.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward8.png" alt="">
-                        </div>
-                        <div class="rewardName">Move Goal 400%</div>
-                        <div class="rewardDate">22/03/2020</div>
+                      <div class="rewardName">7-Workout Week</div>
+                      <div class="rewardDate">14/07/2019</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward20.png" alt="">
                       </div>
-                      <div class="reward">
-                        <div class="rewardImage">
-                          <img src="Slike/Rewards/reward9.png" alt="">
-                        </div>
-                        <div class="rewardName">Longest Move Streak</div>
-                        <div class="rewardDate">366 days</div>
+                      <div class="rewardName">First Cycling Workout</div>
+                      <div class="rewardDate">28/08/2015</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward21.png" alt="">
                       </div>
-                    </div>  
+                      <div class="rewardName">First Elliptical Workout</div>
+                      <div class="rewardDate">25/11/2015</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward22.png" alt="">
+                      </div>
+                      <div class="rewardName">First Rowing Workout</div>
+                      <div class="rewardDate">09/12/2015</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward23.png" alt="">
+                      </div>
+                      <div class="rewardName">First Running Workout</div>
+                      <div class="rewardDate">26/07/2015</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward24.png" alt="">
+                      </div>
+                      <div class="rewardName">First Stair-Stepper Workout</div>
+                      <div class="rewardDate">04/08/2016</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward25.png" alt="">
+                      </div>
+                      <div class="rewardName">First Swimming Workout</div>
+                      <div class="rewardDate">27/04/2017</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward26.png" alt="">
+                      </div>
+                      <div class="rewardName">First Walking Workout</div>
+                      <div class="rewardDate">09/12/2015</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="section">
+                  <h2>Close Your Cicrles</h2>
+                  <div class="rewards-container">
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward4.png" alt="">
+                      </div>
+                      <div class="rewardName">New Move Record</div>
+                      <div class="rewardDate">2,019 Calories</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward5.png" alt="">
+                      </div>
+                      <div class="rewardName">New Exercise Record</div>
+                      <div class="rewardDate">199 minutes</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward6.png" alt="">
+                      </div>
+                      <div class="rewardName">Move Goal 200%</div>
+                      <div class="rewardDate">11/05/2018</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward7.png" alt="">
+                      </div>
+                      <div class="rewardName">Move Goal 300%</div>
+                      <div class="rewardDate">04/07/2020</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward8.png" alt="">
+                      </div>
+                      <div class="rewardName">Move Goal 400%</div>
+                      <div class="rewardDate">22/03/2020</div>
+                    </div>
+                    <div class="reward">
+                      <div class="rewardImage">
+                        <img src="Slike/Rewards/reward9.png" alt="">
+                      </div>
+                      <div class="rewardName">Longest Move Streak</div>
+                      <div class="rewardDate">366 days</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="profile-friends tab">
-              <div class="friends-container">
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/1. ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg" alt=""></div>
-                  <div class="friendName"><h3>Ayo Ogunseinde</h3></div>
+          </div>
+          <div class="profile-friends tab">
+            <div class="friends-container">
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/1. ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg" alt="">
                 </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/img-4.jpg" alt=""></div>
-                  <div class="friendName"><h3>Liam Morgan</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/img-2.jpg" alt=""></div>
-                  <div class="friendName"><h3>Noah Johnson</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/img-1.jpg" alt=""></div>
-                  <div class="friendName"><h3>Ava Mitchell</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/2. aiony-haust-3TLl_97HNJo-unsplash.jpg" alt=""></div>
-                  <div class="friendName"><h3>Aiony Haust</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/img-6.jpg" alt=""></div>
-                  <div class="friendName"><h3>Mason Davis</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/img-5.jpg" alt=""></div>
-                  <div class="friendName"><h3>Emily Turner</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/img-3.jpg" alt=""></div>
-                  <div class="friendName"><h3>Harper Reynolds</h3></div>
-                </div>
-                <div class="friend">
-                  <div class="friendImage"><img src="Slike/People/4. rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg" alt=""></div>
-                  <div class="friendName"><h3>Rafaella Mendes</h3></div>
+                <div class="friendName">
+                  <h3>Ayo Ogunseinde</h3>
                 </div>
               </div>
-              <div class="btnContainer">
-                <div id="btnAddFrineds">Add friends</div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/img-4.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Liam Morgan</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/img-2.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Noah Johnson</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/img-1.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Ava Mitchell</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/2. aiony-haust-3TLl_97HNJo-unsplash.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Aiony Haust</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/img-6.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Mason Davis</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/img-5.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Emily Turner</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/img-3.jpg" alt=""></div>
+                <div class="friendName">
+                  <h3>Harper Reynolds</h3>
+                </div>
+              </div>
+              <div class="friend">
+                <div class="friendImage"><img src="Slike/People/4. rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg"
+                    alt=""></div>
+                <div class="friendName">
+                  <h3>Rafaella Mendes</h3>
+                </div>
               </div>
             </div>
-            <div class="profile-info tab">
-              <div id="profilePicture">
-                <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="">
-              </div>
-              <button id="uploadButton">Upload new photo</button>
-              <div class="infoBody">
-                <h2 class="InfoHeader">Personal Info</h2>
-                <div class="twoTogether">
-                  <div class="form-info">
-                    <label class="form-label">First Name</label>
-                    <input type="text" class="formInput" value="Alex" id="firstNameInput" required>
-                  </div>
-                  <div class="form-info">
-                    <label class="form-label">Last Name</label>
-                    <input type="text" class="formInput" value="Smith" id="lastNameInput" required>
-                  </div>
+            <div class="btnContainer">
+              <div id="btnAddFrineds">Add friends</div>
+            </div>
+          </div>
+          <div class="profile-info tab">
+            <div id="profilePicture">
+              <img src="Slike/People/3. ian-dooley-d1UPkiFd04A-unsplash.jpg" alt="">
+            </div>
+            <button id="uploadButton">Upload new photo</button>
+            <div class="infoBody">
+              <h2 class="InfoHeader">Personal Info</h2>
+              <div class="twoTogether">
+                <div class="form-info">
+                  <label class="form-label">First Name</label>
+                  <input type="text" class="formInput" value="Alex" id="firstNameInput" required>
                 </div>
-                <div class="twoTogether">
-                  <div class="form-info">
-                    <label class="form-label">Email</label>
-                    <input type="text" class="formInput" value="alex.smith@gmail.com" id="emailInput" required>
-                  </div>
-                  <div class="form-info">
-                    <label class="form-label">Phone number</label>
-                    <input type="text" class="formInput" value="+38640213477" id="phoneInput">
-                  </div>
-                </div>
-                <div class="twoTogether">
-                  <div class="form-info">
-                    <label class="form-label">Birthday date</label>
-                    <input type="date" class="formInput" value="1999-08-27" id="birthdayInput">
-                  </div>
-                  <div class="form-info">
-                    <label class="form-label">Gender:</label>
-                      <label>
-                        <input type="radio" class="radioLabel" name="gender" value="male" checked required>
-                        Male
-                      </label>
-                      <label>
-                        <input type="radio" class="radioLabel" name="gender" value="female" required>
-                        Female
-                      </label>
-                      <label>
-                        <input type="radio" class="radioLabel" name="gender" value="other" required>
-                        Other
-                      </label>
-                  </div>
-                </div>
-                <div class="twoTogether">
-                  <div class="form-info">
-                    <label class="form-label">Weight (kg)</label>
-                    <input type="number" class="formInput" value="80" id="weightInput" required>
-                  </div>
-                  <div class="form-info">
-                    <label class="form-label">Height (cm)</label>
-                    <input type="number" class="formInput" value="180" id="heightInput" required>
-                  </div>
-                </div>
-                <div class="form-info" id="infoBio">
-                  <label class="form-label">Bio</label>
-                  <textarea class="formInput" cols="100" rows="10" id="bioInput">Passionate about fitness and well-being. 💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced approach to health. Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate</textarea>
+                <div class="form-info">
+                  <label class="form-label">Last Name</label>
+                  <input type="text" class="formInput" value="Smith" id="lastNameInput" required>
                 </div>
               </div>
-              <input type="file" id="fileInput" style="display:none;">
-              <button id="saveButton">Save Changes</button>
-            </div> 
+              <div class="twoTogether">
+                <div class="form-info">
+                  <label class="form-label">Email</label>
+                  <input type="text" class="formInput" value="alex.smith@gmail.com" id="emailInput" required>
+                </div>
+                <div class="form-info">
+                  <label class="form-label">Phone number</label>
+                  <input type="text" class="formInput" value="+38640213477" id="phoneInput">
+                </div>
+              </div>
+              <div class="twoTogether">
+                <div class="form-info">
+                  <label class="form-label">Birthday date</label>
+                  <input type="date" class="formInput" value="1999-08-27" id="birthdayInput">
+                </div>
+                <div class="form-info">
+                  <label class="form-label">Gender:</label>
+                  <label>
+                    <input type="radio" class="radioLabel" name="gender" value="male" checked required>
+                    Male
+                  </label>
+                  <label>
+                    <input type="radio" class="radioLabel" name="gender" value="female" required>
+                    Female
+                  </label>
+                  <label>
+                    <input type="radio" class="radioLabel" name="gender" value="other" required>
+                    Other
+                  </label>
+                </div>
+              </div>
+              <div class="twoTogether">
+                <div class="form-info">
+                  <label class="form-label">Weight (kg)</label>
+                  <input type="number" class="formInput" value="80" id="weightInput" required>
+                </div>
+                <div class="form-info">
+                  <label class="form-label">Height (cm)</label>
+                  <input type="number" class="formInput" value="180" id="heightInput" required>
+                </div>
+              </div>
+              <div class="form-info" id="infoBio">
+                <label class="form-label">Bio</label>
+                <textarea class="formInput" cols="100" rows="10"
+                  id="bioInput">Passionate about fitness and well-being. 💪 Join me on a journey to a healthier lifestyle! Certified fitness enthusiast and advocate for a balanced approach to health. Let's inspire and motivate each other to reach our fitness goals! 🏋️‍♂️ #FitnessJourney #WellnessAdvocate</textarea>
+              </div>
+            </div>
+            <input type="file" id="fileInput" style="display:none;">
+            <button id="saveButton">Save Changes</button>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   <!--Login Form-->
   <div class="loginform" id="loginForm">
