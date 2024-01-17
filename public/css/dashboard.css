@@ -1,3 +1,46 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary-color);
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*Scroll opcija ostaja skrita ampak se obdrži funkcionalnost*/
+body::-webkit-scrollbar{
+  display: none;
+}
+html {
+  height: 100%;
+}
+
+/*primary dark mode colors*/
+:root {
+  --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --secondary-color: #fff;
+  --third-color: rgb(121, 202, 255);
+}
+
+/*light mode*/
+.light-theme {
+  --primary-color: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
+  --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --third-color: rgb(121, 202, 255);
+}
+
+
+
 /*Primary dasboard*/
 .dashboard-content {
     position: relative;
@@ -13,30 +56,84 @@
     flex-wrap: wrap;
     padding: 5px 2rem;
   }
-  .search-bar {
-    background: rgb(237,237,237);
-    border-radius: 15px;
-    color: rgba(113, 99, 186, 255);
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    padding: 4px 12px;
-  }
-  .search-bar input{
-    background: transparent;
-    padding: 3px;
-  }
-  .search-bar i {
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: all 0.5s ease-out;
-  }
-  .search-bar i:hover{
-    transform: scale(1.2);
-  }
   .grams{
     font-weight: bold;
   }
+
+  /*GO premium button*/
+  .go-premium{
+    position: relative;
+    padding: 10px 22px;
+    background-color: var(--third-color);
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: transform 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .go-premium:active{
+    transform: scale(0.96);
+  }
+  .go-premium::before,
+  .go-premium::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 150%;
+    z-index: -1;
+    background-repeat: no-repeat;
+  }
+
+  .go-premium.animate::before{
+    top:-70%;
+    background-image: radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, var(--third-color) 20%, transparent 30%),
+    radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--third-color) 15%, transparent 20%),
+    radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--third-color) 20%, transparent 20%);
+    background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 18% 18%;
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    animation: topBubbles 0.4s ease-in-out forwards;
+  }
+  @keyframes topBubbles{
+    50%{
+      background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+    100%{
+      background-position: 0 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%,  0% 0%;
+    }
+  }
+  .go-premium.animate::after{
+   bottom: -70%;
+   background-image: radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+   radial-gradient(circle, transparent 10%, var(--third-color) 15%, transparent 20%),
+   radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+   radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+   radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+   radial-gradient(circle, var(--third-color) 20%, transparent 20%),
+   radial-gradient(circle, var(--third-color) 20%, transparent 20%);
+   background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 20% 20%, 18% 18%;
+   background-position: 10% 0%, 30% 10%, 55% 0%, 70% 0%, 85% 0%, 70% 0%, 70% 0%;
+   animation: bottomBubbles 0.3s ease-in-out forwards;
+  }
+  @keyframes bottomBubbles{
+    50%{
+      background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+    100%{
+      background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+      background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+    }
   
 /*Macro container*/
 

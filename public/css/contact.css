@@ -1,3 +1,44 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary-color);
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*Scroll opcija ostaja skrita ampak se obdrži funkcionalnost*/
+body::-webkit-scrollbar{
+  display: none;
+}
+html {
+  height: 100%;
+}
+
+/*primary dark mode colors*/
+:root {
+  --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --secondary-color: #fff;
+  --third-color: rgb(121, 202, 255);
+}
+
+/*light mode*/
+.light-theme {
+  --primary-color: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
+  --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --third-color: rgb(121, 202, 255);
+}
+
 /*Contatct---------------------------------------------------------------------------------------------------------*/
 
 .contact-container{
