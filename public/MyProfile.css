@@ -267,6 +267,10 @@ a {
     color: var(--third-color);
 }
 
+.friend.removed {
+    display: none;
+}
+
 /*REWARDS------------------------------------------------*/
 
 /* Container for all sections */

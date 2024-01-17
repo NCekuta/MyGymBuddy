@@ -12,6 +12,7 @@
   <title>MyGymBuddy</title>
 </head>
 
+
 <body>
   <header class="header">
     <h1>MyGymBuddy</h1>
@@ -40,21 +41,26 @@
 
   <div class="addFriendsContainer">
     <div class="addFriends">
-        <div id="headTxt">Find friends</div>
-        <div id="searchBar">
-            <ion-icon id="searchIcon" name="search"></ion-icon>
-            <input type="search" id="search" placeholder="Search users" data-search>
+      <div id="headTxt">Find friends</div>
+      <div id="searchBar">
+        <ion-icon id="searchIcon" name="search"></ion-icon>
+        <input type="search" id="search" placeholder="Search users" data-search>
+      </div>
+      <div class="user-cards" data-user-cards-container></div>
+      <template data-user-template>
+        <div class="AddFriendCard hide">
+          <div class="picture"><img class="friendImage" alt=""></div>
+          <div class="UserName" data-header></div>
+          <div class="ID"></div>
+          <div>
+            <button class="UserAdd" onclick="handleButtonClick(this)">Add</button>
+          </div>
         </div>
-        <div class="user-cards" data-user-cards-container></div>
-        <template data-user-template>
-            <div class="AddFriendCard hide">
-                <div class="picture"><ion-icon name="person-circle-outline"></ion-icon></div>
-                <div class="UserName" data-header></div>
-                <div><button class="UserAdd" onclick="handleButtonClick(this)">Add</button></div>
-            </div>
-        </template>
+      </template>
     </div>
   </div>
+  
+  
 
   <div class="swiper-container">
     <div class="swiper mySwiper">
@@ -212,11 +218,13 @@
   </footer>
 
   <!--Ikone za socialna omrežja-->
+  <script type="module" src="Friends.js"></script>
+  <script src="main.js"></script>
+
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="main.js"></script>
-  <script src="Friends.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script type="module" src="friendsData.js"></script>
 
   <script>
     var swiper = new Swiper('.mySwiper', {
@@ -250,7 +258,6 @@
       },
     });
   </script>
-
 </body>
 
 </html>

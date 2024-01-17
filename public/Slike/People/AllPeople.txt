@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Ayo Ogunseinde",
+    "email": "ayo.ogunseinde@gmail.com",
+    "image": "Slike/People/1. ayo-ogunseinde-6W4F62sN_yI-unsplash.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Liam Morgan",
+    "email": "liam.morgan@gmail.com",
+    "image": "Slike/People/img-4.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Noah Johnson",
+    "email": "noah.johnson@gmail.com",
+    "image": "Slike/People/img-2.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Ava Mitchell",
+    "email": "ava.mitchell@gmail.com",
+    "image": "Slike/People/img-1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Aiony Haust",
+    "email": "aiony.haust@gmail.com",
+    "image": "Slike/People/2. aiony-haust-3TLl_97HNJo-unsplash.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Mason Davis",
+    "email": "mason.davis@gmail.com",
+    "image": "Slike/People/img-6.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Emily Turner",
+    "email": "emily.turner@gmail.com",
+    "image": "Slike/People/img-5.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Harper Reynolds",
+    "email": "harper.reynolds@gmail.com",
+    "image": "Slike/People/img-3.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Rafaella Mendes",
+    "email": "rafaella.mendes@gmail.com",
+    "image": "Slike/People/4. rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg"
+  }
+]

@@ -153,6 +153,20 @@
     margin-bottom: 1rem;
 }
 
+.picture img {
+    width: 100px; /* Fixed width */
+    height: 100px; /* Fixed height */
+    object-fit: cover; /* Maintain aspect ratio, cover the container */
+    border-radius: 50%; /* Make the image circular */
+    border: 3px solid var(--third-color);
+    background: #fff;
+    padding: 3px;
+}
+
+.ID{
+    display: none;
+}
+
 /*Uno spodi suggestions ----------------------------------------------------------------------------------------------------*/
 .card {
     position: relative;
