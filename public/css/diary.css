@@ -478,6 +478,21 @@ header .navbar ul{
    transition: 1s;
   }
 
+  #weight-protein-error{
+    color: red;
+    font-size: 15px;
+    position: absolute;
+    left: 15.5em;
+    top: 6em;
+  }
+
+  #output-protein{
+    position: absolute;
+    left: 12em;
+    bottom: -30px;
+    color: green;
+  }
+
   /*Recommendations okvirček*/
 
   .recommendation-title-wrapper{

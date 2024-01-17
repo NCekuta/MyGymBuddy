@@ -40,4 +40,26 @@ button.addEventListener('click', () => {
 });
 
 // Protein counter - functionallity
+let button2 = document.getElementById('btn-protein-calculate');
 
+button2.addEventListener('click', () => {
+    const weightProtein = parseInt(document.getElementById('weight-protein').value);
+    const resultProtein = parseInt(document.getElementById('output-protein').value);
+    let weightStatus = false;
+
+    if (weightProtein === '' || isNaN(weightProtein) || (weightProtein <= 0)) {
+        document.getElementById('weight-protein-error').innerHTML = 'Please provide valid weight';
+    }
+    else {
+        document.getElementById('weight-protein-error').innerHTML = '';
+        weightStatus = true;
+    }
+    if (weightStatus) {
+        const requiredProtein = weightProtein * 0.8;
+        resultProtein.innerHTML = 'Your recomended dose of protein is:' + requiredProtein;
+    }
+    else {
+        alert('The form has errors');
+        resultProtein.innerHTML = '';
+    }
+});

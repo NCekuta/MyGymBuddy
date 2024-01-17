@@ -1,0 +1,326 @@
+/*Contatct---------------------------------------------------------------------------------------------------------*/
+
+.contact-container{
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  
+  .contact {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .contact-form{
+    background-color: #fff;
+    position: relative;
+    padding: 2.3rem 2.2rem;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .title {
+    color: black;
+    font-size: 40px;
+    line-height: 1;
+    margin-bottom: 0.7rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+  .title span{
+    color: var(--third-color);
+  }
+  
+  .contact-full-name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    grid-column: span 2;
+  }
+  
+  .contact-input-container {
+    position: relative;
+    margin-top: 1rem;
+  }
+  
+  .contact-input {
+    width: 100%;
+    outline: none;
+    border: 2px solid hsla(208, 94%, 54%, 0.137);
+    background-color: hsl(208, 50%, 50%, 6.5%);
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 0.7rem;
+    color: rgb(54, 54, 54);
+    font-size: 1.1rem; /* Adjusted font size */
+    letter-spacing: 0.8px; /* Adjusted letter spacing */
+    border-radius: 25px; /* Adjusted border radius */
+    transition: 0.3s;
+  }
+  
+  .contact-input:focus {
+    border-color: var(--third-color);
+    background-color: #fff;
+  }
+  
+  .contact-input-container:focus-within label,
+  .contact-input:focus-within + .contact-input-container label {
+    color: var(--third-color);
+  }
+  
+  .contact-input-container:focus-within .contact-icon,
+  .contact-input:focus-within + .contact-icon {
+    color: var(--third-color);
+  }
+  
+  textarea.contact-input {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    min-height: 250px;
+    border-radius: 22px;
+    resize: none;
+    overflow-y: auto;
+    font-family: "Red Hat Display";
+    color: rgb(54, 54, 54);
+  }
+  
+  textarea.contact-input::-webkit-scrollbar {
+    width: 12px; 
+  }
+  
+  textarea.contact-input::-webkit-scrollbar-thumb {
+    background-color: var(--third-color);
+    border-radius: 6px;
+  }
+  
+  textarea.contact-input::-webkit-scrollbar-track {
+    background-color: var(--primary-color);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-input-container label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    padding: 0 0.4rem;
+    color: rgb(94, 94, 94);
+    font-size: 1rem;
+    font-weight: bold;
+    pointer-events: none;
+    transition: 0.5s;
+    font-family: "Red Hat Display";
+  }
+  
+  .contact-icon{
+    position: absolute;
+    right: calc(1.35rem + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: rgb(94, 94, 94);
+  }
+  
+  /*spremeni se ko je v fokusu*/
+  .contact-input-container.focus label {
+    font-size: 0.8rem;
+    top: 0.5rem;
+    transform: translateY(0);
+    transition: 0.3s;
+  
+  }
+  
+  .contact-input-container.textarea.focus label {
+    font-size: 0.8rem;
+    top: 0.5rem;
+    transform: translateY(0);
+    transition: 0.3s;
+    font-weight: bold;
+  }
+  
+  .contact-input-container.textarea label {
+    top: 1rem;
+    transform: translateY(0);
+  }
+  
+  .contact-icon.textarea{
+    top: 1rem;
+    transform: translateY(0);
+  }
+  
+  .contact-buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+    grid-column: span 2;
+  }
+  
+  .btn {
+    display: inline-block;
+    padding: 1.1rem 2rem;
+    background-color: var(--third-color);
+    color: black;
+    border-radius: 40px;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn.contact {
+    color: #fff;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: "Red Hat Display";
+  }
+  
+  .btn.contact:hover {
+    background-color: rgb(138, 228, 255);
+  }
+  
+  .send-button{
+    position: relative;
+  }
+  
+  .send-icon{
+    position: absolute;
+    right: calc(1.35rem + 2px);
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #fff;
+    font-size: 25px;
+  }
+  
+  .btn.upload{
+    position: relative;
+    background-color: hsl(208, 50%, 50%, 6.5%);
+  }
+  
+  .btn.btn.upload label{
+    font-weight: bolder;
+    font-size: 20px;
+    font-family: "Red Hat Display";
+    color: rgb(94, 94, 94);
+  }
+  
+  .btn.upload:hover{
+    background-color: rgb(233, 233, 233);
+  }
+  
+  .btn.upload span{
+    color: var(--primary-color);
+    font-size: 20px;
+    color: rgb(94, 94, 94);
+  }
+  
+  .btn.upload input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color: red;
+    cursor: pointer;
+    opacity: 0;
+  }
+  
+  #attachment-list {
+    margin-top: 1rem;
+  }
+  
+  .attachment-item {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: gray;
+  }
+  
+  /*Desna stran---------------------*/
+  .contact-info {
+    padding: 2.3rem 2.2rem;
+    position: relative;
+    background-color: var(--third-color);
+    border-radius: 100px 0 0 20px;
+  }
+  
+  .contact-info .title {
+    color: #fff;
+    padding-bottom: 1rem;
+  }
+  
+  .contact-info-information{
+    display: flex;
+    color: #fff;
+    margin: 0.7rem 0;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+  
+  .contact-info-icon {
+    width: 28px;
+    margin-right: 0.7rem;
+    font-size: 20px;
+  }
+  
+  .contact-info-social-media {
+    padding: 1rem 0 0 0;
+  }
+  
+  .contact-info-social-media p {
+    color: #fff;
+  }
+  
+  .contact-info-social-icons {
+    display: flex;
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .contact-info-social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    background: #fff;
+    color: var(--third-color);
+    text-align: center;
+    padding-top: 7px;
+    margin-right: 1.5rem;
+    transition: 0.3s;
+  }
+  
+  .contact-info-social-icons a:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-map {
+    margin-top: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .contact-map iframe {
+    width: 100%; 
+    max-width: 1000px;
+    height: 350px;
+    border-radius: 10px 10px 10px 10px;
+  }
+  
