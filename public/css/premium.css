@@ -1,0 +1,77 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary-color);
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+/*Scroll opcija ostaja skrita ampak se obdrži funkcionalnost*/
+body::-webkit-scrollbar{
+  display: none;
+}
+html {
+  height: 100%;
+}
+
+/*primary dark mode colors*/
+:root {
+  --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --secondary-color: #fff;
+  --third-color: rgb(121, 202, 255);
+}
+
+/*light mode*/
+.light-theme {
+  --primary-color: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
+  --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --third-color: rgb(121, 202, 255);
+}
+
+div h1{
+font-size: 25px;
+  font-weight: 400px;
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-display: swap;
+  color: var(--secondary-color);
+  width: 400px;
+  margin-bottom: 30px;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col-1{ /*Polovica kjer je naslov*/
+    flex-basis: 50%;
+    flex-grow: 1;
+    background-image: var(--third-color);
+    background-size: cover;
+    background-position: center;
+    min-height: inherit;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.col-2{
+    flex-basis: 50%;
+    flex-grow: 1;
+}
