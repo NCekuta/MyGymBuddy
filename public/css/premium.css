@@ -71,7 +71,79 @@ font-size: 25px;
     flex-direction: column;
     color: white;
 }
+
+.col-1 ul{
+  list-style: none;
+}
+.col-1 ul li{
+  display: flex;
+  align-items: center;
+  margin: 12px 0;
+}
 .col-2{
     flex-basis: 50%;
     flex-grow: 1;
+    padding: 50px 80px;
+}
+h2{
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-top: -80px;
+  color: white;
+}
+span{
+  color: black;
+}
+form{
+  width: 400px;
+  color: #333;
+  font-weight: 500;
+  font-size: 15px;
+  background-color: white;
+}
+
+label{
+  display: block;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 20px 5px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+}
+
+label span{
+  flex: 1;
+  margin-left: 15px;
+  font-size: 19px;
+  font-weight:400;
+  color: #333;
+}
+label span small{
+  font-size: 12px;
+}
+input[type="radio"]:checked + span{
+  color: var(--third-color);
+}
+
+input[type="text"], input[type="email"]{
+  width: 100%;
+  background: transparent;
+  padding: 7px;
+  outline: none;
+  border: 1px solid #333;
+  border-radius: 4px;
+  margin: 12px 0;
+}
+
+form button{
+  background: var(--third-color);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
 }
