@@ -40,14 +40,14 @@ html {
 }
 
 div h1{
-font-size: 25px;
+font-size: 35px;
   font-weight: 400px;
   font-family: "Kaushan Script";
   font-style: normal;
   font-display: swap;
   color: var(--secondary-color);
-  width: 400px;
   margin-bottom: 30px;
+  color: black;
 }
 
 .container{
@@ -60,7 +60,7 @@ font-size: 25px;
 .col-1{ /*Polovica kjer je naslov*/
     flex-basis: 50%;
     flex-grow: 1;
-    background-image: var(--third-color);
+    background-image: linear-gradient(rgb(255, 255, 255), rgba(255, 255, 255, 0.8));
     background-size: cover;
     background-position: center;
     min-height: inherit;
@@ -69,12 +69,9 @@ font-size: 25px;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    color: white;
+    color: black;
 }
 
-.col-1 ul{
-  list-style: none;
-}
 .col-1 ul li{
   display: flex;
   align-items: center;
@@ -83,15 +80,17 @@ font-size: 25px;
 .col-2{
     flex-basis: 50%;
     flex-grow: 1;
-    padding: 50px 80px;
+    padding: 60px 80px;
+   
 }
 h2{
-  font-weight: 500;
+  font-weight: 600;
   display: flex;
   align-items: center;
   margin-bottom: 25px;
   margin-top: -80px;
   color: white;
+
 }
 span{
   color: black;
@@ -121,7 +120,7 @@ label span{
   flex: 1;
   margin-left: 15px;
   font-size: 19px;
-  font-weight:400;
+  font-weight:600;
   color: #333;
 }
 label span small{
@@ -132,18 +131,35 @@ input[type="radio"]:checked + span{
 }
 
 input[type="text"], input[type="email"]{
-  width: 100%;
+  width: 95%;
   background: transparent;
   padding: 7px;
   outline: none;
   border: 1px solid #333;
   border-radius: 4px;
-  margin: 12px 0;
+  margin: 12px 10px;
 }
 
-form button{
+.submit-btn{
   background: var(--third-color);
   color: #fff;
   font-size: 16px;
   padding: 12px;
+  margin: 20px 10px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.5s;
 }
+
+.submit-btn:hover{
+  transform: translateY(-5px);
+}
+
+.info{
+  margin: 0 10px;
+}
+
+

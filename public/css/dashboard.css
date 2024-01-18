@@ -156,7 +156,7 @@ html {
   .carb-counter,
   .fat-counter,
   .sugar-counter{
-      background-color: rgb(205, 205, 205);
+    background-image: linear-gradient(rgb(192, 192, 192), rgba(214, 211, 211, 0.8));
       border-radius: 10px;
       padding: 1.2rem;
       width: 20%;
