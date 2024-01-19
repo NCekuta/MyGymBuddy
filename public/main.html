@@ -17,7 +17,6 @@
     <div id="welcomeMessage"></div>
 
     <script>
-      // Function to get query parameters from the URL
       function getQueryVariable(variable) {
         const query = window.location.search.substring(1);
         const vars = query.split('&');
@@ -30,13 +29,10 @@
         console.error('Query variable %s not found', variable);
       }
 
-      // Get the 'Ime' value from the query parameter
       const Ime = getQueryVariable('Ime');
 
-      // Get the welcomeMessage element
       const welcomeMessageElement = document.getElementById('welcomeMessage');
 
-      // Display a welcome message with the 'Ime' value
       if (Ime) {
         welcomeMessageElement.innerHTML = `<p>Welcome, ${Ime}!</p>`;
       } else {

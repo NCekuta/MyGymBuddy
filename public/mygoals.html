@@ -18,6 +18,31 @@
 <body>
     <header class="header">
         <h1>MyGymBuddy</h1>
+        <div id="welcomeMessage"></div>
+
+    <script>
+      function getQueryVariable(variable) {
+        const query = window.location.search.substring(1);
+        const vars = query.split('&');
+        for (let i = 0; i < vars.length; i++) {
+          const pair = vars[i].split('=');
+          if (decodeURIComponent(pair[0]) === variable) {
+            return decodeURIComponent(pair[1]);
+          }
+        }
+        console.error('Query variable %s not found', variable);
+      }
+
+      const Ime = getQueryVariable('Ime');
+
+      const welcomeMessageElement = document.getElementById('welcomeMessage');
+
+      if (Ime) {
+        welcomeMessageElement.innerHTML = `<p>Welcome, ${Ime}!</p>`;
+      } else {
+        welcomeMessageElement.innerHTML = '<p>Welcome</p>';
+      }
+    </script>
         <nav class="navbar">
             <ul>
                 <li><a href="main.html" class="active">Dashboard</a></li>
@@ -36,7 +61,7 @@
                         <li><a href="addplan.html">Add plan</li>
                     </ul>
                 </li>
-                <li><a href="#" id="openLogin">Login</a></li>
+                <li><a href="/login">Login</a></li>
                 <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
             </ul>
         </nav>

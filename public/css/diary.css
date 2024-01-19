@@ -71,7 +71,7 @@ header .navbar ul{
   padding: 55px;
 
 }
-.header .navbar ul li a{
+.header .navbar ul li a, #welcomeMessage{
   color: var(--secondary-color);
   text-decoration: none;
   font-family: "Red Hat Display";
@@ -551,5 +551,24 @@ header .navbar ul{
   margin-left: 30px;
   margin-bottom: 10px;
   width: 10%;
+}
+
+select {
+  width: 100%;
+
+  margin-bottom: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
   

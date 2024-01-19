@@ -1,0 +1,201 @@
+/*GOOGLE FONTS*/
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: var(--primary-color);
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+/*Scroll opcija ostaja skrita ampak se obdrži funkcionalnost*/
+body::-webkit-scrollbar{
+  display: none;
+}
+html {
+  height: 100%;
+}
+
+/*primary dark mode colors*/
+:root {
+  --primary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --secondary-color: #fff;
+  --third-color: rgb(121, 202, 255);
+}
+
+/*light mode*/
+.light-theme {
+  --primary-color: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(121, 181, 230));
+  --secondary-color: linear-gradient(to bottom right, #2c3e50, rgb(0, 0, 0));
+  --third-color: rgb(121, 202, 255);
+}
+
+/*NAVBAR------------------------------------------------------------------------------------------------------------*/
+
+.header {
+  height: 100px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+.navbar{
+  margin-right:35px
+}
+header h1 {
+  font-size: 25px;
+  font-weight: 400px;
+  font-family: "Kaushan Script";
+  font-style: normal;
+  font-display: swap;
+  color: var(--secondary-color);
+  margin-left: 40px;
+}
+header .navbar ul{
+  list-style: none;
+  
+}
+.header .navbar ul li{
+  position: relative;
+  float:left;
+  padding: 55px;
+
+}
+.header .navbar ul li a, #welcomeMessage{
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-family: "Red Hat Display";
+  font-weight: bolder;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  position: relative;
+  
+}
+.header .navbar ul li a:hover {
+  color: var(--third-color);
+}
+/*Dropdown menu celotni blok*/
+.header .navbar ul li ul{
+  position: absolute;
+  left: 0;
+  width: 200px;
+  display: none;
+  border: 1px solid rgba(0,0,0,0.2);
+  background-color: whitesmoke
+}
+/*Dropdown menu posamezne komponente*/
+.header .navbar ul li ul li{
+  position: relative;
+  width: 100%;
+  height: 6vh;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(0,0,0,0.2);
+  padding: 15px;
+  
+}
+/*napisi zavihkov znotraj dropdown*/
+.header .navbar ul li ul li a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: black;
+
+}
+/*Postavitev na more*/
+.header .navbar ul li:hover > ul{
+  display: block;
+  
+}
+/*puscica zraven more*/
+.dropdown-arrow {
+  height: 0;
+  width: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top: 5px solid #333;
+  position: relative;
+  left: 60px;
+  bottom:15px
+}
+
+/*UNDERLINE EFEKT*/
+.header .navbar a:after{
+  content: "";
+  position: absolute;
+  background-color: var(--third-color);
+  height: 3px;
+  width: 0%;
+  left:0;
+  bottom: -10px;
+  transition: 0.4s;
+}
+.navbar li a.active {
+  color: var(--third-color);
+}
+.navbar a:hover:after{
+  width: 100%;
+}
+
+/*Addplan------------------------------------------------------------------------------------------------------------*/
+#plan-editor {
+    background-color: white;
+    height: 600px;
+    width: 95%;
+    display: flex;
+    margin: 0 auto;
+    margin-left: 10px;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+  
+  .save-button{
+    margin-left: 50px;
+    margin-top: 10px;
+    width: 10%;
+  }
+  
+  #fontSizeInput, #fontInput, #colorInput{
+    width: 100%;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    width: 10%;
+
+  }
+  
+  button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+    
+body{
+    display: flex;
+    margin-left: 80px;
+    color: var(--secondary-color);  
+    text-decoration: none;
+    font-family: "Red Hat Display";
+    font-weight: bolder;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    position: relative;
+}

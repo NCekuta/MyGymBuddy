@@ -89,7 +89,7 @@ header .navbar ul{
   padding: 55px;
 
 }
-.header .navbar ul li a{
+.header .navbar ul li a, #welcomeMessage{
   color: var(--secondary-color);
   text-decoration: none;
   font-family: "Red Hat Display";
