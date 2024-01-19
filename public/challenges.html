@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/addplan.css" />
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <title>Challenges Site</title>
+    <style>
+        .outer {
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .challenge-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            max-width: 600px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .challenge {
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .challenge.completed {
+            background-color: #b3ffb3;
+            border-color: #80cc80;
+            color: #008000;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>MyGymBuddy</h1>
+        <div id="welcomeMessage"></div>
+    
+        <script>
+          function getQueryVariable(variable) {
+            const query = window.location.search.substring(1);
+            const vars = query.split('&');
+            for (let i = 0; i < vars.length; i++) {
+              const pair = vars[i].split('=');
+              if (decodeURIComponent(pair[0]) === variable) {
+                return decodeURIComponent(pair[1]);
+              }
+            }
+            console.error('Query variable %s not found', variable);
+          }
+    
+          const Ime = getQueryVariable('Ime');
+    
+          const welcomeMessageElement = document.getElementById('welcomeMessage');
+    
+          if (Ime) {
+            welcomeMessageElement.innerHTML = `<p>Welcome, ${Ime}!</p>`;
+          } else {
+            welcomeMessageElement.innerHTML = '<p>Welcome</p>';
+          }
+        </script>
+        <nav class="navbar">
+          <ul>
+            <li><a href="main.html" class="active">Dashboard</a></li>
+            <li><a href="diary.html">Diary</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li>
+              <a href="#">More </i></a>
+              <div class="dropdown-arrow"></div>
+              <ul>
+                <li><a href="myprofile.html">MyProfile</li>
+                <li><a href="mygoals.html">MyGoals</li>
+                <li><a href="progress.html">Progress</li>
+                <li><a href="messages.html">Messages</li>
+                <li><a href="contact.html">Contact</li>
+                <li><a href="settings.html">Settings</li>
+                <li><a href="addplan.html">Add plan</li>
+                <li><a href="challenges.html">Challanges</li>
+              </ul>
+            </li>
+            <li><a href="/login">Login</a></li>
+            <li id="moon_sun"><ion-icon name="moon" id="moon"></ion-icon></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="outer">
+        <div class="challenge-container" id="challengeContainer">
+    </div>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const challengeContainer = document.getElementById('challengeContainer');
+            const challenges = [
+                'Go for a 30-minute run',
+                'Complete 50 push-ups',
+                'Drink 8 glasses of water',
+                'Read a chapter of a book',
+                'Learn a new recipe',
+                'Do 10 minutes of meditation',
+                'Take a walk in nature'
+            ];
+            challenges.forEach((challengeText, index) => {
+                const challengeElement = document.createElement('div');
+                challengeElement.classList.add('challenge');
+                challengeElement.textContent = challengeText;
+
+                challengeElement.addEventListener('click', () => {
+    
+                    challengeElement.classList.toggle('completed');
+                });
+
+                challengeContainer.appendChild(challengeElement);
+            });
+        });
+    </script>
+</body>
+</html>
