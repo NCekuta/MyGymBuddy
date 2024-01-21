@@ -118,13 +118,14 @@
 
     calculateRemaining();
   </script>
-     <style>
-      #cal-container {
-    align-items: center;
-    margin-left: 50px;
-}
-      #cal {
-        background-color: white;
+  <style>
+    #cal-container {
+      align-items: center;
+      margin-left: 50px;
+    }
+
+    #cal {
+      background-color: white;
       height: 190px;
       width: 97%;
       align-items: center;
@@ -133,265 +134,271 @@
       border-radius: 10px;
       margin: 10px;
       font-size: 22px;
-      }
-      input[type="number"] {
-          width: 100px;
-          margin: 10px;
-      }
-     input {
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
+    }
+
+    input[type="number"] {
+      width: 100px;
+      margin: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
     }
 
     button {
-    width: 10%;
-    padding: 0.5rem;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+      width: 10%;
+      padding: 0.5rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-#result {
-        margin: 25px;
+
+    #result {
+      margin: 25px;
     }
   </style>
   <h2 id="Calories">Calorie Intake Calculator</h2>
   <div id="cal-container">
-      <div id="cal">
-      
-          <label for="currentWeight">Your current weight (kg):</label><br>
-          <input type="number" id="currentWeight"><br>
-          <label for="desiredWeight">Your desired weight (kg):</label><br>
-          <input type="number" id="desiredWeight"><br>
-          <button onclick="calculateCalories()">Calculate</button><br>
-          <div id="result"></div>
-      </div>
+    <div id="cal">
+
+      <label for="currentWeight">Your current weight (kg):</label><br>
+      <input type="number" id="currentWeight"><br>
+      <label for="desiredWeight">Your desired weight (kg):</label><br>
+      <input type="number" id="desiredWeight"><br>
+      <button id="calculate-calories" onclick="calculateCalories()">Calculate</button><br>
+      <div id="result"></div>
     </div>
-  
+  </div>
+
   <script>
-      function calculateCalories() {
-          const currentWeight = parseFloat(document.getElementById('currentWeight').value);
-          const desiredWeight = parseFloat(document.getElementById('desiredWeight').value);
-  
-          const caloriesIntake = 22 * desiredWeight; 
-          const resultDiv = document.getElementById('result');
-          resultDiv.innerHTML = `Your estimated daily calorie intake: ${caloriesIntake} calories`;
-      }
+    function calculateCalories() {
+      const currentWeight = parseFloat(document.getElementById('currentWeight').value);
+      const desiredWeight = parseFloat(document.getElementById('desiredWeight').value);
+
+      const caloriesIntake = 22 * desiredWeight;
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = `Your estimated daily calorie intake: ${caloriesIntake} calories`;
+    }
   </script>
-  
+
   <style>
     input[type="number"] {
-        width: 100px;
-        margin-bottom: 10px;
+      width: 100px;
+      margin-bottom: 10px;
     }
+
     button {
-        padding: 8px 20px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 3px;
-        cursor: pointer;
+      padding: 8px 20px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
     }
+
     #result {
       margin: 25px;
     }
   </style>
   </head>
+
   <body>
     <h2 id="Calories">Daily Water Intake Calculator</h2>
     <div id="cal-container">
-  <div id="cal">
-  
-    <label for="weight">Weight (kg):</label><br>
-    <input type="number" id="weight"><br>
-    <button onclick="calculateWaterIntake()">Calculate</button>
-    <div id="result2"></div>
-  </div>
-</div>
-  
-  <script>
-    function calculateWaterIntake() {
+      <div id="cal">
+
+        <label for="weight">Weight (kg):</label><br>
+        <input type="number" id="weight"><br>
+        <button id="calculate-water" onclick="calculateWaterIntake()">Calculate</button>
+        <div id="result2"></div>
+      </div>
+    </div>
+
+    <script>
+      function calculateWaterIntake() {
         const weight = parseFloat(document.getElementById('weight').value);
-  
+
         if (!isNaN(weight) && weight > 0) {
-            const waterIntake = weight * 0.033;
-            const resultDiv = document.getElementById('result2');
-            resultDiv.innerHTML = `Your estimated daily water intake should be approximately ${waterIntake.toFixed(2)} liters.`;
+          const waterIntake = weight * 0.033;
+          const resultDiv = document.getElementById('result2');
+          resultDiv.innerHTML = `Your estimated daily water intake should be approximately ${waterIntake.toFixed(2)} liters.`;
         } else {
-            alert("Please enter a valid weight.");
+          alert("Please enter a valid weight.");
         }
-    }
-  </script>
+      }
+    </script>
 
-  <h2 id="Calories">Daily intake</h2>
-  <div id="daily-intake-container">
-    <div id="food-intake-container">Food intake:
-      <button type="button" class="add-button">Add</button>
-    </div>
-    <div id="water-intake-container">Water intake:
-      <button type="button" class="add-button">Add</button>
-    </div>
-    <div id="add-exercise-container">Exercise:
-      <button type="button" class="add-button">Add</button>
-    </div>
-  </div>
-
-  <!--Meal intakes-->
-  <h2 id="Calories">Meals</h2>
-  <div id="meal-intake-container">
-    <div class="daily-intakes">
-      <h2 class="meal-name">Breakfast <span class="sum breakfast">659</span></h2>
-      <button type="button" class="addfood-button">Add food</button>
-    </div>
-    <div class="daily-intakes">
-      <h2 class="meal-name">Lunch <span class="sum lunch">1024</span></h2>
-      <button type="button" class="addfood-button">Add food</button>
-    </div>
-    <div class="daily-intakes">
-      <h2 class="meal-name">Dinner <span class="sum dinner">560</span></h2>
-      <button type="button" class="addfood-button">Add food</button>
-    </div>
-    <div class="daily-intakes">
-      <h2 class="meal-name">Snacks/water <span class="sum snacks">67</span></h2>
-      <button type="button" class="addfood-button">Add snack</button>
-    </div>
-  </div>
-
-  <!--BMI calculator-->
-  <div class="title-container">
-    <h3 id="bmi-title">BMI calculator</h3>
-    <h3 id="calculated-protein">Recommended protein</h3>
-    <h3 id="recommendation">Recommendations</h3>
-  </div>
-  <div class="content-container">
-    <div class="bmi-container">
-      <div class="bmi-wrapper">
-        <p id="height-tag">Height in cm:
-          <input type="text" id="height"><br><span id="height_error"></span>
-        </p>
-        <p id="weight-tag">
-          Weight in kg:
-          <input type="text" id="weight"><br><span id="weight_error"></span>
-        </p>
-        <button id="btn">Calculate</button>
-        <p id="output"></p>
+    <h2 id="Calories">Daily intake</h2>
+    <div id="daily-intake-container">
+      <div id="food-intake-container">Food intake:
+        <button type="button" class="add-button">Add</button>
+      </div>
+      <div id="water-intake-container">Water intake:
+        <button type="button" class="add-button">Add</button>
+      </div>
+      <div id="add-exercise-container">Exercise:
+        <button type="button" class="add-button">Add</button>
       </div>
     </div>
 
-    <div class="recommended-protein-container">
-      <div class="recommended-protein-wrapper">
-        <div class="recommended-protein-title-container">
-          <h4 id="recommended-protein-title">Our calculations are based on your bodyweight</h4>
+    <!--Meal intakes-->
+    <h2 id="Calories">Meals</h2>
+    <div id="meal-intake-container">
+      <div class="daily-intakes">
+        <h2 class="meal-name">Breakfast <span class="sum breakfast">659</span></h2>
+        <button type="button" class="addfood-button">Add food</button>
+      </div>
+      <div class="daily-intakes">
+        <h2 class="meal-name">Lunch <span class="sum lunch">1024</span></h2>
+        <button type="button" class="addfood-button">Add food</button>
+      </div>
+      <div class="daily-intakes">
+        <h2 class="meal-name">Dinner <span class="sum dinner">560</span></h2>
+        <button type="button" class="addfood-button">Add food</button>
+      </div>
+      <div class="daily-intakes">
+        <h2 class="meal-name">Snacks/water <span class="sum snacks">67</span></h2>
+        <button type="button" class="addfood-button">Add snack</button>
+      </div>
+    </div>
+
+    <!--BMI calculator-->
+    <div class="title-container">
+      <h3 id="bmi-title">BMI calculator</h3>
+      <h3 id="calculated-protein">Recommended protein</h3>
+      <h3 id="recommendation">Recommendations</h3>
+    </div>
+    <div class="content-container">
+      <div class="bmi-container">
+        <div class="bmi-wrapper">
+          <p id="height-tag">Height in cm:
+            <input type="text" id="height"><br><span id="height_error"></span>
+          </p>
+          <p id="weight-tag">
+            Weight in kg:
+            <input type="text" id="weight"><br><span id="weight_error"></span>
+          </p>
+          <button id="btn">Calculate</button>
+          <p id="output"></p>
         </div>
-        <p id="Weight-tag-protein">Weight in kg:</p>
-        <input type="text" id="weight-protein"><br><span id="weight-protein-error"></span>
-        <button id="btn-protein-calculate">Calculate</button>
-        <p id="output-protein"></p>
       </div>
-    </div>
 
-    <div class="recommended-container">
-      <div class="recommended-wrapper">
-        <div class="recommendation-title-wrapper">
-          <h4 id="recommendation-title">Our recommendations:</h4>
+      <div class="recommended-protein-container">
+        <div class="recommended-protein-wrapper">
+          <div class="recommended-protein-title-container">
+            <h4 id="recommended-protein-title">Our calculations are based on your bodyweight</h4>
+          </div>
+          <p id="Weight-tag-protein">Weight in kg:</p>
+          <input type="text" id="weight-protein"><br><span id="weight-protein-error"></span>
+          <button id="btn-protein-calculate">Calculate</button>
+          <p id="output-protein"></p>
         </div>
-        <br><br>
-        <p id="meats-recommendation">Meats: chicken, turkey, ground beef and fish. Don't forget the vegetables !</p>
-        <br>
-        <p id="supplements-recommendation">Supplements: whey protein isolate, omega 3, zinc and magnesium</p>
-        <br>
-        <p id="rest-recommendation">Take rest when nedded and get your 8 hours of sleep</p>
-      </div>
-    </div>
-  </div>
-  </div>
-
-
-  <!--Login Form-->
-  <div class="loginform" id="loginForm">
-    <!--Log in-->
-    <div class="Sign-container" id="container">
-
-      <!-- Close Icon -->
-      <div id="login-close-icon">
-        <ion-icon name="close"></ion-icon>
       </div>
 
-      <div class="form-container log-in">
-        <form action="main.html" method="GET">
-          <h1>Log in</h1>
-          <div class="sign-icons">
-            <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
+      <div class="recommended-container">
+        <div class="recommended-wrapper">
+          <div class="recommendation-title-wrapper">
+            <h4 id="recommendation-title">Our recommendations:</h4>
           </div>
-          <span>or use your account</span>
-          <input type="email" name="Email" placeholder="Email" class="sign-input" />
-          <input type="password" name="Password" placeholder="Password" class="sign-input password-field" />
-          <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
-            <ion-icon name="eye-off-outline"></ion-icon>
-          </i>
-          <a href="forgotPassword.html">Forgot your password?</a>
-          <button type="submit">Log in</button>
-        </form>
-      </div>
-
-      <!--Sign up-->
-      <div class="form-container sign-up">
-        <form action="main.html" method="GET">
-          <h1>Create Account</h1>
-          <div class="sign-icons">
-            <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
-            <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
-          </div>
-          <span>or use your email for registration</span>
-          <input type="text" placeholder="Name" name="Name" class="sign-input" />
-          <input type="email" placeholder="Email" name="Email" class="sign-input" />
-          <input type="password" placeholder="Password" name="Password" class="sign-input password-field"
-            oninput="checkPasswordStrength(this.value)" />
-          <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
-            <ion-icon name="eye-off-outline"></ion-icon>
-          </i>
-          <div class="strengthIndicator">
-            <span class="weekIndicator"></span>
-            <span class="goodIndicator"></span>
-            <span class="strongIndicator"></span>
-          </div>
-          <div id="checkPassword"></div>
-          <button>Sign up</button>
-        </form>
-      </div>
-
-      <!--Uno zravn v okvircku-->
-      <div class="toggle-container">
-        <div class="toggle">
-          <div class="toggle-panel toggle-left">
-            <h1>Welcome back!</h1>
-            <p>
-              Stay in sync with your fitness goals by logging in with your
-              personal information
-            </p>
-            <button class="hidden" id="login">Log in</button>
-          </div>
-          <div class="toggle-panel toggle-right">
-            <h1>Welcome, fitness enthusiast!</h1>
-            <p>
-              Provide your personal information to kickstart your
-              transformative fitness journey with our app
-            </p>
-            <button class="hidden" id="register">Sign up</button>
-          </div>
+          <br><br>
+          <p id="meats-recommendation">Meats: chicken, turkey, ground beef and fish. Don't forget the vegetables !</p>
+          <br>
+          <p id="supplements-recommendation">Supplements: whey protein isolate, omega 3, zinc and magnesium</p>
+          <br>
+          <p id="rest-recommendation">Take rest when nedded and get your 8 hours of sleep</p>
         </div>
       </div>
     </div>
-  </div>
-  <!--
+    </div>
+
+
+    <!--Login Form-->
+    <div class="loginform" id="loginForm">
+      <!--Log in-->
+      <div class="Sign-container" id="container">
+
+        <!-- Close Icon -->
+        <div id="login-close-icon">
+          <ion-icon name="close"></ion-icon>
+        </div>
+
+        <div class="form-container log-in">
+          <form action="main.html" method="GET">
+            <h1>Log in</h1>
+            <div class="sign-icons">
+              <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
+            </div>
+            <span>or use your account</span>
+            <input type="email" name="Email" placeholder="Email" class="sign-input" />
+            <input type="password" name="Password" placeholder="Password" class="sign-input password-field" />
+            <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'log-in')">
+              <ion-icon name="eye-off-outline"></ion-icon>
+            </i>
+            <a href="forgotPassword.html">Forgot your password?</a>
+            <button type="submit">Log in</button>
+          </form>
+        </div>
+
+        <!--Sign up-->
+        <div class="form-container sign-up">
+          <form action="main.html" method="GET">
+            <h1>Create Account</h1>
+            <div class="sign-icons">
+              <a href="#"><ion-icon name="logo-google" color="danger"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-apple"></ion-icon></a>
+              <a href="#"><ion-icon name="logo-facebook" color="primary"></ion-icon></a>
+            </div>
+            <span>or use your email for registration</span>
+            <input type="text" placeholder="Name" name="Name" class="sign-input" />
+            <input type="email" placeholder="Email" name="Email" class="sign-input" />
+            <input type="password" placeholder="Password" name="Password" class="sign-input password-field"
+              oninput="checkPasswordStrength(this.value)" />
+            <i class="eye-icon togglePassword" onclick="togglePasswordVisibility(this, 'sign-up')">
+              <ion-icon name="eye-off-outline"></ion-icon>
+            </i>
+            <div class="strengthIndicator">
+              <span class="weekIndicator"></span>
+              <span class="goodIndicator"></span>
+              <span class="strongIndicator"></span>
+            </div>
+            <div id="checkPassword"></div>
+            <button>Sign up</button>
+          </form>
+        </div>
+
+        <!--Uno zravn v okvircku-->
+        <div class="toggle-container">
+          <div class="toggle">
+            <div class="toggle-panel toggle-left">
+              <h1>Welcome back!</h1>
+              <p>
+                Stay in sync with your fitness goals by logging in with your
+                personal information
+              </p>
+              <button class="hidden" id="login">Log in</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+              <h1>Welcome, fitness enthusiast!</h1>
+              <p>
+                Provide your personal information to kickstart your
+                transformative fitness journey with our app
+              </p>
+              <button class="hidden" id="register">Sign up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
   <footer class="footer">
     <ul class="social_icon">
       <li>
@@ -410,10 +417,10 @@
   </footer>
 
   <!--Ikone za socialna omrežja-->
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="main.js"></script>
-  <script src="bmi.js"></script>
-</body>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="main.js"></script>
+    <script src="bmi.js"></script>
+  </body>
 
 </html>

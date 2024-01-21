@@ -260,6 +260,31 @@ header .navbar ul{
     width: 100%;
     padding-left: 1rem;
   }
+
+  #calculate-calories{
+    background-color: var(--third-color);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 10%;
+    margin-top: 0.3rem;
+    border-radius: 10px;
+    border-color: var(--third-color);
+  }
+  #calculate-water{
+    background-color: var(--third-color);
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 10%;
+    margin-top: 0.3rem;
+    border-radius: 10px;
+    border-color: var(--third-color);
+  }
   
   .calories {
     margin-left: auto;
@@ -369,12 +394,12 @@ header .navbar ul{
   }
   .bmi-container{
     background-color: white;
-    height: 150px;
+    height: 250px;
     width: 30%;
     display: flex;
     align-items: center;
     margin-left: 3.0em;
-    padding: 0.5rem;
+    padding: 1.5rem;
     border-radius: 10px;
     margin-top: 0.8em;
   }
@@ -388,7 +413,7 @@ header .navbar ul{
   }
   .recommended-container{
     background-color: white;
-    height: 150px;
+    height: 250px;
     width: 30%;
     margin-left: 3.0em;
     padding: 1em;
@@ -424,7 +449,7 @@ header .navbar ul{
     background-color: var(--third-color);
     color: white;
     font-weight: bold;
-    padding: 0.1rem;
+    padding: 0.5rem;
     font-size: 1rem;
     cursor: pointer;
     width: 35%;
@@ -440,7 +465,7 @@ header .navbar ul{
   /*Recommended protein intake okvirček*/
   .recommended-protein-container{
     background-color: white;
-    height: 150px;
+    height: 250px;
     width: 30%;
     margin-left: 3.0em;
     padding: 1em;
@@ -455,17 +480,17 @@ header .navbar ul{
     padding: 0.5em;
     width: 100%;
     margin-top: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
   }
   #btn-protein-calculate{
     background-color: var(--third-color);
     color: white;
     font-weight: bold;
-    padding: 0.1em;
+    padding: 0.5em;
     font-size: 1rem;
     cursor: pointer;
     width: 20%;
-    margin-top: 0.3rem;
+    margin-top: 2.4rem;
     border-radius: 10px;
     border-color: var(--third-color);
   }
@@ -480,7 +505,7 @@ header .navbar ul{
     font-size: 15px;
     position: absolute;
     left: 15.5em;
-    top: 6em;
+    top: 12.6em;
   }
 
   #output-protein{
