@@ -178,6 +178,7 @@
     justify-content: flex-start;
     align-items: center;
     background: linear-gradient(to bottom, var(--third-color) 40%, white 60%);
+    margin-bottom: 6rem;
 }
 
 .card .image {
@@ -243,6 +244,7 @@
 
 .swiper-pagination {
     transform: translateY(200%);
+    margin-bottom: 6rem;
 }
 
 
